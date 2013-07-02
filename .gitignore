@@ -1,0 +1,4 @@
+# ignore folders
+/vendor/*
+/app/runtime/*
+/www/assets/*

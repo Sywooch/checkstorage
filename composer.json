@@ -1,0 +1,73 @@
+{
+    "name": "frenzelgmbh",
+    "description": "Frenzel GmbH Web Site",
+    "type":"project",
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "Philipp Frenzel",
+            "email": "philipp@frenzel.net"
+        }
+    ],
+    "repositories": [
+        {
+            "type":"package",
+            "package":{
+                "name":"yiiext/assetparser",
+                "version":"1.0.8",
+                "authors": [
+                    {
+                        "name": "Michel Bobilier",
+                        "homepage": "https://github.com/athos99"
+                    }
+                ],
+                "require": {
+                    "php": ">=5.2.0"
+                },
+                "source":{
+                    "url":"https://github.com/athos99/assetparser.git",
+                    "type":"git",
+                    "reference":"master"
+                }
+            }
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "yiisoft/yii2": "dev-master",
+        "yiisoft/yii2-composer":"dev-master",
+        "yiiext/assetparser":"*",
+        "phpexcel/phpexcel":"*",
+        "phpword/phpword":"*",
+        "sebastian/diff": "1.0.*@dev",
+        "philippfrenzel/yii2wikiparser": "dev-master",
+        "philippfrenzel/yiidhtmlx": "dev-master",
+        "philippfrenzel/yiimetroui":"dev-development",
+        "philippfrenzel/yiijquerytoc": "dev-master",
+        "philippfrenzel/yiiwymeditor": "dev-master",
+        "philippfrenzel/yii2elfinder": "dev-master",
+        "phpmailer/phpmailer": "dev-master"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "yii\\composer\\InstallHandler::setPermissions"
+        ],
+        "post-update-cmd": [
+            "yii\\composer\\InstallHandler::setPermissions"
+        ]
+    },
+    "extra": {
+        "yii-install-writable": [
+            "runtime",
+            "www/assets",
+            "www/autodocs",
+            "www/less",
+            "www/img/cms",
+            "console/dbbackup",
+            "console/dbbackup/sql"
+        ],
+        "yii-install-executable": [
+            "yii"
+        ]
+    }    
+}

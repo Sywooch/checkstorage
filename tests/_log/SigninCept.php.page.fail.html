@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Login</title>
+	<link href="/mpintranet/www/assets/881a5b71/css/jquery-ui.css" rel="stylesheet">
+<link href="/mpintranet/www/assets/d86cfe57/css/bootstrap.css" rel="stylesheet">
+<link href="/mpintranet/www/css/site.css" rel="stylesheet">
+<link href="/mpintranet/www/less/modern.css" rel="stylesheet">
+</head>
+<body class="metrouicss">
+<div class="container">
+		<div class="masthead">		
+		<h3 class="muted">MyPlace Intranet
+				</h3>
+	</div>
+	<div id="pagewrapper">
+		<section id="content" class="bg-color-white">
+	<div class="container-fluid">
+		<div class="row-fluid">
+			
+
+<div class="row-fluid">
+	<div class="span3">
+		<div id="w0" class="icon bg-color-redMyplace tile">
+<div id="w0-tile0" class="tile-content"><i class="icon-cube"></i></div>
+
+<div id="w0-tile-brand0" class="brand"><div class="name">myplace</div></div>
+
+</div>
+	</div>
+	<div class="span9">
+		<div class="notices">
+<div id="w1" class="bg-color-green"><div id="w1-notice-icon0" class="notice-icon"><i class="icon-key fg-color-white"></i></div>
+
+<div id="w1-notice-header0" class="notice-header">Login</div>
+
+<a class="close" href="#"></a>
+
+<div id="w1-notice0" class="notice-text"><p>Welcome to the MyPlace Intranet!</p><p>Please fill out the following fields to login</p></div>
+</div>
+</div>
+
+		<p>&nbsp;</p>
+
+		<form id="w2" class="form-horizontal" action="/mpintranet/www//index.php?r=site%2Flogin" method="post">			<div class="control-group field-loginform-username required">
+<label class="control-label" for="loginform-username">Benutzername</label>
+<div class="controls">
+<input type="text" id="loginform-username" name="LoginForm[username]">
+<span class="help-inline"></span>
+</div>
+</div>			<div class="control-group field-loginform-password required">
+<label class="control-label" for="loginform-password">Passwort</label>
+<div class="controls">
+<input type="password" id="loginform-password" name="LoginForm[password]">
+<span class="help-inline"></span>
+</div>
+</div>			<div class="control-group field-loginform-rememberme">
+<input type="hidden" name="LoginForm[rememberMe]" value="0">
+<div class="controls">
+<label class="checkbox"><input type="checkbox" id="loginform-rememberme" name="LoginForm[rememberMe]" value="1" checked> angemeldet bleiben</label>
+<span class="help-inline"></span>
+</div>
+</div>			<div class="form-actions">				
+				<button type="submit" class="btn btn-success fg-color-white"><i class="icon-enter"></i> Anmelden</button>			</div>
+		</form>	</div>
+</div>
+
+	
+		</div><!-- content -->
+	</div>
+</section>
+	</div>
+
+	<script src="/mpintranet/www/assets/d975465d/jquery.js"></script>
+<script src="/mpintranet/www/assets/d975465d/yii.js"></script>
+<script src="/mpintranet/www/assets/881a5b71/js/tile-drag.js"></script>
+<script src="/mpintranet/www/assets/d975465d/yii.validation.js"></script>
+<script src="/mpintranet/www/assets/d975465d/yii.activeForm.js"></script>
+<script src="/mpintranet/www/js/dropdown.js"></script>
+<script type="text/javascript">jQuery(document).ready(function(){
+jQuery('#w2').yiiActiveForm({"username":{"validate":function(attribute, value, messages) {yii.validation.required(value, messages, {"message":"Benutzername cannot be blank."});},"name":"loginform-username","validateOnChange":true,"validateOnType":false,"validationDelay":200,"container":".field-loginform-username","input":"#loginform-username","error":".help-inline"},"password":{"validate":function(attribute, value, messages) {yii.validation.required(value, messages, {"message":"Passwort cannot be blank."});},"name":"loginform-password","validateOnChange":true,"validateOnType":false,"validationDelay":200,"container":".field-loginform-password","input":"#loginform-password","error":".help-inline"},"rememberMe":{"validate":function(attribute, value, messages) {yii.validation.boolean(value, messages, {"trueValue":"1","falseValue":"0","message":"angemeldet bleiben must be either &quot;1&quot; or &quot;0&quot;.","skipOnEmpty":1});},"name":"loginform-rememberme","validateOnChange":true,"validateOnType":false,"validationDelay":200,"container":".field-loginform-rememberme","input":"#loginform-rememberme","error":".help-inline"}}, {"errorSummary":".error-summary","validateOnSubmit":true,"errorCssClass":"error","successCssClass":"success","validatingCssClass":"validating","ajaxVar":"ajax"});
+});</script>
+</div>
+
+<div id="footer" class="footer fg-color-white">
+	<div class="container">
+		<div class="span4">
+			<ul class="unstyled">
+				<li>MyPlace Selfstorage 2013</li>
+				<li>&copy; Frenzel GmbH 2013</li>
+			</ul>
+		</div>
+		<div class="span4">
+			<ul class="unstyled">
+				<li>Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a>.</li>
+				<li>Styles by <a href="http://metroui.org.ua/">Metro UI CSS</a></li>
+			</ul>
+		</div>
+		<div class="span4">
+			
+		</div>
+	</div>	
+</div>
+
+ 
+</body>
+</html>
