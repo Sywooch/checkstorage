@@ -36,7 +36,7 @@ use yii\jui\DatePicker;
 		<div class="control-group">
 			<label for="storagesearchform-date_start" class="control-label">&nbsp;</label>
 			<div class="controls">
-				<a href="#" class="btn btn-warning span10"><i class="icon-search"></i> Finden!</a>	
+				<?php echo Html::submitButton('<i class="icon-search"></i> '.Yii::t('app','Finden!'), array('class'=>'btn btn-warning fg-color-white span10')); ?>	
 			</div>	
 		</div>		
 	</div>
