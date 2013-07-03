@@ -9,12 +9,12 @@ use \yii\bootstrap\Tabs;
 
 <?php Block::begin(array('id'=>'sidebar')); ?>
 	<ul>
-		<li class="sticker sticker-color-yellow"><?php echo Html::a('<i class="icon-arrow-left-3"></i>Overview User', array('/user/index')); ?></li>
+		<li class="sticker sticker-color-yellow"><?php echo Html::a('<i class="icon-arrow-left-3"></i>Overview User', array('/site/index')); ?></li>
 	</ul>
 <?php Block::end(); ?>
 
 <h4>
-    <?php echo Html::a('<i class="icon-arrow-left"></i> '.Yii::t('app','back'), array('/user/view','id'=>$model->id),array()); ?>
+    <?php echo Html::a('<i class="icon-arrow-left"></i> '.Yii::t('app','back'), array('/site/index'),array()); ?>
     <?php echo Yii::t('app','Benutzer Registrieren'); ?>
 </h4>
 
