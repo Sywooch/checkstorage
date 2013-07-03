@@ -44,9 +44,7 @@ $this->registerAssetBundle('app');
 						'items'=> array(
 								array('label' => 'Über Uns', 'url' => array('/site/about')),
 								array('label' => 'Kontakt', 'url' => array('/site/contact')),
-								Yii::$app->user->isGuest ?
-								array('label' => 'Login/Registrieren', 'url' => array('/site/login')) :
-								array('label' => 'Logout (' . Yii::$app->user->identity->username .')' , 'url' => array('/site/logout')),
+								!Yii::$app->user->isGuest?array('label' => 'Abmelden', 'url' => array('/site/logout')):array(),
 						)
 					)
 				)
@@ -70,14 +68,14 @@ $this->registerAssetBundle('app');
 					<li>&copy; Frenzel GmbH <?php echo date('Y'); ?></li>				
 				</ul>
 				<address>
-					Hohewartstr. 32
-					70469 Stuttgart
+					Hohewartstr. 32 <br>
+					70469 Stuttgart <br>
 					Deutschland
 				</address>
 			</div>
 			<div class="span4">
 				<ul class="unstyled">
-					
+					<li>Impressum</li>
 				</ul>
 			</div>
 			<div class="span4">

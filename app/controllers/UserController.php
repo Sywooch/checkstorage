@@ -72,7 +72,7 @@ class UserController extends Controller
 		$this->layout = 'column1';
 		$model=$this->loadModel($id);
 		if ($model->load($_POST) && $model->save()) {
-			return $this->redirect(array('admin'));
+			return $this->redirect(array('/user/view','id'=>$id));
 		}
 
 		return $this->render('update',array(
@@ -110,7 +110,7 @@ class UserController extends Controller
 		$mail->Password   = Yii::$app->params['mailconfig']['Password'];// SMTP password
 		//$mail->SMTPSecure = 'tls';                            			// Enable encryption, 'ssl' also accepted
 
-		$mail->From = 'myplace-info@lichtbruecken.at';
+		$mail->From = Yii::$app->params['adminEmail'];
 		$mail->FromName = Yii::$app->params['mailerAlias'];
 		$mail->AddAddress($model->email, $model->name.', '.$model->prename);  // Add a recipient
 		$mail->AddBCC(Yii::$app->params['adminEmail'], 'Administrator');  // Add a recipient

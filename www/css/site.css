@@ -24,6 +24,14 @@ body {
 
 .portlet-title{
 	padding-top:2px;
+  color: #32CD32;
+}
+
+.portlet{
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  box-shadow: 0 0 10px 5px #999999;
 }
 
 /* Custom container */

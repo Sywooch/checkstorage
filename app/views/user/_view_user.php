@@ -4,8 +4,12 @@ use \yii\helpers\Html;
 
 ?>
 
-<h3><?php echo Yii::t('app','User'); ?></h3>
+<h3><?php echo Yii::t('app','Benutzer'); ?></h3>
 <table class="table table-striped">
+	<tr>
+		<td class="span2"><?php echo Yii::t('app','Position'); ?>:</td>
+		<td><?php echo Html::encode($data->PositionAsString); ?></td>
+	</tr>
 	<tr>
 		<td class="span2"><?php echo Yii::t('app','Username'); ?>:</td>
 		<td><?php echo Html::encode($data->username); ?></td>
@@ -17,21 +21,6 @@ use \yii\helpers\Html;
 	<tr>
 		<td class="span2"><?php echo Yii::t('app','Entry Date'); ?>:</td>
 		<td><?php echo Html::encode($data->date_entry); ?></td>
-	</tr>
-</table>
-<h3><?php echo Yii::t('app','Organisational'); ?></h3>
-<table class="table table-striped">
-	<tr>
-		<td class="span2"><?php echo Yii::t('app','Position'); ?>:</td>
-		<td><?php echo Html::encode($data->PositionAsString); ?></td>
-	</tr>
-	<tr>
-		<td class="span2"><?php echo Yii::t('app','Reports To'); ?>:</td>
-		<td><?php echo Html::encode($data->ReportTo->name); ?>, <?php echo Html::encode($data->ReportTo->prename); ?></td>
-	</tr>
-	<tr>
-		<td class="span2"><?php echo Yii::t('app','Backup'); ?>:</td>
-		<td><?php echo Html::encode($data->Backup->name); ?>, <?php echo Html::encode($data->Backup->prename); ?></td>
 	</tr>
 </table>
 <h3><?php echo Yii::t('app','Contact'); ?></h3>	

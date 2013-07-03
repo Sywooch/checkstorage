@@ -3,9 +3,6 @@
 use \yii\helpers\Html;
 use \yii\jui\DatePicker;
 
-use app\models\Location;
-use app\models\Orgunit;
-
 use yii\widgets\MaskedInput;
 
 ?>
@@ -20,7 +17,7 @@ use yii\widgets\MaskedInput;
 					<?php echo MaskedInput::widget(array(
 						'model'=>$model,
 						'attribute'=>'phone',
-						'mask'=>substr($model->Location->Costcenter->name,0,2)=='AT'?'+(99) 9 99 9?9 9999':'+(99) 999 99 9?9 9999'
+						'mask'=>'+(99) 999 99 ?99 9999'
 					));?>
 				</div>
 			</div>
@@ -33,7 +30,7 @@ use yii\widgets\MaskedInput;
 					<?php echo MaskedInput::widget(array(
 						'model'=>$model,
 						'attribute'=>'mobile',
-						'mask'=>'+(99) 999 99 9?9 9999'
+						'mask'=>'+(99) 999 99 ?99 9999'
 					));?>
 				</div>
 			</div>
@@ -46,7 +43,7 @@ use yii\widgets\MaskedInput;
 					<?php echo MaskedInput::widget(array(
 						'model'=>$model,
 						'attribute'=>'fax',
-						'mask'=>substr($model->Location->Costcenter->name,0,2)=='AT'?'+(99) 9 99 9?9 9999':'+(99) 999 99 9?9 9999'
+						'mask'=>'+(99) 999 99 ?99 9999'
 					));?>
 				</div>
 			</div>

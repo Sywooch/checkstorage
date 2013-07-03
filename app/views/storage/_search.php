@@ -15,12 +15,11 @@ use yii\jui\DatePicker;
 <div class="row-fluid">
 	<div class="span6">
 		<?php echo $form->field($model,'address')->textInput(array('size'=>80,'maxlength'=>128)); ?>
-		<?php echo $form->field($model,'double_sqm')->textInput(array('size'=>80,'maxlength'=>128)); ?>
-		<a href="#" class="btn">Finden!</a>	
+		<?php echo $form->field($model,'double_sqm')->textInput(array('size'=>80,'maxlength'=>128)); ?>		
 	</div>
 	<div class="span6">
 		<div class="control-group">
-			<label for="storagesearchform-date_start" class="control-label">Ab:</label>
+			<label for="storagesearchform-date_start" class="control-label">Ab</label>
 			<div class="controls">
 				<?php echo DatePicker::widget(array(
 				  'id' => 'storagesearchform-date_start',
@@ -29,9 +28,15 @@ use yii\jui\DatePicker;
 			      'attribute' => 'date_start',
 			      'inline'=>false,
 			      'clientOptions' => array(
-			          'dateFormat' => 'yy-mm-dd',								          
+			          'dateFormat' => 'dd-mm-yy',								          
 			      ),
 				));?>
+			</div>	
+		</div>
+		<div class="control-group">
+			<label for="storagesearchform-date_start" class="control-label">&nbsp;</label>
+			<div class="controls">
+				<a href="#" class="btn btn-warning span10"><i class="icon-search"></i> Finden!</a>	
 			</div>	
 		</div>		
 	</div>

@@ -25,7 +25,7 @@ class SiteController extends Controller
 	/**
 	* @var string the default layout
 	*/
-	public $layout='column3';
+	public $layout='column2';
 
 	/**
 	* @var string the default command action.
@@ -64,7 +64,7 @@ class SiteController extends Controller
 				'rules' => array(
 					array(
 						'allow'=>true,
-						'actions'=>array('login','index'),
+						'actions'=>array('login','index','register','contact'),
 						'roles'=>array('?'), // allow guest users to access the named actions 
 					),
 					array(
@@ -119,6 +119,20 @@ class SiteController extends Controller
 		}
 	}
 
+	public function actionRegister()
+	{
+		$this->layout = 'column1';
+
+		$model = new User(array('scenario'=>'signup'));
+		if ($model->load($_POST) && $model->save()) {
+			return $this->redirect(array('site/index'));
+		} else {
+			return $this->render('/user/create', array(
+				'model' => $model,
+			));
+		}
+	}
+
 	public function actionLogout()
 	{
 		Yii::$app->getUser()->logout();
@@ -127,6 +141,8 @@ class SiteController extends Controller
 
 	public function actionContact()
 	{
+		$this->layout = 'column1';
+
 		$model = new ContactForm;
 		if ($model->load($_POST) && $model->contact(Yii::$app->params['adminEmail'])) {
 			Yii::$app->session->setFlash('contactFormSubmitted');

@@ -45,7 +45,7 @@ $this->title = 'check storage - Lagerraum, Keller, Dachboden, Selfstorage Vergle
 			echo Carousel::widget(array(
 				'items'=> $item,
 				'options'=>array(
-					'style'=>'height:250px',
+					'style'=>'height:230px',
 				)
 			)); ?>
 		</div>		
@@ -83,10 +83,10 @@ $this->title = 'check storage - Lagerraum, Keller, Dachboden, Selfstorage Vergle
 	</div>
 	<div class="row-fluid">
 		<div class="span4">
-			<a href="#" class="btn btn-success span12"><i class="icon-plus"></i> Registrieren</a>
+			<a href="<?php echo Html::url(array('/site/register')); ?>" class="btn btn-success span12"><i class="icon-plus"></i> Registrieren (kostenlos)</a>
 		</div>
 		<div class="span4">
-			<a href="#" class="btn btn-inverse span12"><i class="icon-plus"></i> Registrieren</a>			
+			<a href="<?php echo Html::url(array('/site/register')); ?>" class="btn btn-inverse span12"><i class="icon-plus"></i> Registrieren (kostenlos)</a>			
 		</div>
 		<div class="span4">
 			<a href="#" class="btn btn-info span12"><i class="icon-signin"></i> Anmelden</a>

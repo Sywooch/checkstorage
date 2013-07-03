@@ -13,37 +13,38 @@ use \yii\bootstrap\Tabs;
 	</ul>
 <?php Block::end(); ?>
 
-<h1>
-    <?php echo Html::a('<i class="icon-arrow-left-3"></i>'.Yii::t('app','back'), array('/user/view','id'=>$model->id),array()); ?>
-    <?php echo Yii::t('app','Create User Form'); ?>
-</h1>
+<h4>
+    <?php echo Html::a('<i class="icon-arrow-left"></i> '.Yii::t('app','back'), array('/user/view','id'=>$model->id),array()); ?>
+    <?php echo Yii::t('app','Benutzer Registrieren'); ?>
+</h4>
 
 <?php $form = ActiveForm::begin(array(
     'options' => array('class' => 'form-horizontal'),
-    'fieldConfig' => array(
-            'class' => 'app\components\MyActiveField'
-    ),
 )); ?>
 
 <div class="row-fluid">
-<?php echo Tabs::widget(array(
-	 'id'=>'userTabs',
-     'items' => array(
-        array(
+<?php 
+
+$myTabs = array();
+$myTabs[] = array(
             'label' => Yii::t('app','General User'),
             'active' => true,
-            'content' => $this->context->renderPartial('_form', array('model'=>$model,'form'=>$form)),
-        ),
-        array(
+            'content' => $this->context->renderPartial('/user/_form', array('model'=>$model,'form'=>$form)),
+        );
+$myTabs[] = array(
             'label' => Yii::t('app','User Contact'),
-            'content' => $this->context->renderPartial('_form_contact', array('model'=>$model,'form'=>$form)),
-        ),
-        array(
+            'content' => $this->context->renderPartial('/user/_form_contact', array('model'=>$model,'form'=>$form)),
+        );
+if(Yii::$app->user->isAdmin)
+        $myTabs[] =  array(
             'label' => Yii::t('app','User Admin'),
             'visible' => Yii::$app->user->isAdmin,
-            'content' => $this->context->renderPartial('tabs/_form_tab_admin', array('model'=>$model,'form'=>$form)),
-        )
-     ),
+            'content' => $this->context->renderPartial('/user/tabs/_form_tab_admin', array('model'=>$model,'form'=>$form)),
+        );
+
+echo Tabs::widget(array(
+	 'id'=>'userTabs',
+     'items' => $myTabs,
 ));
 ?>
 </div>

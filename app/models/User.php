@@ -25,10 +25,10 @@ class User extends ActiveRecord implements Identity
     const ROLE_USER     = 3;
 
     public static $roles = array(
-		self::ROLE_SYSADMIN      => 'Sysadmin',
-		self::ROLE_ADMIN         => 'Admin',
-		self::ROLE_USER_ADVANCED => 'Advanced User',
-		self::ROLE_USER          => 'User',
+		self::ROLE_SYSADMIN      => 'System Administrator',
+		self::ROLE_ADMIN         => 'Administrator',
+		self::ROLE_USER_ADVANCED => 'Fortgeschrittener',
+		self::ROLE_USER          => 'Standard Benutzer',
     );
 
     public static function getRoleOptions()
@@ -47,19 +47,15 @@ class User extends ActiveRecord implements Identity
     	return isset($options[$this->role]) ? $options[$this->role] : '';
     }
 
-    const POS_OWNER = 0;
-    const POS_MANAGEMENT = 1;
-    const POS_OFFICE = 2;
-    const POS_STORE = 3;
-    const POS_STORE_SERVICE = 4;
-
+    const POS_STORE = 0;
+    const POS_CUSTOMER = 1;
+    const POS_LEAD = 2;
+    
     public static $positions = array(
-		self::POS_OWNER         =>'Owner',
-		self::POS_MANAGEMENT    =>'Management',
-		self::POS_OFFICE        =>'Office',
-		self::POS_STORE         =>'Store',
-		self::POS_STORE_SERVICE =>'Housekeeper',
-    );
+		self::POS_STORE         =>'Lagerraumanbieter',
+		self::POS_CUSTOMER      =>'Kunde',
+		self::POS_LEAD          =>'Interessent',
+	);
 
     public static function getPostitionOptions()
     {
@@ -124,11 +120,32 @@ class User extends ActiveRecord implements Identity
 	{
 	    return array(
 	    	array('username','required'),
+	    	array('username', 'filter', 'filter' => 'trim'),
+	    	array('username', 'string', 'min' => 2, 'max' => 255),
+	    	array('username', 'unique', 'message' => 'This username has already been taken.'),
+
+	    	array('email', 'filter', 'filter' => 'trim'),
+	    	array('email', 'required'),
+			array('email', 'email'),
+			array('email', 'unique', 'message' => 'This email has already been taken.'),
+			
+			array('password', 'required'),
+			array('password', 'string', 'min' => 6),
+
 	    	array('no_employee','string','max'=>25),
-	        array('username, password, email, phone, name, prename, mobile,messanger,fax', 'string', 'max'=>128),
+	        array('phone, name, prename, mobile,messanger,fax', 'string', 'max'=>128),
 	        array('date_entry, date_exit','date'),
-	        array('position, parent_user_id, backup_user_id, orgunit_id, location_id, role','integer'),
+	        array('position, parent_user_id, backup_user_id, role','integer'),
 	    );
+	}
+
+	public function scenarios()
+	{
+		return array(
+			'signup' => array('username', 'email', 'password','name','prename','phone','mobile','fax','role'),
+			'login'  => array('username', 'password'),
+			'default' => array('username', 'email', 'password','name','prename','phone','mobile','fax','role'),
+		);
 	}
 
 	/**
@@ -153,12 +170,10 @@ class User extends ActiveRecord implements Identity
 			'id'             => 'ID',
 			'parent_user_id' => Yii::t('app','Reports To'),
 			'backup_user_id' => Yii::t('app','Backup User'),
-			'username'       => Yii::t('app','Username'),
-			'password'       => Yii::t('app','Password'),
+			'username'       => Yii::t('app','Benutzername'),
+			'password'       => Yii::t('app','Passwort'),
 			'email'          => Yii::t('app','EMail'),
-			'role'           => Yii::t('app','Role'),
-			'location_id'    => Yii::t('app','Location'),
-			'orgunit_id'     => Yii::t('app','Org Unit'),
+			'role'           => Yii::t('app','Rolle'),
 			'messanger'      => Yii::t('app','Messanger'),
 			'fax'            => Yii::t('app','Fax'),
 			'mobile'         => Yii::t('app','Mobile Phone'),
@@ -166,18 +181,13 @@ class User extends ActiveRecord implements Identity
 			'name'           => Yii::t('app','Fam. Name'),
 			'prename'        => Yii::t('app','Prename'),
 			'no_employee'    => Yii::t('app','Employee No'),
+			'position'       => Yii::t('app','Zweck'),
         );
     }
 
 	public static function searchByString($query){
 		return static::find()->where("UPPER(name) LIKE '%".strtoupper($query)."%' OR UPPER(prename) LIKE '%".strtoupper($query)."%'")->all();
 	}
-
-	public static function getAdapterForHoliday() {
-        return static::find()
-        		->select('id, name, prename, orgunit_id, location_id')
-        		->orderBy('name ASC');
-    }
 
     /**
 	 * all functions needed for identity
