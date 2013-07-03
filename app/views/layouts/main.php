@@ -44,7 +44,9 @@ $this->registerAssetBundle('app');
 						'items'=> array(
 								array('label' => 'Über Uns', 'url' => array('/site/about')),
 								array('label' => 'Kontakt', 'url' => array('/site/contact')),
-								!Yii::$app->user->isGuest?array('label' => 'Abmelden', 'url' => array('/site/logout')):array(),
+								!Yii::$app->user->isGuest?
+								array('label' => 'Abmelden', 'url' => array('/site/logout')):
+								array('label' => 'Anmelden', 'url' => array('/site/login')),
 						)
 					)
 				)
