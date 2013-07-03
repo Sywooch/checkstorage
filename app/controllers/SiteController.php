@@ -64,7 +64,7 @@ class SiteController extends Controller
 				'rules' => array(
 					array(
 						'allow'=>true,
-						'actions'=>array('login'),
+						'actions'=>array('login','index'),
 						'roles'=>array('?'), // allow guest users to access the named actions 
 					),
 					array(
@@ -79,14 +79,9 @@ class SiteController extends Controller
 		);
 	}
 
-	public function actionIndex($tag='All')
+	public function actionIndex($tag='ALL')
 	{
-		$this->layout = 'column3';
-
-		//check for unread messages
-		$unread = 0;
-		if(!Yii::$app->user->isGuest)
-			$unread = Messages::getCountUnreaded(Yii::$app->user->identity->id)->count();
+		$this->layout = 'column1';
 
 		//the blog part!
 		$query = Post::find()
@@ -95,6 +90,7 @@ class SiteController extends Controller
 
 		if (!empty($tag))
 			$query->andWhere(array('like', 'tags', '%'.$tag.'%'));
+		
 		$countQuery = clone $query;
 		$pagination = new Pagination($countQuery->count());
 
@@ -105,8 +101,7 @@ class SiteController extends Controller
 
 		return $this->render('index',array(
 			'models' => $models,
-			'pagination' => $pagination,
-			'msgunread'=>$unread
+			'pagination' => $pagination
 		));		
 	}
 

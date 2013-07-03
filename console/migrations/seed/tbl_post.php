@@ -1,22 +1,13 @@
 <?php
 
 return array(
-	'post2'=>array(
-		'title'=>'Jahresmeeting 2013',
-		'content'=>'Das Jahresmeeting rueckt immer näher...',
-		'author_id'=>22,
-		'tags'=>'ALL, Jahresmeeting',
+	'post1'=>array(
+		'title'=>'CheckStorage beta',
+		'content'=>'Wir freuen uns sehr, Ihnen den ersten beta release unserer neuen Platform für die Suche, den Vergleich und die Abwicklung von Lagervermietungen anzubieten.',
+		'author_id'=>1,
+		'tags'=>'ALL',
 		'status'=>'published',
 		'time_create' => time(),
 		'time_update' => time(),
 	),
-	'post1'=>array(
-		'title'=>'MyPlace Intranet Prototype',
-		'content'=>'Hierbei handelt es sich um die Entwicklungsplattform des neuen MyPlace Intranets. Gerne freue ich mich über Feedback, Wünsche oder Anwendungsvorschläge!',
-		'author_id'=>22,
-		'tags'=>'ALL, AT018',
-		'status'=>'published',
-		'time_create' => time(),
-		'time_update' => time(),
-	)
 );

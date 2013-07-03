@@ -3,14 +3,13 @@
 $params = require(__DIR__ . '/../../app/config/params.php');
 
 return array(
-	'id' => 'frenzelgmbhconsole',
+	'id' => 'checkstorage',
 	'basePath' => dirname(__DIR__),
 	'controllerPath' => '@app/controllers',
-	'preload' => array('log'),
 	'components' => array(
 		'db' => array(
 			'class' => 'yii\db\Connection',
-			'dsn' => 'mysql:host=localhost;dbname=mpintranet',
+			'dsn' => 'mysql:host=localhost;dbname=checkstorage',
             'username' => 'root', 
             'password' => '',
             'tablePrefix' => 'tbl_',
@@ -29,10 +28,9 @@ return array(
 			'basePath' => dirname(__DIR__).'/migrations/preseed',
         ),
 		'log' => array(
-			'class' => 'yii\logging\Router',
 			'targets' => array(
 				'file' => array(
-					'class'  => 'yii\logging\FileTarget',
+					'class'  => 'yii\log\FileTarget',
 					'levels' => array('error', 'warning'),
 				),
 			),

@@ -33,22 +33,4 @@ return array(
 		'special' => 0,
 		'category' => 0,
 	),
-	'page3'=>array(
-		'name' => 'Reporting Plattform',
-		'title'=> 'Reporting Plattform',
-		'body' => '
-== Inhaltsverzeichnis
-=== GENERAL
-* Names and Conventions
-* Architecture
-* Datasources
-
-=== QLIKVIEW	
-* Organisation
-
-=== STANDARD REPORTING	
-		',
-		'special' => 1,
-		'category' => 0,
-	),
 );

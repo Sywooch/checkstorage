@@ -15,10 +15,6 @@ use \yii\helpers\Html;
 		<td><?php echo Html::encode($data->email); ?></td>
 	</tr>
 	<tr>
-		<td class="span2"><?php echo Yii::t('app','Employee No'); ?>:</td>
-		<td><?php echo Html::encode($data->no_employee); ?></td>
-	</tr>
-	<tr>
 		<td class="span2"><?php echo Yii::t('app','Entry Date'); ?>:</td>
 		<td><?php echo Html::encode($data->date_entry); ?></td>
 	</tr>
@@ -26,16 +22,8 @@ use \yii\helpers\Html;
 <h3><?php echo Yii::t('app','Organisational'); ?></h3>
 <table class="table table-striped">
 	<tr>
-		<td class="span2"><?php echo Yii::t('app','Orga'); ?>:</td>
-		<td><?php echo Html::encode($data->Orgunit->name); ?></td>
-	</tr>
-	<tr>
 		<td class="span2"><?php echo Yii::t('app','Position'); ?>:</td>
 		<td><?php echo Html::encode($data->PositionAsString); ?></td>
-	</tr>
-	<tr>
-		<td class="span2"><?php echo Yii::t('app','Site'); ?>:</td>
-		<td><?php echo Html::encode($data->Location->address); ?>(<?php echo Html::encode($data->Location->Costcenter->name); ?>)</td>
 	</tr>
 	<tr>
 		<td class="span2"><?php echo Yii::t('app','Reports To'); ?>:</td>

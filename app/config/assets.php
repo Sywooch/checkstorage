@@ -5,8 +5,9 @@ return array(
         'basePath' => '@wwwroot',
         'baseUrl' => '@www',
         'css' => array(
-            'css/site.css',
-            'less/modern.less',
+            'css/bootstrap.min.css',
+            'css/font-awesome.min.css',
+            'css/site.css',            
         ),
         'js' => array(
             'js/dropdown.js',

@@ -64,8 +64,6 @@ class SeedController extends Controller
 	 */
 	public function actionSeed()
 	{
-		echo 'disabled';
-		exit;
 		$tx = $this->db->beginTransaction();
 		try
 		{

@@ -4,15 +4,26 @@ body {
 	background-color: #F9F9F5;
 }
 
+#logostyle{
+	font-size: 38px;
+	color: #00688B;
+}
+
+#sloganstyle{
+	font-size: 19px;
+	padding-bottom: 15px;
+	color: #32CD32;
+}
+
 /* Custom footer */
 .footer {
 	padding-bottom: 50px;
 	padding-top:20px;
-	background: url("../img/bg_footer.png") repeat-x scroll 0 0 transparent;
+	/*background: url("../img/bg_footer.png") repeat-x scroll 0 0 transparent;*/
 }
 
-.metrouicss .portlet-title{
-	padding-top:10px;
+.portlet-title{
+	padding-top:2px;
 }
 
 /* Custom container */
@@ -50,14 +61,14 @@ body {
 	padding: 10px;
 }
 
-/* page wrap */
+/* page wrap 
 #pagewrapper{
 	box-shadow: 0 0 10px 5px #999999;
-}
+}*/
 
 /* section content */
 #content{
-	padding: 20px 0;
+
 }
 
 #comments{
@@ -74,4 +85,174 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 
 #toccmspage a{
 	display: block;
+}
+
+/*
+THE FONT COLORS
+*/
+.fg-color-blue {
+  color: #2d89ef !important;
+}
+.fg-color-blueLight {
+  color: #EFF4FF !important;
+}
+.fg-color-blueDark {
+  color: #2B5797 !important;
+}
+.fg-color-green {
+  color: #00a300 !important;
+}
+.fg-color-greenLight {
+  color: #99b433 !important;
+}
+.fg-color-greenDark {
+  color: #1E7145 !important;
+}
+.fg-color-red {
+  color: #b91d47 !important;
+}
+.fg-color-yellow {
+  color: #ffc40d !important;
+}
+.fg-color-orange {
+  color: #e3a21a !important;
+}
+.fg-color-orangeDark {
+  color: #da532c !important;
+}
+.fg-color-pink {
+  color: #9f00a7 !important;
+}
+.fg-color-pinkDark {
+  color: #7E3878 !important;
+}
+.fg-color-purple {
+  color: #603cba !important;
+}
+.fg-color-darken {
+  color: #1d1d1d !important;
+}
+.fg-color-lighten {
+  color: #d5e7ec !important;
+}
+.fg-color-white {
+  color: #ffffff !important;
+}
+.fg-color-grayDark {
+  color: #525252 !important;
+}
+.fg-color-magenta {
+  color: #FF0097 !important;
+}
+.fg-color-teal {
+  color: #00ABA9 !important;
+}
+.fg-color-redLight {
+  color: #EE1111 !important;
+}
+.fg-color-redMyplace {
+  color: #F30000 !important;
+}
+.fg-color-statusCreated {
+  color: #BDD09F !important;
+}
+.fg-color-statusRejected {
+  color: #8F3B1B !important;
+}
+.fg-color-statusRequested {
+  color: #D57500 !important;
+}
+.fg-color-statusCorrected {
+  color: #4E6172 !important;
+}
+.fg-color-statusApproved {
+  color: #404F24 !important;
+}
+.fg-color-statusPendig {
+  color: #DBCA69 !important;
+}
+
+/*
+THE BACKGROUND COLORS
+*/
+.bg-color-blue {
+  background-color: #2d89ef !important;
+}
+.bg-color-blueLight {
+  background-color: #EFF4FF !important;
+}
+.bg-color-blueDark {
+  background-color: #2B5797 !important;
+}
+.bg-color-green {
+  background-color: #00a300 !important;
+}
+.bg-color-greenLight {
+  background-color: #99b433 !important;
+}
+.bg-color-greenDark {
+  background-color: #1E7145 !important;
+}
+.bg-color-red {
+  background-color: #b91d47 !important;
+}
+.bg-color-yellow {
+  background-color: #ffc40d !important;
+}
+.bg-color-orange {
+  background-color: #e3a21a !important;
+}
+.bg-color-orangeDark {
+  background-color: #da532c !important;
+}
+.bg-color-pink {
+  background-color: #9f00a7 !important;
+}
+.bg-color-pinkDark {
+  background-color: #7E3878 !important;
+}
+.bg-color-purple {
+  background-color: #603cba !important;
+}
+.bg-color-darken {
+  background-color: #1d1d1d !important;
+}
+.bg-color-lighten {
+  background-color: #d5e7ec !important;
+}
+.bg-color-white {
+  background-color: #ffffff !important;
+}
+.bg-color-grayDark {
+  background-color: #525252 !important;
+}
+.bg-color-magenta {
+  background-color: #FF0097 !important;
+}
+.bg-color-teal {
+  background-color: #00ABA9 !important;
+}
+.bg-color-redLight {
+  background-color: #EE1111 !important;
+}
+.bg-color-redMyplace {
+  background-color: #F30000 !important;
+}
+.bg-color-statusCreated {
+  background-color: #BDD09F !important;
+}
+.bg-color-statusRejected {
+  background-color: #8F3B1B !important;
+}
+.bg-color-statusRequested {
+  background-color: #D57500 !important;
+}
+.bg-color-statusCorrected {
+  background-color: #4E6172 !important;
+}
+.bg-color-statusApproved {
+  background-color: #404F24 !important;
+}
+.bg-color-statusPendig {
+  background-color: #DBCA69 !important;
 }

@@ -8710,3 +8710,88 @@ Stack trace:
   ),
   'argc' => 2,
 )
+2013/07/03 05:59:42 [127.0.0.1] [error] [yii\console\Exception] exception 'yii\console\Exception' with message 'Missing required arguments: configFile, bundleFile' in /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Controller.php:129
+Stack trace:
+#0 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/InlineAction.php(46): yii\console\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/Controller.php(116): yii\base\InlineAction->runWithParams(Array)
+#2 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Controller.php(77): yii\base\Controller->runAction('', Array)
+#3 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/Module.php(582): yii\console\Controller->runAction('', Array)
+#4 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Application.php(127): yii\base\Module->runAction('asset', Array)
+#5 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Application.php(95): yii\console\Application->runAction('asset', Array)
+#6 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/Application.php(177): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /Users/philippfrenzel/Sites/pliq/checkstorage/yii(22): yii\base\Application->run()
+#8 {main}
+2013/07/03 05:59:42 [127.0.0.1] [info] [application] $_SERVER = array (
+  'TERM_PROGRAM' => 'Apple_Terminal',
+  'SHELL' => '/bin/bash',
+  'TERM' => 'xterm-256color',
+  'TMPDIR' => '/var/folders/0n/pltm268d44zdxv6jgfh4zsdr0000gn/T/',
+  'Apple_PubSub_Socket_Render' => '/tmp/launch-fNkEby/Render',
+  'TERM_PROGRAM_VERSION' => '309',
+  'TERM_SESSION_ID' => '2EF6BF41-3A6C-4906-9712-4A8FDB518A4E',
+  'USER' => 'philippfrenzel',
+  'COMMAND_MODE' => 'unix2003',
+  'SSH_AUTH_SOCK' => '/tmp/launch-yx0agk/Listeners',
+  'Apple_Ubiquity_Message' => '/tmp/launch-bUM2Pw/Apple_Ubiquity_Message',
+  '__CF_USER_TEXT_ENCODING' => '0x1F5:0:3',
+  'PATH' => '/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin',
+  'PWD' => '/Users/philippfrenzel/Sites/pliq/checkstorage',
+  'DBUS_LAUNCHD_SESSION_BUS_SOCKET' => '/tmp/launch-ypXHiL/session',
+  'LANG' => 'de_DE.UTF-8',
+  'HOME' => '/Users/philippfrenzel',
+  'SHLVL' => '1',
+  'LOGNAME' => 'philippfrenzel',
+  'SECURITYSESSIONID' => '186a4',
+  '_' => './yii',
+  'OLDPWD' => '/Users/philippfrenzel',
+  'PHP_SELF' => './yii',
+  'SCRIPT_NAME' => './yii',
+  'SCRIPT_FILENAME' => './yii',
+  'PATH_TRANSLATED' => './yii',
+  'DOCUMENT_ROOT' => '',
+  'REQUEST_TIME' => 1372831182,
+  'argv' => 
+  array (
+    0 => './yii',
+    1 => 'asset',
+  ),
+  'argc' => 2,
+)
+2013/07/03 05:59:59 [127.0.0.1] [error] [yii\db\Command::queryInternal] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'checkstorage.tbl_migration' doesn't exist
+Command::fetchAll() failed: SHOW FULL COLUMNS FROM `tbl_migration`
+2013/07/03 05:59:59 [127.0.0.1] [info] [application] $_SERVER = array (
+  'TERM_PROGRAM' => 'Apple_Terminal',
+  'SHELL' => '/bin/bash',
+  'TERM' => 'xterm-256color',
+  'TMPDIR' => '/var/folders/0n/pltm268d44zdxv6jgfh4zsdr0000gn/T/',
+  'Apple_PubSub_Socket_Render' => '/tmp/launch-fNkEby/Render',
+  'TERM_PROGRAM_VERSION' => '309',
+  'TERM_SESSION_ID' => '2EF6BF41-3A6C-4906-9712-4A8FDB518A4E',
+  'USER' => 'philippfrenzel',
+  'COMMAND_MODE' => 'unix2003',
+  'SSH_AUTH_SOCK' => '/tmp/launch-yx0agk/Listeners',
+  'Apple_Ubiquity_Message' => '/tmp/launch-bUM2Pw/Apple_Ubiquity_Message',
+  '__CF_USER_TEXT_ENCODING' => '0x1F5:0:3',
+  'PATH' => '/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin',
+  'PWD' => '/Users/philippfrenzel/Sites/pliq/checkstorage',
+  'DBUS_LAUNCHD_SESSION_BUS_SOCKET' => '/tmp/launch-ypXHiL/session',
+  'LANG' => 'de_DE.UTF-8',
+  'HOME' => '/Users/philippfrenzel',
+  'SHLVL' => '1',
+  'LOGNAME' => 'philippfrenzel',
+  'SECURITYSESSIONID' => '186a4',
+  '_' => './yii',
+  'OLDPWD' => '/Users/philippfrenzel',
+  'PHP_SELF' => './yii',
+  'SCRIPT_NAME' => './yii',
+  'SCRIPT_FILENAME' => './yii',
+  'PATH_TRANSLATED' => './yii',
+  'DOCUMENT_ROOT' => '',
+  'REQUEST_TIME' => 1372831199,
+  'argv' => 
+  array (
+    0 => './yii',
+    1 => 'migrate',
+  ),
+  'argc' => 2,
+)

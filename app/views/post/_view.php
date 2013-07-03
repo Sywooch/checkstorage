@@ -7,14 +7,14 @@ if (!isset($commentCount)) {
 }
 ?>
 <div class="row-fluid">
-	<div style="padding-top:13px">
-		<h2>
+	<div>
+		<h5>
 			<?php echo Html::encode($data->title);?>
 			<?php echo Html::a(Yii::t('app','view'), $data->url); ?>
-		</h2>
+		</h5>
 	</div>
 	<p class="meta"><?php echo Yii::t('app','Posted by');?> <?php echo $data->author->username . ' on ' . date('F j, Y',$data->time_create); ?></p>
-	<p class='lead'>
+	<p>
 		<?php
 			echo $data->content;
 		?>

@@ -3,7 +3,7 @@ return array(
 	'comment1'=>array(
 		'content'					=> 'Only a test comment, this has no meaning, only some text to display',
 		'status'					=> 'approved',
-		'author_id'		          	=> 22,
+		'author_id'		          	=> 2,
 		'time_create'             	=> time(),
 		'comment_table'				=> 4,
 		'comment_id'				=> 1,

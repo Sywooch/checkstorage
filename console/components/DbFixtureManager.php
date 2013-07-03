@@ -95,7 +95,7 @@ class DbFixtureManager extends Component
 	{
 		parent::init();
 		if($this->basePath===null)
-			$this->basePath=Yii::getAlias('@app');
+			$this->basePath=Yii::$app->getAlias('@app');
 		$this->prepare();
 	}
 

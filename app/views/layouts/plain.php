@@ -20,13 +20,16 @@ $this->registerAssetBundle('app');
 <body class="metrouicss">
 <div class="container">
 	<?php $this->beginBody(); ?>
-	<div class="masthead">		
-		<h3 class="muted">MyPlace Intranet
-		<?php if (!Yii::$app->user->isGuest): ?>
-			<small><a href="<?php echo Html::Url(array('user/view','id'=>Yii::$app->user->identity->id)); ?>"><?php echo Yii::$app->user->identity->username; ?></a></small>
-		<?php endif; ?>
-		</h3>
+	<div class="masthead">
+		<div class="pull-right">		
+			<?php if (!Yii::$app->user->isGuest): ?>
+				<a href="<?php echo Html::Url(array('user/view','id'=>Yii::$app->user->identity->id)); ?>"><i class="icon-user"></i> <?php echo Yii::$app->user->identity->username; ?></a>
+			<?php endif; ?>
+		</div>
+		<div id="logostyle">check storage</div>
+		<div id="sloganstyle">LAGERRAUM VERGLEICH</div>
 	</div>
+	
 	<div id="pagewrapper">
 		<?php echo $content; ?>
 	</div>
@@ -38,14 +41,12 @@ $this->registerAssetBundle('app');
 	<div class="container">
 		<div class="span4">
 			<ul class="unstyled">
-				<li>MyPlace Selfstorage <?php echo date('Y'); ?></li>
 				<li>&copy; Frenzel GmbH <?php echo date('Y'); ?></li>
 			</ul>
 		</div>
 		<div class="span4">
 			<ul class="unstyled">
-				<li><?php echo Yii::powered(); ?></li>
-				<li>Styles by <a href="http://metroui.org.ua/">Metro UI CSS</a></li>
+				<li><?php echo Yii::powered(); ?></li>				
 			</ul>
 		</div>
 		<div class="span4">

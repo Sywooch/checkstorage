@@ -11,8 +11,6 @@ class m130505_131012_users extends \yii\db\Migration
 				'email'       => 'VARCHAR(255) NOT NULL',
 				'role'        => 'INTEGER UNSIGNED NOT NULL',
 				'position'    => 'INTEGER UNSIGNED NOT NULL',
-				'orgunit_id'  => 'INTEGER UNSIGNED',
-				'location_id' => 'INTEGER UNSIGNED',
 				'prename'     => 'VARCHAR(255)',
 				'name'        => 'VARCHAR(255)',
 				'phone'       => 'VARCHAR(255)',
