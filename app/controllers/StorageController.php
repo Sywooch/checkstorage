@@ -112,8 +112,8 @@ class StorageController extends Controller
 	public function actionAdmin()
 	{
 		$this->layout = 'column2';
-		$query = Storage::find(array('user_id'=>Yii::$app->user->id))
-			->orderBy('id DESC');
+		$query = Storage::find()->where(array('user_id'=>Yii::$app->user->id))
+				->orderBy('id DESC');
 
 		$countQuery = clone $query;
 		$pagination = new Pagination($countQuery->count());
