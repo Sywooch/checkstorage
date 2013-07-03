@@ -29,7 +29,7 @@ $this->registerAssetBundle('app');
 				<a href="<?php echo Html::Url(array('site/login')); ?>"><i class="icon-signin icon-2x"></i> Anmelden</a>
 			<?php endif; ?>
 		</div>
-		<div id="logostyle">check storage</div>
+		<div id="logostyle">checkstorage</div>
 		<div id="sloganstyle">LAGERRAUM VERGLEICH</div>
 	</div>
 		
