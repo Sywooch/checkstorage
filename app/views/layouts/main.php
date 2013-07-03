@@ -5,6 +5,7 @@
  */
 use yii\helpers\Html;
 use yii\bootstrap\NavBar;
+use app\models\User;
 
 $this->registerAssetBundle('app');
 
@@ -34,20 +35,26 @@ $this->registerAssetBundle('app');
 	</div>
 		
 	<div id="pagewrapper">
-		<?php echo NavBar::widget(array(
+		<?php 
+
+		$MenuItems = array();
+		$MenuItems[] = array('label' => 'Über Uns', 'url' => array('/site/about'));
+		$MenuItems[] = array('label' => 'Kontakt', 'url' => array('/site/contact'));
+		if(Yii::$app->user->identity->position==User::POS_STORE){
+			$MenuItems[] = array('label' => 'Standorte', 'url' => array('/storage/admin'));
+		};
+		if(!Yii::$app->user->isGuest){
+			$MenuItems[] = array('label' => 'Abmelden', 'url' => array('/site/logout'));
+		};
+
+		echo NavBar::widget(array(
 			'options' => array('class' => 'nav'),
 			'brandLabel' => 'Start',
 			'items' => array(
 				 array(
 					'class' => 'yii\bootstrap\Nav',
 					'options' => array(
-						'items'=> array(
-								array('label' => 'Über Uns', 'url' => array('/site/about')),
-								array('label' => 'Kontakt', 'url' => array('/site/contact')),
-								!Yii::$app->user->isGuest?
-								array('label' => 'Abmelden', 'url' => array('/site/logout')):
-								array('label' => 'Anmelden', 'url' => array('/site/login')),
-						)
+						'items'=> $MenuItems,
 					)
 				)
 			),

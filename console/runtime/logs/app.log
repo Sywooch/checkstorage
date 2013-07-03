@@ -8795,3 +8795,108 @@ Command::fetchAll() failed: SHOW FULL COLUMNS FROM `tbl_migration`
   ),
   'argc' => 2,
 )
+2013/07/03 17:34:46 [127.0.0.1] [error] [yii\base\ErrorException] exception 'yii\base\ErrorException' with message 'date() expects at least 1 parameter, 0 given' in /Users/philippfrenzel/Sites/pliq/checkstorage/console/migrations/seed/tbl_user.php:6
+Stack trace:
+#0 [internal function]: yii\base\Application->handleError(2, 'date() expects ...', '/Users/philippf...', 6, Array)
+#1 /Users/philippfrenzel/Sites/pliq/checkstorage/console/migrations/seed/tbl_user.php(6): date()
+#2 /Users/philippfrenzel/Sites/pliq/checkstorage/console/components/DbFixtureManager.php(182): require('/Users/philippf...')
+#3 /Users/philippfrenzel/Sites/pliq/checkstorage/console/components/DbFixtureManager.php(136): app\components\DbFixtureManager->loadFixture('tbl_user')
+#4 /Users/philippfrenzel/Sites/pliq/checkstorage/console/components/DbFixtureManager.php(99): app\components\DbFixtureManager->prepare()
+#5 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/Object.php(46): app\components\DbFixtureManager->init()
+#6 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/YiiBase.php(467): yii\base\Object->__construct(Array)
+#7 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/Module.php(462): yii\YiiBase::createObject(Array)
+#8 /Users/philippfrenzel/Sites/pliq/checkstorage/console/controllers/SeedController.php(86): yii\base\Module->getComponent('seeder')
+#9 /Users/philippfrenzel/Sites/pliq/checkstorage/console/controllers/SeedController.php(70): app\controllers\SeedController->seed()
+#10 [internal function]: app\controllers\SeedController->actionSeed()
+#11 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/InlineAction.php(47): call_user_func_array(Array, Array)
+#12 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/Controller.php(116): yii\base\InlineAction->runWithParams(Array)
+#13 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Controller.php(77): yii\base\Controller->runAction('', Array)
+#14 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/Module.php(582): yii\console\Controller->runAction('', Array)
+#15 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Application.php(127): yii\base\Module->runAction('seed', Array)
+#16 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Application.php(95): yii\console\Application->runAction('seed', Array)
+#17 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/Application.php(177): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /Users/philippfrenzel/Sites/pliq/checkstorage/yii(22): yii\base\Application->run()
+#19 {main}
+2013/07/03 17:34:44 [127.0.0.1] [info] [application] $_SERVER = array (
+  'TERM_PROGRAM' => 'Apple_Terminal',
+  'SHELL' => '/bin/bash',
+  'TERM' => 'xterm-256color',
+  'TMPDIR' => '/var/folders/0n/pltm268d44zdxv6jgfh4zsdr0000gn/T/',
+  'Apple_PubSub_Socket_Render' => '/tmp/launch-fNkEby/Render',
+  'TERM_PROGRAM_VERSION' => '309',
+  'TERM_SESSION_ID' => '2EF6BF41-3A6C-4906-9712-4A8FDB518A4E',
+  'USER' => 'philippfrenzel',
+  'COMMAND_MODE' => 'unix2003',
+  'SSH_AUTH_SOCK' => '/tmp/launch-yx0agk/Listeners',
+  'Apple_Ubiquity_Message' => '/tmp/launch-bUM2Pw/Apple_Ubiquity_Message',
+  '__CF_USER_TEXT_ENCODING' => '0x1F5:0:3',
+  'PATH' => '/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin',
+  'PWD' => '/Users/philippfrenzel/Sites/pliq/checkstorage',
+  'DBUS_LAUNCHD_SESSION_BUS_SOCKET' => '/tmp/launch-ypXHiL/session',
+  'LANG' => 'de_DE.UTF-8',
+  'HOME' => '/Users/philippfrenzel',
+  'SHLVL' => '1',
+  'LOGNAME' => 'philippfrenzel',
+  'SECURITYSESSIONID' => '186a4',
+  '_' => './yii',
+  'OLDPWD' => '/Users/philippfrenzel',
+  'PHP_SELF' => './yii',
+  'SCRIPT_NAME' => './yii',
+  'SCRIPT_FILENAME' => './yii',
+  'PATH_TRANSLATED' => './yii',
+  'DOCUMENT_ROOT' => '',
+  'REQUEST_TIME' => 1372872884,
+  'argv' => 
+  array (
+    0 => './yii',
+    1 => 'seed',
+  ),
+  'argc' => 2,
+)
+2013/07/03 17:36:30 [127.0.0.1] [error] [yii\console\Exception] exception 'yii\console\Exception' with message 'Missing required arguments: name' in /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Controller.php:129
+Stack trace:
+#0 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/InlineAction.php(46): yii\console\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/Controller.php(116): yii\base\InlineAction->runWithParams(Array)
+#2 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Controller.php(77): yii\base\Controller->runAction('create', Array)
+#3 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/Module.php(582): yii\console\Controller->runAction('create', Array)
+#4 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Application.php(127): yii\base\Module->runAction('migrate/create', Array)
+#5 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Application.php(95): yii\console\Application->runAction('migrate/create', Array)
+#6 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/Application.php(177): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /Users/philippfrenzel/Sites/pliq/checkstorage/yii(22): yii\base\Application->run()
+#8 {main}
+2013/07/03 17:36:30 [127.0.0.1] [info] [application] $_SERVER = array (
+  'TERM_PROGRAM' => 'Apple_Terminal',
+  'SHELL' => '/bin/bash',
+  'TERM' => 'xterm-256color',
+  'TMPDIR' => '/var/folders/0n/pltm268d44zdxv6jgfh4zsdr0000gn/T/',
+  'Apple_PubSub_Socket_Render' => '/tmp/launch-fNkEby/Render',
+  'TERM_PROGRAM_VERSION' => '309',
+  'TERM_SESSION_ID' => '2EF6BF41-3A6C-4906-9712-4A8FDB518A4E',
+  'USER' => 'philippfrenzel',
+  'COMMAND_MODE' => 'unix2003',
+  'SSH_AUTH_SOCK' => '/tmp/launch-yx0agk/Listeners',
+  'Apple_Ubiquity_Message' => '/tmp/launch-bUM2Pw/Apple_Ubiquity_Message',
+  '__CF_USER_TEXT_ENCODING' => '0x1F5:0:3',
+  'PATH' => '/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin',
+  'PWD' => '/Users/philippfrenzel/Sites/pliq/checkstorage',
+  'DBUS_LAUNCHD_SESSION_BUS_SOCKET' => '/tmp/launch-ypXHiL/session',
+  'LANG' => 'de_DE.UTF-8',
+  'HOME' => '/Users/philippfrenzel',
+  'SHLVL' => '1',
+  'LOGNAME' => 'philippfrenzel',
+  'SECURITYSESSIONID' => '186a4',
+  '_' => './yii',
+  'OLDPWD' => '/Users/philippfrenzel',
+  'PHP_SELF' => './yii',
+  'SCRIPT_NAME' => './yii',
+  'SCRIPT_FILENAME' => './yii',
+  'PATH_TRANSLATED' => './yii',
+  'DOCUMENT_ROOT' => '',
+  'REQUEST_TIME' => 1372872990,
+  'argv' => 
+  array (
+    0 => './yii',
+    1 => 'migrate/create',
+  ),
+  'argc' => 2,
+)
