@@ -64,7 +64,7 @@ class SiteController extends Controller
 				'rules' => array(
 					array(
 						'allow'=>true,
-						'actions'=>array('login','index','register','contact'),
+						'actions'=>array('login','index','register','contact','about'),
 						'roles'=>array('?'), // allow guest users to access the named actions 
 					),
 					array(
@@ -156,6 +156,7 @@ class SiteController extends Controller
 
 	public function actionAbout()
 	{
+		$this->layout = 'column1';
 		return $this->render('about');
 	}
 
