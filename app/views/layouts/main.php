@@ -40,7 +40,7 @@ $this->registerAssetBundle('app');
 		$MenuItems = array();
 		$MenuItems[] = array('label' => 'Über Uns', 'url' => array('/site/about'));
 		$MenuItems[] = array('label' => 'Kontakt', 'url' => array('/site/contact'));
-		if(Yii::$app->user->identity->position===User::POS_STORE && !Yii::$app->user->isGuest){
+		if(Yii::$app->user->identity->position==User::POS_STORE && !Yii::$app->user->isGuest){
 			$MenuItems[] = array('label' => 'Standorte', 'url' => array('/storage/admin'));
 		};
 		if(!Yii::$app->user->isGuest){
