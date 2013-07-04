@@ -85,7 +85,7 @@ class SiteController extends Controller
 		//the sample map content...
 		$map = new \PHPGoogleMaps\Map;
 
-		$map->setHeight(300);
+		$map->setHeight(350);
 		$map->setWidth(440);
 
 		$locations = array(
