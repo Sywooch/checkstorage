@@ -99,6 +99,7 @@ $this->registerJs($map->printMapJS());
 
 	<div class="row-fluid">
 		<div class="span6">
+			<h4>&nbsp;&nbsp;<i class="icon-truck icon-2x"></i> Standorte</h4>
 			<?php $map->printMap() ?>
 		</div>
 		<div class="span6">
