@@ -89,22 +89,10 @@ class SiteController extends Controller
 		$map->setWidth(440);
 
 		$locations = array(
-			'New York, NY',
-			'San Diego, CA',
-			'Dallas, TX',
-			'Seattle, WA',
-			'Miami, FL',
-			'Atlanta, GA',
-			'Boise, ID',
-			'Green Bay, WI',
-			'Detroit, MI',
-			'Denver, CO',
-			'Phoenix, AZ',
-			'Portland, OR',
-			'Chicago, IL',
-			'New Orleans, LA',
-			'San Francisco, CA',
-			'Las Vegas, NV'
+			'Wien, AT',
+			'München, DE',
+			'Berlin, DE',
+			'Stuttgart, DE'
 		);
 
 		foreach( $locations as $i => $location ) {
