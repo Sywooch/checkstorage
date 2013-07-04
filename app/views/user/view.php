@@ -9,17 +9,17 @@ use \yii\widgets\Block;
 
 <ul class="nav nav-list">
 <li class="nav-header">Aktionen</li>
+	<ul class="unstyled">
+	<?php
 
-<?php
+	if(Yii::$app->user->isAdmin OR Yii::$app->user->id == $model->id)
+		echo '<li>'.Html::a('<i class="icon-pencil"></i> Ändern',array('/user/update','id'=>$model->id)).'</li>';
 
-if(Yii::$app->user->isAdmin OR Yii::$app->user->id == $model->id)
-	echo Html::a('<i class="icon-pencil"></i> Ändern',array('/user/update','id'=>$model->id));
+	if(Yii::$app->user->isAdmin)
+		echo '<li>'.Html::a('<i class="icon-remove"></i> Entfernen',array('/user/softdelete','id'=>$model->id)).'</li>';
 
-if(Yii::$app->user->isAdmin)
-	echo Html::a('<i class="icon-remove"></i> Entfernen',array('/user/softdelete','id'=>$model->id));
-
-?>
-
+	?>
+	</ul>
 </ul>
 
 <?php Block::end(); ?>
