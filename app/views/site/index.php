@@ -135,13 +135,15 @@ $this->registerJs($map->printMapJS());
 			<?php $map->printMap() ?>
 		</div>
 		<div class="span6">			
-		
-<?php foreach( $map->getMarkers() as $n => $marker ): ?>
-	<li id="marker<?php echo $n ?>" style="background-image: url(<?php echo $marker->getIcon() ?>)" onclick="<?php echo $marker->getOpener() ?>">
-		<h4><?php echo $marker->title ?></h4>
-		<p><?php echo $marker->title ?> marker</p>
-	</li>
-<?php endforeach; ?>
+			<h4>&nbsp;&nbsp;<i class="icon-arrow-right icon-2x"></i> Ihr Ihrer Nähe</h4>
+<ul class="unstyled">	
+	<?php foreach( $map->getMarkers() as $n => $marker ): ?>
+		<li id="marker<?php echo $n ?>" style="background-image: url(<?php echo $marker->getIcon() ?>)" onclick="<?php echo $marker->getOpener() ?>">
+			<b><?php echo $marker->title ?></b>
+			<p><?php echo $marker->title ?> marker</p>
+		</li>
+	<?php endforeach; ?>
+</ul>
 
 		</div>
 	</div>
