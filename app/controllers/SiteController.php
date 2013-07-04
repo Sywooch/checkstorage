@@ -81,6 +81,45 @@ class SiteController extends Controller
 
 	public function actionIndex($tag='ALL')
 	{
+
+		//the sample map content...
+		$map = new \PHPGoogleMaps\Map;
+
+		$map->setHeight(300);
+		$map->setWidth(440);
+
+		$locations = array(
+			'New York, NY',
+			'San Diego, CA',
+			'Dallas, TX',
+			'Seattle, WA',
+			'Miami, FL',
+			'Atlanta, GA',
+			'Boise, ID',
+			'Green Bay, WI',
+			'Detroit, MI',
+			'Denver, CO',
+			'Phoenix, AZ',
+			'Portland, OR',
+			'Chicago, IL',
+			'New Orleans, LA',
+			'San Francisco, CA',
+			'Las Vegas, NV'
+		);
+
+		foreach( $locations as $i => $location ) {
+			$marker = \PHPGoogleMaps\Overlay\Marker::createFromLocation($location,
+				array(
+					'title' => $location,
+					'content' => "$location marker"
+				)
+			);
+			$map->addObject( $marker );
+		}
+
+		$e = new \PHPGoogleMaps\Event\EventListener( $map, 'click', 'find_closest_marker');
+		$map->addObject( $e );
+
 		$this->layout = 'column1';
 
 		//the blog part!
@@ -101,7 +140,8 @@ class SiteController extends Controller
 
 		return $this->render('index',array(
 			'models' => $models,
-			'pagination' => $pagination
+			'pagination' => $pagination,
+			'map' => $map,
 		));		
 	}
 

@@ -13,6 +13,10 @@ use app\models\Messages;
 use app\widgets\PortletStorageSearch;
 
 $this->title = 'check storage - Lagerraum, Keller, Dachboden, Selfstorage Vergleich';
+
+$this->registerJs($map->printHeaderJS());
+$this->registerJs($map->printMapJS());
+
 ?>
 
 <?php Block::begin(array('id'=>'sidebar')); ?>
@@ -95,7 +99,7 @@ $this->title = 'check storage - Lagerraum, Keller, Dachboden, Selfstorage Vergle
 
 	<div class="row-fluid">
 		<div class="span6">
-
+			<?php $map->printMap() ?>
 		</div>
 		<div class="span6">
 			<h4>&nbsp;&nbsp;<i class="icon-bullhorn icon-2x"></i> Neuigkeiten</h4>
