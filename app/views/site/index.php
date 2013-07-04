@@ -131,11 +131,11 @@ $this->registerJs($map->printMapJS());
 
 	<div class="row-fluid">
 		<div class="span6">
-			<h4>&nbsp;&nbsp;<i class="icon-truck icon-2x"></i> Standorte</h4>
+			<h4>&nbsp;&nbsp;<i class="icon-globe icon-2x"></i> Standorte</h4>
 			<?php $map->printMap() ?>
 		</div>
 		<div class="span6">			
-			<h4>&nbsp;&nbsp;<i class="icon-arrow-right icon-2x"></i> Ihr Ihrer Nähe</h4>
+			<h4>&nbsp;&nbsp;<i class="icon-truck icon-2x"></i> Ihr Ihrer Nähe</h4>
 <ul class="unstyled">	
 	<?php foreach( $map->getMarkers() as $n => $marker ): ?>
 		<li id="marker<?php echo $n ?>" style="background-image: url(<?php echo $marker->getIcon() ?>)" onclick="<?php echo $marker->getOpener() ?>">
