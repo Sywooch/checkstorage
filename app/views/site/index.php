@@ -14,6 +14,38 @@ use app\widgets\PortletStorageSearch;
 
 $this->title = 'check storage - Lagerraum, Keller, Dachboden, Selfstorage Vergleich';
 
+
+$mapJS = <<<DEL
+
+//google.maps.event.addListener(map, 'click', find_closest_marker);
+function rad(x) {return x*Math.PI/180;}
+function find_closest_marker( event ) {
+	var lat = event.latLng.lat();
+	var lng = event.latLng.lng();
+	var R = 6371;
+	var distances = [];
+	var closest = -1;
+	for( i=0;i<map.markers.length; i++ ) {
+		var mlat = map.markers[i].position.lat();
+		var mlng = map.markers[i].position.lng();
+		var dLat = rad(mlat - lat);
+		var dLong = rad(mlng - lng);
+		var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+		Math.cos(rad(lat)) * Math.cos(rad(lat)) * Math.sin(dLong/2) * Math.sin(dLong/2);
+		var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+		var d = R * c;
+		distances[i] = d;
+		if ( closest == -1 || d < distances[closest] ) {
+			closest = i;
+		}
+	}
+	alert(map.markers[closest].title);
+}
+
+DEL;
+
+$this->registerJs($mapJS);
+
 $this->registerJs($map->printHeaderJS());
 $this->registerJs($map->printMapJS());
 
@@ -102,6 +134,19 @@ $this->registerJs($map->printMapJS());
 			<h4>&nbsp;&nbsp;<i class="icon-truck icon-2x"></i> Standorte</h4>
 			<?php $map->printMap() ?>
 		</div>
+		<div class="span6">			
+		
+<?php foreach( $map->getMarkers() as $n => $marker ): ?>
+	<li id="marker<?php echo $n ?>" style="background-image: url(<?php echo $marker->getIcon() ?>)" onclick="<?php echo $marker->getOpener() ?>">
+		<h4><?php echo $marker->title ?></h4>
+		<p><?php echo $marker->title ?> marker</p>
+	</li>
+<?php endforeach; ?>
+
+		</div>
+	</div>
+
+	<div class="row-fluid">
 		<div class="span6">
 			<h4>&nbsp;&nbsp;<i class="icon-bullhorn icon-2x"></i> Neuigkeiten</h4>
 			
@@ -119,7 +164,7 @@ foreach($models as $model) {
 
 echo LinkPager::widget(array('pagination'=>$pagination));
 ?>
-
 		
 		</div>
+		<div class="span6"></div>
 	</div>
