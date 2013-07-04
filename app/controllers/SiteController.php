@@ -92,7 +92,11 @@ class SiteController extends Controller
 			'Wien, AT',
 			'München, DE',
 			'Berlin, DE',
-			'Stuttgart, DE'
+			'Stuttgart, DE',
+			'Frankfurt, DE',
+			'Hamburg, DE',
+			'Nürnberg, DE',
+			'Graz, AT',
 		);
 
 		foreach( $locations as $i => $location ) {
