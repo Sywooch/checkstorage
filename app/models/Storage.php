@@ -70,4 +70,13 @@ class Storage extends ActiveRecord
         ));
     }
 
+    /**
+    * search storage by quicksearch form
+    * @param model search params to be looked up
+    */
+    public static function searchQuickForm($model,$limit=5){
+        //here we need to implement a google place search returning geo kordinates and then look for places around the search string
+        return static::find()->where("UPPER(city) LIKE '%".strtoupper($model->address)."%'")->limit($limit);
+    }
+
 }

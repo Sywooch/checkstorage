@@ -7,6 +7,8 @@ use yii\jui\DatePicker;
 
 ?>
 
+<?php if(is_Null($hits)): ?>
+
 <?php $form = ActiveForm::begin(array(
 	'options' => array('class' => 'form-search'),
 )); 
@@ -43,3 +45,18 @@ use yii\jui\DatePicker;
 </div>
 
 <?php ActiveForm::end(); ?>
+
+<?php else: ?>
+
+<div style="height:160px">
+
+<?php
+	foreach($hits as $hit) {
+		echo $this->render('@app/views/storage/portlet/_search_result',array('data'=>$hit));
+	}
+?>
+
+</div>
+
+<?php endif; ?>
+

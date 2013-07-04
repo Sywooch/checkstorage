@@ -2,6 +2,8 @@
 use \yii\helpers\Html;
 use \yii\widgets\LinkPager;
 
+use \yii\widgets\Block;
+
 $tdis->params['breadcrumbs']=array(
 	'Manage Posts',
 );
@@ -18,7 +20,20 @@ DEL;
 
 $this->registerJs($deleteJS);
 ?>
-<h1>Standorte verwalten</h1>
+
+<?php Block::begin(array('id'=>'sidebar')); ?>
+	<ul class="nav nav-list">
+	<li class="nav-header">Aktionen</li>
+		<ul class="unstyled">
+		<?php
+			echo '<li>'.Html::a('<i class="icon-plus"></i> Neuen Standort anlegen',array('/storage/create')).'</li>';
+		?>
+		</ul>
+	</ul>
+<?php Block::end(); ?>
+
+
+<h1><i class="icon-building"></i> Standorte verwalten</h1>
 
 
 <table class="table">
@@ -27,6 +42,7 @@ $this->registerJs($deleteJS);
 			<td>#</td>
 			<td>Name</td>
 			<td>Adresse</td>
+			<td>Land</td>
 			<td>PLZ</td>
 			<td>Aktionen</td>
 		</tr>
@@ -39,6 +55,7 @@ $this->registerJs($deleteJS);
 		<td><?php echo $model->id;?></td>
 		<td><?php echo Html::a(Html::encode($model->name), $model->url);?></td>
 		<td><?php echo $model->address;?></td>
+		<td><?php echo $model->country;?></td>
 		<td><?php echo $model->zipcode;?></td>
 		<td>
 			<i class="icon-pencil"></i> 
@@ -47,7 +64,7 @@ $this->registerJs($deleteJS);
 			?>
 			<i class="icon-remove"></i> 
 			<?php
-				echo Html::a('delete', array("delete", "id"=>$model->id), array('class'=>'delete'));
+				echo Html::a('delete', array("softdelete", "id"=>$model->id), array('class'=>'delete'));
 			?>
 		</td>
 	</tr>

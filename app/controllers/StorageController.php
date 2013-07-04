@@ -117,6 +117,7 @@ class StorageController extends Controller
 
 		$countQuery = clone $query;
 		$pagination = new Pagination($countQuery->count());
+		$pagination->pageSize=25;
 
 		$models = $query->offset($pagination->offset)
 			->limit($pagination->limit)
