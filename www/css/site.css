@@ -19,7 +19,7 @@ body {
 
 #map, #map_sidebar { float: left }
 #map_sidebar *, .infowindow * {padding:0;margin:0;}
-#map_sidebar { float:left;margin-left:20px;overflow:auto; border:1px solid #ddd;width:100%;font-size:.8em; }
+#map_sidebar { float:left;margin-left:20px;overflow:auto;border:1px solid #ddd;font-size:.8em;}
 .sidebar { list-style:none;margin:0;padding:0; }
 .sidebar li { border-bottom: 1px dotted #ddd;padding: 5px 10px !important; cursor:pointer; background-repeat: no-repeat;background-position: 5px 5px;}
 .sidebar li:hover { background-color:#eee; }
