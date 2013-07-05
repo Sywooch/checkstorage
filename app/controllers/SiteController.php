@@ -104,7 +104,7 @@ class SiteController extends Controller
 			$marker = \PHPGoogleMaps\Overlay\Marker::createFromLocation($location,
 				array(
 					'title' => $location,
-					'content' => "$location marker"
+					'content' => "$location Lagerplatz"
 				)
 			);
 			$map->addObject( $marker );
