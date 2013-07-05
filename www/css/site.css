@@ -17,7 +17,14 @@ body {
 
 /* the map styles */
 
-#map, #map_sidebar { float: left }
+#map, #map_sidebar { 
+  float: left 
+}
+
+#map img {
+  max-width: none;
+}
+
 #map_sidebar *, .infowindow * {padding:0;margin:0;}
 #map_sidebar { float:left;margin-left:20px;overflow:auto;border:1px solid #ddd;font-size:.8em;width:100%;}
 .sidebar { list-style:none;margin:0;padding:0; }
