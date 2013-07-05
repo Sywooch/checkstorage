@@ -27,11 +27,17 @@ class Storage extends ActiveRecord
 	}
 
     /**
-    * @return model \app\models\costcenter costcenter
+    * @return model \app\models\user Owner
     */
-
     public function getOwner(){
         return $this->hasOne('User', array('id' => 'user_id'));
+    }
+
+    /**
+    * @return model \app\models\comparisonfactor Comparison Factor
+    */
+    public function getComparision(){
+        return $this->hasOne('ComparisionFactor', array('storage_id' => 'id'));
     }
 
     /**
