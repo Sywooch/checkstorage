@@ -38,11 +38,17 @@ $this->registerAssetBundle('app');
 		<?php 
 
 		$MenuItems = array();
-		$MenuItems[] = array('label' => 'Über Uns', 'url' => array('/site/about'));
-		$MenuItems[] = array('label' => 'Kontakt', 'url' => array('/site/contact'));
+		//menu items visible for guests
+		if(Yii::$app->user->isGuest)
+		{
+			$MenuItems[] = array('label' => 'Über Uns', 'url' => array('/site/about'));
+			$MenuItems[] = array('label' => 'Kontakt', 'url' => array('/site/contact'));
+		}
+		//menu items visible for stores and administrator
 		if(Yii::$app->user->identity->position==User::POS_STORE && !Yii::$app->user->isGuest){
 			$MenuItems[] = array('label' => 'Standorte', 'url' => array('/storage/admin'));
 		};
+		//menu items visible for none stores
 		if(!Yii::$app->user->isGuest){
 			$MenuItems[] = array('label' => 'Abmelden', 'url' => array('/site/logout'));
 		};

@@ -144,7 +144,7 @@ class User extends ActiveRecord implements Identity
 		return array(
 			'signup' => array('username', 'email', 'password','name','prename','phone','mobile','fax','role'),
 			'login'  => array('username', 'password'),
-			'default' => array('username', 'email', 'password','name','prename','phone','mobile','fax','role'),
+			'default' => array('username', 'email', 'password','name','prename','phone','mobile','fax','role','messanger'),
 		);
 	}
 
