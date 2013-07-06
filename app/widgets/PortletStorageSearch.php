@@ -24,6 +24,7 @@ class PortletStorageSearch extends Portlet
 		$model = new StorageSearchForm;
 		if ($model->load($_POST))
 		{
+			$model->placeFinder();
 			$hits = Storage::searchQuickForm($model,$this->maxResults)->all();
 		}
 		echo $this->render('@app/views/storage/_search',array('model'=>$model,'hits'=>$hits));

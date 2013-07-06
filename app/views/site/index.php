@@ -134,7 +134,7 @@ $this->registerJs($map->printMapJS());
 		<div class="span5">
 			<?php $map->printMap() ?>
 			<hr>
-<h4>&nbsp;&nbsp;<i class="icon-globe icon-2x"></i> Standorte</h4>
+<h4>&nbsp;&nbsp;<i class="icon-globe icon-2x"></i> Top Standorte</h4>
 <div id="map_sidebar">
 	<ul class="sidebar unstyled">	
 	<?php foreach( $map->getMarkers() as $n => $marker ): ?>

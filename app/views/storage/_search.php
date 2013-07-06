@@ -63,15 +63,12 @@ use yii\jui\DatePicker;
 
 <?php else: ?>
 
-<div style="height:160px">
-
 <?php
 	foreach($hits as $hit) {
-		echo $this->render('@app/views/storage/portlet/_search_result',array('data'=>$hit));
+		echo $this->render('@app/views/storage/portlet/_search_result',array('data'=>$hit,'model'=>$model));
 	}
 ?>
 
-</div>
 
 <?php endif; ?>
 

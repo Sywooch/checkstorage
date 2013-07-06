@@ -39,11 +39,6 @@ Yii::setAlias('@yii2elfinder', __DIR__ . '/../vendor/philippfrenzel/yii2elfinder
 
 Yii::$classMap['SebastianBergmann\Diff'] = __DIR__ . '/../vendor/sebastian/diff/src/Diff.php';
 
-Yii::$classMap['app\extensions\assetparser\Converter'] = __DIR__ . '/../vendor/yiiext/assetparser/Converter.php';
-Yii::$classMap['app\extensions\assetparser\Parser'] = __DIR__ . '/../vendor/yiiext/assetparser/Parser.php';
-Yii::$classMap['app\extensions\assetparser\Less'] = __DIR__ . '/../vendor/yiiext/assetparser/Less.php';
-Yii::$classMap['app\extensions\assetparser\Sass'] = __DIR__ . '/../vendor/yiiext/assetparser/Sass.php';
-
 if(($baseConfig = includeIfExists(__DIR__.'/../app/config/main.php')) && ($localConfig = includeIfExists(__DIR__.'/../app/config/local.php'))) {
 	$config = \yii\helpers\ArrayHelper::merge($baseConfig,$localConfig);
 } else {

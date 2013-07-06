@@ -7,6 +7,8 @@ use \yii\base\Model;
 use \yii\helpers\ArrayHelper;
 use \Yii;
 
+use app\components\GeoLocation;
+
 class Storage extends ActiveRecord
 {
     /**
@@ -22,7 +24,8 @@ class Storage extends ActiveRecord
 	    return array(
 	        array('name, user_id', 'required'),
             array('name, country, address, city','string','max'=>255),
-            array('zipcode','string','max'=>15),	        
+            array('zipcode','string','max'=>15),
+            array('no_latitude, no_longitude','float'),	        
 	    );
 	}
 
@@ -52,6 +55,8 @@ class Storage extends ActiveRecord
             'address'           => Yii::t('app','Address'),
             'city'              => Yii::t('app','City'),
             'zipcode'           => Yii::t('app','Zipcode'),
+            'no_longitude'      => Yii::t('app','Longitude'),
+            'no_latitude'       => Yii::t('app','Latitude'),
         );
     }
 
@@ -82,7 +87,16 @@ class Storage extends ActiveRecord
     */
     public static function searchQuickForm($model,$limit=5){
         //here we need to implement a google place search returning geo kordinates and then look for places around the search string
-        return static::find()->where("UPPER(city) LIKE '%".strtoupper($model->address)."%'")->limit($limit);
+        //return static::find()->where("UPPER(city) LIKE '%".strtoupper($model->address)."%'")->limit($limit);
+        return static::find()->where("(no_latitude BETWEEN '".$model->min_latitude."' AND '".$model->max_latitude."') AND  (no_longitude BETWEEN '".$model->min_longitude."' AND '".$model->max_longitude."')")->limit($limit);
+    }
+
+    public function calcDistanceBetween($latidute,$longitude)
+    {
+        // Set locations
+        $storeplace = GeoLocation::fromDegrees($this->no_latitude, $this->no_longitude);
+        $userplace  = GeoLocation::fromDegrees($latidute, $longitude);
+        return $storeplace->distanceTo($userplace, 'miles');
     }
 
 }
