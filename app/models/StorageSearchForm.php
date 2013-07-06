@@ -42,7 +42,7 @@ class StorageSearchForm extends Model
 			'date_start'       => Yii::t('app','Beginn'),
 			'double_sqm'     => Yii::t('app','Fläche in qm'),
 			'double_distance'     => Yii::t('app','Umkreis (km)'),
-			'int_weeks'     => Yii::t('app','Geplante Lagerzeit'),
+			'int_weeks'     => Yii::t('app','Erwartete Lagerzeit'),
         );
     }
 
