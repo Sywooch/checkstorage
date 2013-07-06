@@ -86,7 +86,7 @@ class SiteController extends Controller
 		$map = new \PHPGoogleMaps\Map;
 
 		$map->setHeight(350);
-		$map->setWidth(440);
+		$map->setWidth('100%');
 
 		$locations = array(
 			'Wien, AT',

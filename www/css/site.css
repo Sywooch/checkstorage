@@ -30,7 +30,7 @@ body {
 }
 
 #map_sidebar *, .infowindow * {padding:0;margin:0;}
-#map_sidebar { float:left;margin-left:20px;overflow:auto;border:1px solid #ddd;font-size:.8em;width:100%;}
+#map_sidebar { float:left;overflow:auto;border:1px solid #ddd;font-size:.8em;width:100%;height:200px;}
 .sidebar { list-style:none;margin:0;padding:0; }
 .sidebar li { border-bottom: 1px dotted #ddd;padding: 5px 10px !important; cursor:pointer; background-repeat: no-repeat;background-position: 5px 5px;}
 .sidebar li:hover { background-color:#eee; }
@@ -44,15 +44,18 @@ body {
 }
 
 .portlet-title{
-	padding-top:2px;
-  color: #32CD32;
+  padding-top:2px;
+  color: #ffffff;
+  /*color: #32CD32;*/
 }
 
 .portlet{
+  background-color: #A4D3EE;
   padding-left: 10px;
   padding-bottom: 10px;
   padding-top: 5px;
   border-left: solid 1px #454545;
+  border-bottom: solid 1px #454545;
   /*box-shadow: 0 0 10px 5px #999999;*/
 }
 
