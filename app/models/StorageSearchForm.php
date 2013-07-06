@@ -16,6 +16,7 @@ class StorageSearchForm extends Model
 	public $date_start;
 	public $double_sqm;
 	public $double_distance;
+	public $int_weeks;
 	
 	/**
 	 * @return array the validation rules.
@@ -27,6 +28,7 @@ class StorageSearchForm extends Model
 			array('address', 'string'),
 			array('date_start','date'),
 			array('double_sqm, double_distance','double'),
+			array('int_weeks','integer'),
 		);
 	}
 
@@ -40,6 +42,7 @@ class StorageSearchForm extends Model
 			'date_start'       => Yii::t('app','Beginn'),
 			'double_sqm'     => Yii::t('app','Fläche in qm'),
 			'double_distance'     => Yii::t('app','Umkreis (km)'),
+			'int_weeks'     => Yii::t('app','Geplante Lagerzeit'),
         );
     }
 

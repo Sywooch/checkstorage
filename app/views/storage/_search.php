@@ -15,8 +15,11 @@ use yii\jui\DatePicker;
 ?>
 
 <div class="row-fluid">
-	<div class="span11">
-		<?php echo $form->field($model,'address')->textInput(array('maxlength'=>128,'placeholder'=>'Ihre Adresse...')); ?>
+	<div class="span6">
+		<?php echo $form->field($model,'address')->textInput(array('maxlength'=>128,'placeholder'=>'Ihre Adresse...','class'=>'input-xlarge')); ?>
+	</div>
+	<div class="span6">
+		<?php echo $form->field($model,'int_weeks')->textInput(array('maxlength'=>128,'placeholder'=>'4 (in Wochen)')); ?>
 	</div>
 </div>
 <div class="row-fluid">
