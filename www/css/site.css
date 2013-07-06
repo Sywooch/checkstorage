@@ -15,6 +15,10 @@ body {
 	color: #32CD32;
 }
 
+#mainnavigation{
+  margin-bottom: 0px;
+}
+
 /* the map styles */
 
 #map, #map_sidebar { 
@@ -48,17 +52,8 @@ body {
   padding-left: 10px;
   padding-bottom: 10px;
   padding-top: 5px;
-  box-shadow: 0 0 10px 5px #999999;
-}
-
-/* Custom container */
-.container {
-	margin: 0 auto;
-	max-width: 1000px;
-}
-
-.container > hr {
-	margin: 60px 0;
+  border-left: solid 1px #454545;
+  /*box-shadow: 0 0 10px 5px #999999;*/
 }
 
 /* Main marketing message and sign up button */

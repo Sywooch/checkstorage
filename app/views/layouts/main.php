@@ -54,6 +54,7 @@ $this->registerAssetBundle('app');
 		};
 
 		echo NavBar::widget(array(
+			'id' => 'mainnavigation',
 			'options' => array('class' => 'nav'),
 			'brandLabel' => 'Start',
 			'items' => array(
