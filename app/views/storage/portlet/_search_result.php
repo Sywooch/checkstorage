@@ -14,8 +14,8 @@ use app\helpers\HighlightHelper;
 </div>
 <table class="table">
 	<tr>
-		<td class="bg-color-white"><i class="icon-flag-checkered fg-color-red"></i> <?php echo number_format($data->calcDistanceBetween($model->latitude, $model->longitude), 2, ',', '.'); ?></td>
-		<td><i class="icon-resize-vertical fg-color-red"></i> <?php echo number_format($data->Comparision->room_height, 2, ',', '.'); ?></td>
+		<td class="bg-color-white"><i class="icon-flag-checkered fg-color-red"></i> <?php echo number_format($data->calcDistanceBetween($model->latitude, $model->longitude), 2, ',', '.'); ?>km</td>
+		<td><i class="icon-resize-vertical fg-color-red"></i> <?php echo number_format($data->Comparision->room_height, 2, ',', '.'); ?>m</td>
 		<td class="bg-color-white"><i class="icon-fire <?php echo $data->Comparision->fireprotection?'fg-color-green':'fg-color-darken'; ?>"></i></td>
 		<td><i class="icon-camera-retro <?php echo $data->Comparision->security_camera?'fg-color-green':'fg-color-darken'; ?>"></i></td>
 		<td class="bg-color-white"><i class="icon-key <?php echo $data->Comparision->security_access?'fg-color-green':'fg-color-darken'; ?>"></i></td>
