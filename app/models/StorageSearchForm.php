@@ -48,7 +48,7 @@ class StorageSearchForm extends Model
     public function attributeLabels()
     {
         return array(
-			'address'         => Yii::t('app','Wo?'),
+			'address'         => Yii::t('app','Wo'),
 			'date_start'      => Yii::t('app','Beginn'),
 			'double_sqm'      => Yii::t('app','Fläche in qm'),
 			'double_distance' => Yii::t('app','Umkreis (km)'),
