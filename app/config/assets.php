@@ -13,8 +13,7 @@ return array(
             'js/dropdown.js',
         ),
         'depends' => array(
-            'yii',
-            'yii/bootstrap'
+            'yii'            
         ),
     ),
     'jquerymetroui' => array(

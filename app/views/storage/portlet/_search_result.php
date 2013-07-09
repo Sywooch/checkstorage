@@ -11,34 +11,34 @@ use app\helpers\HighlightHelper;
 			<?php echo $data->zipcode; ?> <?php echo $data->city; ?> 
 		</div>
 	</div>
-	<div class="span6">
+	<div class="span7">
 		<table class="table striped">
 			<tr>
-				<td class="fg-color-white bg-color-green1">1qm</td>
-				<td class="fg-color-white bg-color-green2">2qm</td>
-				<td class="fg-color-white bg-color-green4">4qm</td>
-				<td class="fg-color-white bg-color-green6">6qm</td>
-				<td class="fg-color-white bg-color-green10">10qm</td>
+				<td class="fg-color-white bg-color-green1" style="text-align:center">1qm</td>
+				<td class="fg-color-white bg-color-green2" style="text-align:center">2qm</td>
+				<td class="fg-color-white bg-color-green4" style="text-align:center">4qm</td>
+				<td class="fg-color-white bg-color-green6" style="text-align:center">6qm</td>
+				<td class="fg-color-white bg-color-green10" style="text-align:center">10qm</td>
 			</tr>
 			<tr>
 				<td>
-					ab 9 <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
+					<small>ab</small><b>9,-</b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
 					Woche
 				</td>
 				<td>
-					ab 17 <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
+					<small>ab</small><b>17,-</b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
 					Woche
 				</td>
 				<td>
-					ab 32 <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
+					<small>ab</small><b>32,-</b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
 					Woche
 				</td>
 				<td>
-					ab 48 <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
+					<small>ab</small><b>48,-</b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
 					Woche
 				</td>
 				<td>
-					ab 78 <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
+					<small>ab</small><b>78,-</b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
 					Woche
 				</td>
 			</tr>

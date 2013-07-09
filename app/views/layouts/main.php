@@ -6,8 +6,11 @@
 use yii\helpers\Html;
 use yii\bootstrap\NavBar;
 use app\models\User;
+use \yii\web\Session;
 
+$this->assetBundles['yii/bootstrap']=true;
 $this->registerAssetBundle('app');
+
 
 ?>
 
@@ -30,7 +33,7 @@ $this->registerAssetBundle('app');
 				<a href="<?php echo Html::Url(array('site/login')); ?>"><i class="icon-signin icon-2x"></i> Anmelden</a>
 			<?php endif; ?>
 		</div>
-		<div id="logostyle">checkstorage</div>
+		<div id="logostyle">CheckStorage</div>
 		<div id="sloganstyle">LAGERRAUM VERGLEICH</div>
 	</div>
 		
@@ -38,11 +41,14 @@ $this->registerAssetBundle('app');
 		<?php 
 
 		$MenuItems = array();
+		//Bedarfssammler
+		$MenuItems[] = array('label' => 'Bedarfssammler', 'url' => array('/opportunities/index'));
+
 		//menu items visible for guests
 		if(Yii::$app->user->isGuest)
 		{
 			$MenuItems[] = array('label' => 'Über Uns', 'url' => array('/site/about'));
-			$MenuItems[] = array('label' => 'Kontakt', 'url' => array('/site/contact'));
+			$MenuItems[] = array('label' => 'Kontakt', 'url' => array('/site/contact'),'options'=>array());
 		}
 		//menu items visible for stores and administrator
 		if(Yii::$app->user->identity->position==User::POS_STORE && !Yii::$app->user->isGuest){
@@ -92,6 +98,7 @@ $this->registerAssetBundle('app');
 			<div class="span4">
 				<ul class="unstyled">
 					<li>Impressum</li>
+					<li>Letzte Suche: <?php $session = new Session; echo $session['address']; ?></li>
 				</ul>
 			</div>
 			<div class="span4">
