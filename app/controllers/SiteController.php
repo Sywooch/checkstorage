@@ -28,6 +28,11 @@ class SiteController extends Controller
 	public $layout='column2';
 
 	/**
+	* @var locations array of the displayed locations
+	*/
+	public $locations = array();
+
+	/**
 	* @var string the default command action.
 	*/
 	public $defaultAction = 'index';
@@ -82,38 +87,6 @@ class SiteController extends Controller
 	public function actionIndex($tag='ALL')
 	{
 
-		//the sample map content...
-		$map = new \PHPGoogleMaps\Map;
-
-		$map->setHeight(350);
-		$map->setWidth('100%');
-
-		$locations = array(
-			'Wien, AT',
-			'München, DE',
-			'Berlin, DE',
-			'Stuttgart, DE',
-			'Frankfurt, DE',
-			'Hamburg, DE',
-			'Nürnberg, DE',
-			'Graz, AT',
-			'Linz, AT',
-			'Zürich, CH',
-		);
-
-		foreach( $locations as $i => $location ) {
-			$marker = \PHPGoogleMaps\Overlay\Marker::createFromLocation($location,
-				array(
-					'title' => $location,
-					'content' => "$location Lagerplatz"
-				)
-			);
-			$map->addObject( $marker );
-		}
-
-		$e = new \PHPGoogleMaps\Event\EventListener( $map, 'click', 'find_closest_marker');
-		$map->addObject( $e );
-
 		$this->layout = 'column1';
 
 		//the blog part!
@@ -136,7 +109,6 @@ class SiteController extends Controller
 		return $this->render('index',array(
 			'models' => $models,
 			'pagination' => $pagination,
-			'map' => $map,
 		));		
 	}
 

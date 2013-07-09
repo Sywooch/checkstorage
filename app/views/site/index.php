@@ -46,10 +46,6 @@ function find_closest_marker( event ) {
 DEL;
 
 $this->registerJs($mapJS);
-
-$this->registerJs($map->printHeaderJS());
-$this->registerJs($map->printMapJS());
-
 ?>
 
 <?php echo yii2tooltipster::widget(array('options'=>array('class'=>'.tipster'))); ?>
@@ -69,6 +65,57 @@ $this->registerJs($map->printMapJS());
 			<?php echo PortletStorageSearch::widget(array(
           		'maxResults'=>5,
       		)); ?>
+
+<?php
+//the sample map content...
+		$map = new \PHPGoogleMaps\Map;
+
+		$map->setHeight(350);
+		$map->setWidth('100%');
+
+		if(count(Yii::$app->controller->locations)==0)
+		{
+			Yii::$app->controller->locations = array(
+				'Wien, AT',
+				'München, DE',
+				'Berlin, DE',
+				'Stuttgart, DE',
+				'Frankfurt, DE',
+				'Hamburg, DE',
+				'Nürnberg, DE',
+				'Graz, AT',
+				'Linz, AT',
+				'Zürich, CH',
+			);		
+			foreach( Yii::$app->controller->locations as $i => $location ) {
+				$marker = \PHPGoogleMaps\Overlay\Marker::createFromLocation($location,
+					array(
+						'title' => $location,
+						'content' => "$location Lagerplatz"
+					)
+				);
+				$map->addObject( $marker );
+			}	
+		}
+		else
+		{
+			foreach( Yii::$app->controller->locations as $i => $location ) {
+				$marker = \PHPGoogleMaps\Overlay\Marker::createFromLocation($location->address,
+					array(
+						'title' => $location->address,
+						'content' => "$location->address Lagerplatz"
+					)
+				);
+				$map->addObject( $marker );
+			}	
+		}
+
+		$e = new \PHPGoogleMaps\Event\EventListener( $map, 'click', 'find_closest_marker');
+		$map->addObject( $e );
+
+$this->registerJs($map->printHeaderJS());
+$this->registerJs($map->printMapJS());
+?>
 
 			<div class="row-fluid">
 				<div class="span6">
@@ -137,7 +184,7 @@ $this->registerJs($map->printMapJS());
 		</div>
 		<div class="span5">
 			<?php $map->printMap() ?>
-			<hr>
+			<p>&nbsp;</p>
 <h4>&nbsp;&nbsp;<i class="icon-globe icon-2x"></i> Top Standorte</h4>
 <div id="map_sidebar">
 	<ul class="sidebar unstyled">	

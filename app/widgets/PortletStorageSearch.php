@@ -34,6 +34,7 @@ class PortletStorageSearch extends Portlet
 
 			$model->placeFinder();
 			$hits = Storage::searchQuickForm($model,$this->maxResults)->all();
+			Yii::$app->controller->locations = $hits;
 		}
 		echo $this->render('@app/views/storage/_search',array('model'=>$model,'hits'=>$hits));
 	}
