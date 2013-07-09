@@ -21,23 +21,23 @@ use app\helpers\HighlightHelper;
 				<td class="fg-color-white bg-color-green10" style="text-align:center">10qm</td>
 			</tr>
 			<tr>
-				<td>
+				<td class="bg-color-blue1">
 					<small>ab</small><b>9,-</b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
 					Woche
 				</td>
-				<td>
+				<td class="bg-color-blue2">
 					<small>ab</small><b>17,-</b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
 					Woche
 				</td>
-				<td>
+				<td class="bg-color-blue4">
 					<small>ab</small><b>32,-</b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
 					Woche
 				</td>
-				<td>
+				<td class="bg-color-blue6">
 					<small>ab</small><b>48,-</b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
 					Woche
 				</td>
-				<td>
+				<td class="bg-color-blue10">
 					<small>ab</small><b>78,-</b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
 					Woche
 				</td>
