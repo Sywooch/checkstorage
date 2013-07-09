@@ -107,6 +107,8 @@ $this->registerJs($mapJS);
 					'content' => "Ihr Standort"
 				)
 			);
+			$icon1 = new \PHPGoogleMaps\Overlay\MarkerIcon( 'img/mapmarker_icon.gif' );
+			$marker->setIcon( $icon1 );
 			$map->addObject( $marker );
 
 			foreach( Yii::$app->controller->locations as $i => $location ) {
@@ -116,6 +118,8 @@ $this->registerJs($mapJS);
 						'content' => "$location->address Lagerplatz"
 					)
 				);
+				$icon2 = new \PHPGoogleMaps\Overlay\MarkerIcon( 'img/truck3.png' );
+				$marker->setIcon( $icon2 );
 				$map->addObject( $marker );
 			}	
 		}
@@ -200,8 +204,10 @@ $this->registerJs($map->printMapJS());
 	<ul class="sidebar unstyled">	
 	<?php foreach( $map->getMarkers() as $n => $marker ): ?>
 		<li id="marker<?php echo $n ?>" style="background-image: url(<?php echo $marker->getIcon() ?>)" onclick="<?php echo $marker->getOpener() ?>">
-			<b><?php echo $marker->title ?></b>
-			<p><?php echo $marker->title ?></p>
+			<div style='padding-left:30px'>
+				<b><?php echo $marker->title ?></b>
+				<p><?php echo $marker->content ?></p>
+			</div>
 		</li>
 	<?php endforeach; ?>
 	</ul>
