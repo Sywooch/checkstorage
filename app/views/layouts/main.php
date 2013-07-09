@@ -19,6 +19,13 @@ $this->registerAssetBundle('app');
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
+	
+	<meta name="description" content="Wir sind die Plattform für den DACH weiten vergleih von Lagerplatz, Börse, Bedarfsermittlung, Storage Plattform, Self Storage, Lager, Keller, Dachboden, Verleih von Flächen" />
+	<meta name="keywords" content="Lagerplatz Vergleich, Börse, Bedarfsermittlung, Storage Plattform, Self Storage, Lager, Keller, Dachboden, Verleih von Flächen" />
+	<meta name="author" content="Frenzel GmbH">
+	<meta name="robots" content="index, follow" />
+	<meta name="revisit-after" content="3 month" />
+
 	<title><?php echo Html::encode($this->title); ?></title>
 	<?php $this->head(); ?>
 </head>
