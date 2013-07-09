@@ -99,10 +99,20 @@ $this->registerJs($mapJS);
 		}
 		else
 		{
+			//adding the user search address
+			$session = new \yii\web\Session;
+			$marker = \PHPGoogleMaps\Overlay\Marker::createFromLocation($session[address],
+				array(
+					'title' => $session[address] .' Ihr Standort',
+					'content' => "Ihr Standort"
+				)
+			);
+			$map->addObject( $marker );
+
 			foreach( Yii::$app->controller->locations as $i => $location ) {
 				$marker = \PHPGoogleMaps\Overlay\Marker::createFromLocation($location->address,
 					array(
-						'title' => $location->address,
+						'title' => $location->address.' Lagerraum',
 						'content' => "$location->address Lagerplatz"
 					)
 				);
@@ -191,7 +201,7 @@ $this->registerJs($map->printMapJS());
 	<?php foreach( $map->getMarkers() as $n => $marker ): ?>
 		<li id="marker<?php echo $n ?>" style="background-image: url(<?php echo $marker->getIcon() ?>)" onclick="<?php echo $marker->getOpener() ?>">
 			<b><?php echo $marker->title ?></b>
-			<p><?php echo $marker->title ?> Lagerraum</p>
+			<p><?php echo $marker->title ?></p>
 		</li>
 	<?php endforeach; ?>
 	</ul>

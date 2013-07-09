@@ -68,6 +68,10 @@ use yii\jui\DatePicker;
 	foreach($hits as $hit) {
 		echo $this->render('@app/views/storage/portlet/_search_result',array('data'=>$hit,'model'=>$model));
 	}
+
+	if(count($hits)==0)
+		echo "An der von Ihnen angegebenen Adresse wurden keine Treffer gefunden, bitte versuchen Sie es erneut mit Strasse, Ort und Land..."
+
 ?>
 
 
