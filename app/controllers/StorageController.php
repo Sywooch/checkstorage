@@ -101,7 +101,8 @@ class StorageController extends Controller
 			->orderBy('id DESC');
 
 		$countQuery = clone $query;
-		$pagination = new Pagination($countQuery->count());
+		$pagination = new Pagination();
+		$pagination->itemCount = $countQuery->count();
 
 		$models = $query->offset($pagination->offset)
 			->limit($pagination->limit)
@@ -123,7 +124,8 @@ class StorageController extends Controller
 				->orderBy('id DESC');
 
 		$countQuery = clone $query;
-		$pagination = new Pagination($countQuery->count());
+		$pagination = new Pagination();
+		$pagination->itemCount = $countQuery->count();
 		$pagination->pageSize=25;
 
 		$models = $query->offset($pagination->offset)

@@ -11,6 +11,8 @@ use app\models\Messages;
 
 use app\widgets\PortletStorageSearch;
 
+use yii2tooltipster\yii2tooltipster;
+
 $this->title = 'check storage - Lagerraum, Keller, Dachboden, Selfstorage Vergleich';
 
 
@@ -49,6 +51,8 @@ $this->registerJs($map->printHeaderJS());
 $this->registerJs($map->printMapJS());
 
 ?>
+
+<?php echo yii2tooltipster::widget(array('options'=>array('class'=>'.tipster'))); ?>
 
 <?php Block::begin(array('id'=>'sidebar')); ?>
 	
@@ -97,13 +101,13 @@ $this->registerJs($map->printMapJS());
 				</div>
 			</div>
 			<div class="row-fluid">
-				<div class="span6">
+				<div class="span6">					
 					<h4>&nbsp;&nbsp;<i class="icon-book icon-2x"></i>Für Kunden!</h4>
 					<ul>
 						<li>Meine Abteile</li>
 						<li>Meine Rechnungen</li>
 					</ul>
-					<a href="#" class="btn btn-info span12"><i class="icon-signin"></i> Anmelden</a>			
+					<a href="#" class="btn btn-info span12"><i class="icon-signin"></i> Anmelden</a>		
 				</div>
 				<div class="span6">
 					<h4>&nbsp;&nbsp;<i class="icon-bullhorn icon-2x"></i> Neuigkeiten</h4>
@@ -126,7 +130,7 @@ $this->registerJs($map->printMapJS());
 				</div>
 			</div>
 			<div class="row-fluid">
-				<div class="span6">
+				<div class="span12">
 					
 				</div>				
 			</div>

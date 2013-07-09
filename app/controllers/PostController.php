@@ -94,7 +94,8 @@ class PostController extends Controller
 		if (!empty($tag))
 			$query->andWhere(array('like', 'tags', '%'.$tag.'%'));
 		$countQuery = clone $query;
-		$pagination = new Pagination($countQuery->count());
+		$pagination = new Pagination();
+		$pagination->itemCount = $countQuery->count();
 
 		$models = $query->offset($pagination->offset)
 				->limit($pagination->limit)
@@ -124,7 +125,8 @@ class PostController extends Controller
 			->orderBy('time_create DESC');
 
 		$countQuery = clone $query;
-		$pagination = new Pagination($countQuery->count());
+		$pagination = new Pagination();
+		$pagination->itemCount = $countQuery->count();
 		
 		$models = $query->offset($pagination->offset)
 				->limit($pagination->limit)

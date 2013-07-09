@@ -93,7 +93,8 @@ class MessagesController extends Controller
 			->orderBy('date_create DESC');
 
 		$countQuery = clone $query;
-		$pagination = new Pagination($countQuery->count());
+		$pagination = new Pagination();
+		$pagination->itemCount = $countQuery->count();
 
 		$models = $query->offset($pagination->offset)
 			->limit($pagination->limit)
@@ -114,7 +115,8 @@ class MessagesController extends Controller
 		$query = Messages::find()->all();
 
 		$countQuery = clone $query;
-		$pagination = new Pagination($countQuery->count());
+		$pagination = new Pagination();
+		$pagination->itemCount = $countQuery->count();
 		
 		$models = $query->offset($pagination->offset)
 				->limit($pagination->limit)

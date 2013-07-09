@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "8d0896610ca2c15d61d86e04d2c6e2a7",
+    "hash": "7a461e41bdc819f4898dfe639242aa97",
     "packages": [
         {
             "name": "anthonymartin/geo-location",
@@ -97,6 +97,50 @@
                 "yii2 elfinder filemaneger"
             ],
             "time": "2013-06-23 17:27:59"
+        },
+        {
+            "name": "philippfrenzel/yii2tooltipster",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/philippfrenzel/yii2tooltipster.git",
+                "reference": "e8530cbb46c5bc4aef1469828d892ff4862e6a7c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/philippfrenzel/yii2tooltipster/zipball/e8530cbb46c5bc4aef1469828d892ff4862e6a7c",
+                "reference": "e8530cbb46c5bc4aef1469828d892ff4862e6a7c",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "yii2tooltipster\\": "/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Philipp Frenzel",
+                    "email": "philipp@frenzel.net",
+                    "homepage": "http://www.frenzel.net/",
+                    "role": "Author Version Yii2"
+                }
+            ],
+            "description": "Yii2 tooltipster Integration",
+            "homepage": "http://www.frenzel.net/",
+            "keywords": [
+                "framework",
+                "yii",
+                "yii2 jquery tooltipster"
+            ],
+            "time": "2013-07-09 15:28:52"
         },
         {
             "name": "philippfrenzel/yii2wikiparser",
@@ -498,12 +542,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "222e1939856808fe4d02ec856a08721858d0217b"
+                "reference": "1.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/222e1939856808fe4d02ec856a08721858d0217b",
-                "reference": "222e1939856808fe4d02ec856a08721858d0217b",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/1.0.0",
+                "reference": "1.0.0",
                 "shasum": ""
             },
             "require": {
@@ -540,7 +584,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2013-05-23 05:55:40"
+            "time": "2013-07-09 05:45:26"
         },
         {
             "name": "yiiext/assetparser",
@@ -567,12 +611,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "047308d40ec62b82fc62adf3ec5e02f3a46d38ab"
+                "reference": "acd121b9f96f9540f4f0946afac1f758e6b39216"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/047308d40ec62b82fc62adf3ec5e02f3a46d38ab",
-                "reference": "047308d40ec62b82fc62adf3ec5e02f3a46d38ab",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/acd121b9f96f9540f4f0946afac1f758e6b39216",
+                "reference": "acd121b9f96f9540f4f0946afac1f758e6b39216",
                 "shasum": ""
             },
             "require": {
@@ -653,7 +697,7 @@
                 "framework",
                 "yii"
             ],
-            "time": "2013-07-06 12:24:33"
+            "time": "2013-07-09 14:23:39"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -719,7 +763,8 @@
         "philippfrenzel/yii2elfinder": 20,
         "phpmailer/phpmailer": 20,
         "anthonymartin/geo-location": 20,
-        "php-google-maps/php-google-maps": 20
+        "php-google-maps/php-google-maps": 20,
+        "philippfrenzel/yii2tooltipster": 20
     },
     "platform": [
 

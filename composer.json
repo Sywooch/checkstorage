@@ -48,7 +48,8 @@
         "philippfrenzel/yii2elfinder": "dev-master",
         "phpmailer/phpmailer": "dev-master",
         "anthonymartin/geo-location": "dev-master",
-        "php-google-maps/php-google-maps": "dev-master"
+        "php-google-maps/php-google-maps": "dev-master",
+        "philippfrenzel/yii2tooltipster": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

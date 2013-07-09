@@ -55,6 +55,7 @@ class UserController extends Controller
 
 		$countmsgQuery = clone $msgquery;
 		$msgpagination = new Pagination($countmsgQuery->count());
+		$msgpagination->itemCount = $countmsgQuery->count();
 
 		$msgmodels = $msgquery->offset($msgpagination->offset)
 						->limit($msgpagination->limit)
@@ -146,7 +147,8 @@ class UserController extends Controller
 		$query = User::find();
 
 		$countQuery = clone $query;
-		$pagination = new Pagination($countQuery->count());
+		$pagination = new Pagination();
+		$pagination->itemCount = $countQuery->count();
 
 		$models = $query->offset($pagination->offset)
 			->limit($pagination->limit)

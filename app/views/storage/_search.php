@@ -16,16 +16,16 @@ use yii\jui\DatePicker;
 
 <div class="row-fluid">
 	<div class="span6">
-		<?php echo $form->field($model,'address')->textInput(array('maxlength'=>128,'placeholder'=>'Ihre Adresse...','class'=>'input-xlarge')); ?>
+		<?php echo $form->field($model,'address')->textInput(array('maxlength'=>128,'placeholder'=>'Ihre Adresse...','class'=>'input-xlarge tipster','title'=>'Adresse, Stadt oder Postleitzahl eintragen...')); ?>
 	</div>
 	<div class="span6">
-		<?php echo $form->field($model,'int_weeks')->textInput(array('maxlength'=>128,'placeholder'=>'4 (in Wochen)')); ?>
+		<?php echo $form->field($model,'int_weeks')->textInput(array('maxlength'=>128,'placeholder'=>'4 (in Wochen)','class'=>'tipster','title'=>'Mietdauer in Wochen, min. 2 Wochen...')); ?>
 	</div>
 </div>
 <div class="row-fluid">
 	<div class="span6">		
-		<?php echo $form->field($model,'double_sqm')->textInput(array('size'=>80,'maxlength'=>128,'class'=>'input-small','placeholder'=>'1.00')); ?>
-		<?php echo $form->field($model,'double_distance')->textInput(array('size'=>80,'maxlength'=>128,'class'=>'input-small','placeholder'=>'5')); ?>
+		<?php echo $form->field($model,'double_sqm')->textInput(array('size'=>80,'maxlength'=>128,'class'=>'input-small tipster','placeholder'=>'1.00','title'=>'Grundfläche in Quadratmetern, von 0.5 bis 100')); ?>
+		<?php echo $form->field($model,'double_distance')->textInput(array('size'=>80,'maxlength'=>128,'class'=>'input-small tipster','placeholder'=>'5','title'=>'Maximale Entfernung von ihrer obigen Adresse...')); ?>
 	</div>
 	<div class="span6">
 		<div class="control-group">
@@ -38,8 +38,9 @@ use yii\jui\DatePicker;
 			      'attribute' => 'date_start',
 			      'inline'=>false,
 			      'options'=>array(
-			      	'class'=>'input-small',
+			      	'class'=>'input-small tipster',
 			      	'placeholder'=>date('d-m-Y'),
+			      	'title'=>'Ab wann benötigen Sie das Abteil...',
 			      ),
 			      'clientOptions' => array(
 			          'dateFormat' => 'dd-mm-yy',
