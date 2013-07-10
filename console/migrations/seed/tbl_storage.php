@@ -461,5 +461,15 @@ return array(
 		'no_latitude'	=> '48.813995',
 		'no_longitude'  => '9.160612',
 	),
+	'shurgard1' => array(
+		'user_id'		=> 8,
+		'name'          => 'Paris-Gare de l Est',		
+		'country'       => 'FR',
+		'address'       => '21-23, rue Eugène Varlin',
+		'zipcode'       => '75010',
+		'city'          => 'Paris',
+		'no_latitude'	=> '45.826413',
+		'no_longitude'  => '1.273833',
+	),
 );
 
