@@ -58,4 +58,20 @@ use yii\widgets\Block;
 			<li>Musik im Gebäude</li>
 		</ul>
 	</ul>
+	Haben Sie weitere Kriterien, die Ihre Mietentscheidung beeinflussen, so würden wir es sehr begrüßen, wenn Sie es uns wissen lassen würden!
+	Am besten sie schicken uns eine mail an <b>kontakt (at) checkstorage.de</b> und beschreiben ihre Wünsche. Wir sind sehr daran interessiert, Sie als
+	Konsument bei der richtigen Entscheidung zu unterstützen.
 </p>
+<h2>
+	Ich bin Anbieter und möchte die Pflege meiner Standorte übernehmen...
+</h2>
+<p>
+	Sie sind Anbieter und möchten die von uns gesammelten Daten qualitativ und quantitativ erweitern, so melden Sie sich bei 
+	unserem Kooperationsteam, am besten per Mail - <b>kooperation (at) checkstorage.de</b> - wir freuen uns Ihnen einen gesonderten Zugang 
+	zu eröffnen und Ihnen die Herrchaft über die Daten zu übertragen.
+</p>
+<p>
+	Da alle Daten auf unserer Webseite entweder von Ihren öffentlichen Präsenzen stammen oder mit Ihrem Einverständnis erweitert werden,
+	erheben wir nicht den Anspruch auf Vollständigkeit.
+</p>
+<p>&nbsp;</p>
