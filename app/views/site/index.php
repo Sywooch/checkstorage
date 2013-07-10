@@ -216,7 +216,13 @@ $this->registerJs($map->printMapJS());
 	<?php endforeach; ?>
 	</ul>
 </div>
-
+<p>&nbsp;</p>
+<h4>&nbsp;&nbsp;<i class="icon-user-md icon-2x"></i> Über Uns</h4>
+	<ul>
+		<li>Fair</li>
+		<li>Zuverlässig</li>
+		<li>Erreichbar</li>
+	</ul>
 		</div>		
 	</div>
 
