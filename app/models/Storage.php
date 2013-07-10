@@ -44,6 +44,20 @@ class Storage extends ActiveRecord
     }
 
     /**
+    * @return model \app\models\comparisonfactor Comparison Factor
+    */
+    public function getUnits(){
+        return $this->hasMany('Unit', array('storage_id' => 'id'));
+    }
+
+    /**
+    * @return model \app\models\comparisonfactor Comparison Factor
+    */
+    public function getUnitPrice($size){
+        return $this->hasOne('Unit', array('storage_id' => 'id','size_code'=>(double)$size));
+    }
+
+    /**
      * @return array customized attribute labels (name=>label)
      */
     public function attributeLabels()
