@@ -98,15 +98,18 @@ $this->registerJs($mapJS);
 		{
 			//adding the user search address
 			$session = new \yii\web\Session;
-			$marker = \PHPGoogleMaps\Overlay\Marker::createFromLocation($session[address],
-				array(
-					'title' => $session[address] .' Ihr Standort',
-					'content' => "Ihr Standort"
-				)
-			);
-			$icon1 = new \PHPGoogleMaps\Overlay\MarkerIcon( 'img/mapmarker_icon.gif' );
-			$marker->setIcon( $icon1 );
-			$map->addObject( $marker );
+			if(strlen($session[address])>0)
+			{
+				$marker = \PHPGoogleMaps\Overlay\Marker::createFromLocation($session[address],
+					array(
+						'title' => $session[address] .' Ihr Standort',
+						'content' => "Ihr Standort"
+					)
+				);
+				$icon1 = new \PHPGoogleMaps\Overlay\MarkerIcon( 'img/mapmarker_icon.gif' );
+				$marker->setIcon( $icon1 );
+				$map->addObject( $marker );
+			}
 
 			if(count(Yii::$app->controller->locations)>0){
 				foreach( Yii::$app->controller->locations as $i => $location ) {
