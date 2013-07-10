@@ -75,18 +75,15 @@ $this->registerJs($mapJS);
 
 		if(count(Yii::$app->controller->locations)==0)
 		{
-			Yii::$app->controller->locations = array(
-				'Wien, AT',
-				'München, DE',
-				'Berlin, DE',
-				'Stuttgart, DE',
-				'Frankfurt, DE',
-				'Hamburg, DE',
-				'Nürnberg, DE',
-				'Graz, AT',
-				'Linz, AT',
-				'Zürich, CH',
-			);		
+			$tmplocations = array();
+			$storages = app\models\Storage::find()->select('city, country')->distinct()->all();
+			foreach($storages as $storage)
+			{
+				$tmplocations[] = $storage->city .', '.$storage->country;
+			}
+
+			Yii::$app->controller->locations = $tmplocations;
+
 			foreach( Yii::$app->controller->locations as $i => $location ) {
 				$marker = \PHPGoogleMaps\Overlay\Marker::createFromLocation($location,
 					array(

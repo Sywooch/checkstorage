@@ -133,6 +133,16 @@ return array(
 	),
 	array(
 		'user_id' => '3',
+		'name' => 'Linz',	
+		'country' => 'AT',
+		'address' => 'Unionstraße 73',
+		'zipcode' => '4020',
+		'city' => 'Linz',
+		'no_latitude'	=> '48.282620',
+		'no_longitude'  => '14.287795',
+	),
+	array(
+		'user_id' => '3',
 		'name' => 'Oerlikon/Hagenholzstrasse',	
 		'country' => 'CH',
 		'address' => 'Vegastrasse 2',
