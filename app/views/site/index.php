@@ -108,17 +108,19 @@ $this->registerJs($mapJS);
 			$marker->setIcon( $icon1 );
 			$map->addObject( $marker );
 
-			foreach( Yii::$app->controller->locations as $i => $location ) {
-				$marker = \PHPGoogleMaps\Overlay\Marker::createFromLocation($location->address.', '.$location->city,
-					array(
-						'title' => $location->address.' Lagerraum',
-						'content' => "$location->address Lagerplatz"
-					)
-				);
-				$icon2 = new \PHPGoogleMaps\Overlay\MarkerIcon( 'img/truck3.png' );
-				$marker->setIcon( $icon2 );
-				$map->addObject( $marker );
-			}	
+			if(count(Yii::$app->controller->locations)>0){
+				foreach( Yii::$app->controller->locations as $i => $location ) {
+					$marker = \PHPGoogleMaps\Overlay\Marker::createFromLocation($location->address.', '.$location->city,
+						array(
+							'title' => $location->address.' Lagerraum',
+							'content' => "$location->address Lagerplatz"
+						)
+					);
+					$icon2 = new \PHPGoogleMaps\Overlay\MarkerIcon( 'img/truck3.png' );
+					$marker->setIcon( $icon2 );
+					$map->addObject( $marker );
+				}	
+			}
 		}
 
 		$e = new \PHPGoogleMaps\Event\EventListener( $map, 'click', 'find_closest_marker');
