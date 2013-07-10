@@ -53,8 +53,11 @@ class Storage extends ActiveRecord
     /**
     * @return model \app\models\comparisonfactor Comparison Factor
     */
-    public function getUnitPrice($size){
-        return $this->hasOne('Unit', array('storage_id' => 'id','size_code'=>(double)$size));
+    public function getUnitPrice($size=1){
+        return $this->hasOne('Unit', array('storage_id' => 'id'))
+            ->where('size_code = :size_code',array(':size_code'=>(double)$size))
+            ->orderBy('size_code ASC')
+            ->limit(1);
     }
 
     /**
