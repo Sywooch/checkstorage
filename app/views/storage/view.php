@@ -33,7 +33,7 @@ use \yii\widgets\Block;
 echo \yii\widgets\DetailView::widget(array(
 	'model' => $model->Comparision,
 	'attributes' => array(
-		'date_opening',
+		//'date_opening',
 		'no_elevators',
 		'room_height',
 		'opening_start',
