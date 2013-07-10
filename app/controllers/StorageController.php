@@ -37,7 +37,7 @@ class StorageController extends Controller
 					),
 					array(
 						'allow'=>true,
-						'actions'=>array('update','create','index','admin','jsongridstoragedata'),
+						'actions'=>array('view','update','create','index','admin','jsongridstoragedata'),
 				        'roles'=>array('@'),
 					),  
 					array(
