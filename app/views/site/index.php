@@ -91,6 +91,8 @@ $this->registerJs($mapJS);
 						'content' => "$location Lagerplatz"
 					)
 				);
+				$icon1 = new \PHPGoogleMaps\Overlay\MarkerIcon( 'img/flags_iso/24/'.substr($location,-2).'.png' );
+				$marker->setIcon( $icon1 );
 				$map->addObject( $marker );
 			}	
 		}
