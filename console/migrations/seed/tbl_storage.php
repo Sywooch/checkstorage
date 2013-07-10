@@ -123,6 +123,16 @@ return array(
 	),
 	array(
 		'user_id' => '3',
+		'name' => 'Graz',	
+		'country' => 'AT',
+		'address' => 'Starhemberggasse 4',
+		'zipcode' => '8020',
+		'city' => 'Graz',
+		'no_latitude'	=> '47.075107',
+		'no_longitude'  => '15.411952',
+	),
+	array(
+		'user_id' => '3',
 		'name' => 'Oerlikon/Hagenholzstrasse',	
 		'country' => 'CH',
 		'address' => 'Vegastrasse 2',
