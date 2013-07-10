@@ -26,3 +26,36 @@ use yii\widgets\Block;
 	ein Lagerraum Anbierter als auch ein Lagerraum Nutzer. Selfstorage ist auf Grund der steigenden Mobilität, sowie dem Wegfall
 	von traditionellen Lagerflächen (Dachboden - immer öfter ausgebaut), Keller - Nuzung als Parkplatz, etc. immer attraktiver geworden.	
 </p>
+<h2>
+	Leistungsübersicht/Mehrleistungen
+</h2>
+<p>
+	Für die erweiterte Bewertung eines Anbieters nutzen wir die folgenden Kategorien:
+	<ul>
+		<li>Sicherheit</li>
+		<ul>
+			<li>Kameraüberwachung</li>
+			<li>Zugangssicherheit</li>
+			<li>Sicherheitsdienst</li>
+			<li>Brandschutz/Brandmelder</li>
+		</ul>
+		<li>Verfügbarkeit</li>
+		<ul>
+			<li>Zugang zum Abteil</li>
+			<li>Anprechpartner vor Ort</li>
+		</ul>
+		<li>Gebäudeinfos</li>
+		<ul>
+			<li>Aufzug</li>
+			<li>Barrierefrei</li>
+			<li>Aussenabteile</li>
+			<li>Klima</li>
+		</ul>
+		<li>Zusatzleistungen</li>
+		<ul>
+			<li>Umzugshilfen</li>
+			<li>Verpackungsmaterial vor Ort / Shop</li>
+			<li>Musik im Gebäude</li>
+		</ul>
+	</ul>
+</p>

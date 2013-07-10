@@ -136,8 +136,8 @@ $this->registerJs($map->printMapJS());
 					<h4>&nbsp;&nbsp;<i class="icon-user icon-2x"></i> Für Interessenten!</h4>
 					<ul>
 						<li>Bedarfssammler</li>
-						<li>Wo ist der nächste Store?</li>
-						<li>Welche Leistungen?</li>
+						<li>Wo liegt mein nächster SelfStorage Anbieter?</li>
+						<li>Welche Mehrleistungen?</li>
 						<li>Wieviel kostet es mich?</li>
 						<li>Lagertraum - Ich suche, Ihr bietet?!</li>
 					</ul>
