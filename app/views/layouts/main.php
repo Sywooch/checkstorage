@@ -20,11 +20,11 @@ $this->registerAssetBundle('app');
 <head>
 	<meta charset="utf-8"/>
 	
-	<meta name="description" content="Wir sind die Plattform für den DACH weiten vergleih von Lagerplatz, Börse, Bedarfsermittlung, Storage Plattform, Self Storage, Lager, Keller, Dachboden, Verleih von Flächen" />
+	<meta name="description" content="Checkstorage ist die Selfstorage Vergleichs Plattform für den EU-weiten Vergleich von Lagerplatz, Mietflächen, Lager Bedarfsermittlung, Storage Plattform, Self Storage, Lager, Keller, Dachboden, Verleih von Flächen" />
 	<meta name="keywords" content="Lagerplatz Vergleich, Börse, Bedarfsermittlung, Storage Plattform, Self Storage, Lager, Keller, Dachboden, Verleih von Flächen" />
 	<meta name="author" content="Frenzel GmbH">
 	<meta name="robots" content="index, follow" />
-	<meta name="revisit-after" content="3 month" />
+	<meta name="revisit-after" content="1 month" />
 
 	<title><?php echo Html::encode($this->title); ?></title>
 	<?php $this->head(); ?>
@@ -94,7 +94,7 @@ $this->registerAssetBundle('app');
 	<div class="container">
 		<div class="row-fluid">
 			<div class="span12">
-				<b>Lagerplatz Vergleich, Börse, Bedarfsermittlung, Storage Plattform, Self Storage, Lager, Keller, Dachboden, Verleih von Flächen</b>
+				<b>Lagerplatz Vergleich, Börse, Bedarfsermittlung, Storage Plattform, Self Storage, Lager, Keller, Dachboden, Verleih von Flächen, Möbel einlagern, Mietflächen</b>
 			</div>
 		</div>
 		<div class="row-fluid">
