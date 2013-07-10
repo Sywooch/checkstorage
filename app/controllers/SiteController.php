@@ -69,7 +69,7 @@ class SiteController extends Controller
 				'rules' => array(
 					array(
 						'allow'=>true,
-						'actions'=>array('login','index','register','contact','about'),
+						'actions'=>array('login','index','register','contact','about','page'),
 						'roles'=>array('?'), // allow guest users to access the named actions 
 					),
 					array(

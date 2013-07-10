@@ -50,6 +50,7 @@ $this->registerAssetBundle('app');
 		$MenuItems = array();
 		//Bedarfssammler
 		$MenuItems[] = array('label' => 'Bedarfssammler', 'url' => array('/opportunities/index'));
+		$MenuItems[] = array('label' => 'Dokumentation', 'url' => array('/site/page','view'=>'page_test'));
 
 		//menu items visible for guests
 		if(Yii::$app->user->isGuest)
@@ -92,6 +93,11 @@ $this->registerAssetBundle('app');
 <div id="footer" class="footer bg-color-darken fg-color-white">
 	<div class="container">
 		<div class="row-fluid">
+			<div class="span12">
+				<b>Lagerplatz Vergleich, Börse, Bedarfsermittlung, Storage Plattform, Self Storage, Lager, Keller, Dachboden, Verleih von Flächen</b>
+			</div>
+		</div>
+		<div class="row-fluid">
 			<div class="span4">
 				<ul class="unstyled">
 					<li>&copy; Frenzel GmbH <?php echo date('Y'); ?></li>				
@@ -105,7 +111,7 @@ $this->registerAssetBundle('app');
 			<div class="span4">
 				<ul class="unstyled">
 					<li>Impressum</li>
-					<li>Letzte Suche: <?php $session = new Session; echo $session['address']; ?></li>
+					<li>Letzte Suche: <?php $session = new Session; echo $session['address']; ?></li>					
 				</ul>
 			</div>
 			<div class="span4">
@@ -115,7 +121,7 @@ $this->registerAssetBundle('app');
 					<li>+43 699 19 08 9393 (AT)</li>		
 				</ul>
 			</div>
-		</div>
+		</div>		
 	</div>			
 </div>
 
