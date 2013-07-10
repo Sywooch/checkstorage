@@ -381,5 +381,15 @@ return array(
 	  	'no_latitude'	=> '49.482363',
 		'no_longitude'  => '11.117160',
 	  ),
+	  'deindepotat' => array(
+		'user_id'		=> 4,
+		'name'          => 'Zissersdorf',		
+		'country'       => 'AT',
+		'address'       => 'Industriezeile',
+		'zipcode'       => '2000',
+		'city'          => 'Zissersdorf bei Stockerau',
+		'no_latitude'	=> '48.402040',
+		'no_longitude'  => '16.140090',
+	),
 );
 
