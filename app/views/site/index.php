@@ -112,7 +112,7 @@ $this->registerJs($mapJS);
 			$map->addObject( $marker );
 
 			foreach( Yii::$app->controller->locations as $i => $location ) {
-				$marker = \PHPGoogleMaps\Overlay\Marker::createFromLocation($location->address,
+				$marker = \PHPGoogleMaps\Overlay\Marker::createFromLocation($location->address.', '.$location->city,
 					array(
 						'title' => $location->address.' Lagerraum',
 						'content' => "$location->address Lagerplatz"
