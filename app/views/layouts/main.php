@@ -113,6 +113,16 @@ $this->registerAssetBundle('app');
 					<li>Impressum</li>
 					<li>Letzte Suche: <?php $session = new Session; echo $session['address']; ?></li>					
 				</ul>
+				<ul class="unstyled">
+					<li>Leistungen</li>
+					<ul>
+						<li>Lagerraum</li>
+						<li>Selfstorage</li>
+						<li>Leistungsvergleich</li>
+						<li>Lagerplatzsuche</li>
+						<li>Lagerraum Bedarfssammlung</li>
+					</ul>
+				</ul>
 			</div>
 			<div class="span4">
 				<ul class="unstyled">
