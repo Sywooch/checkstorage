@@ -35,6 +35,7 @@ Yii::setAlias('@yii2tooltipster', __DIR__ . '/../vendor/philippfrenzel/yii2toolt
 Yii::setAlias('@yiimetroui', __DIR__ . '/../vendor/philippfrenzel/yiimetroui/yiimetroui/');
 Yii::setAlias('@yiijquerytoc', __DIR__ . '/../vendor/philippfrenzel/yiijquerytoc/yiijquerytoc/');
 Yii::setAlias('@yiiwymeditor', __DIR__ . '/../vendor/philippfrenzel/yiiwymeditor/yiiwymeditor/');
+Yii::setAlias('@yii/jui', __DIR__ . '/../vendor/yiisoft/yii2-jui/yii/jui/');
 
 //adding elfinder
 Yii::setAlias('@yii2elfinder', __DIR__ . '/../vendor/philippfrenzel/yii2elfinder/yii2elfinder/');

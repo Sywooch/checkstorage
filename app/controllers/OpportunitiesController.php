@@ -104,7 +104,7 @@ class OpportunitiesController extends Controller
 
 		$countQuery = clone $query;
 		$pagination = new Pagination();
-		$pagination->itemCount = $countQuery->count();
+		$pagination->totalCount = $countQuery->count();
 
 		$models = $query->offset($pagination->offset)
 			->limit($pagination->limit)
@@ -127,7 +127,7 @@ class OpportunitiesController extends Controller
 
 		$countQuery = clone $query;
 		$pagination = new Pagination();
-		$pagination->itemCount = $countQuery->count();
+		$pagination->totalCount = $countQuery->count();
 		$pagination->pageSize=25;
 
 		$models = $query->offset($pagination->offset)

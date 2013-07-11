@@ -36,6 +36,7 @@
     "require": {
         "yiisoft/yii2": "dev-master",
         "yiisoft/yii2-composer":"dev-master",
+        "yiisoft/yii2-jui": "dev-master",
         "yiiext/assetparser":"*",
         "phpexcel/phpexcel":"*",
         "phpword/phpword":"*",
