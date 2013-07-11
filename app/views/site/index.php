@@ -210,6 +210,24 @@ $this->registerJs($map->printMapJS());
 	<?php endforeach; ?>
 	</ul>
 </div>
+
+<p>&nbsp;</p>
+<h4>&nbsp;&nbsp;<i class="icon-facebook icon-2x"></i> Sozial</h4>
+
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1&appId=208992362564793";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<div class="fb-like" data-href="https://www.facebook.com/Checkstorage" data-send="true" data-width="450" data-show-faces="true"></div>
+
 <p>&nbsp;</p>
 <h4>&nbsp;&nbsp;<i class="icon-user-md icon-2x"></i> Über Uns</h4>
 	<ul>
