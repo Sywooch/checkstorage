@@ -76,22 +76,16 @@ $this->registerJs($mapJS);
 		if(count(Yii::$app->controller->locations)==0)
 		{
 			$tmplocations = array();
-			$storages = app\models\Storage::find()->select('city, country')->distinct()->all();
+			$storages = app\models\Storage::find()->select('name, city, country,no_latitude,no_longitude')->limit(50)->all();
 			foreach($storages as $storage)
-			{
-				$tmplocations[] = $storage->city .', '.$storage->country;
-			}
-
-			Yii::$app->controller->locations = $tmplocations;
-
-			foreach( Yii::$app->controller->locations as $i => $location ) {
-				$marker = \PHPGoogleMaps\Overlay\Marker::createFromLocation($location,
+			{				
+				$marker = \PHPGoogleMaps\Overlay\Marker::createFromPosition(new \PHPGoogleMaps\Core\LatLng((double)$storage->no_latitude,(double)$storage->no_longitude),
 					array(
-						'title' => $location,
-						'content' => "$location Lagerplatz"
+						'title' => $storage->name,
+						'content' => $storage->address." Lagerplatz"
 					)
 				);
-				$icon1 = new \PHPGoogleMaps\Overlay\MarkerIcon( 'img/flags_iso/24/'.strtolower(substr($location,-2)).'.png' );
+				$icon1 = new \PHPGoogleMaps\Overlay\MarkerIcon( 'img/flags_iso/24/'.strtolower($storage->country).'.png' );
 				$marker->setIcon( $icon1 );
 				$map->addObject( $marker );
 			}	
