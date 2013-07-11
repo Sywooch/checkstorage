@@ -468,8 +468,8 @@ return array(
 		'address'       => '21-23, rue Eugène Varlin',
 		'zipcode'       => '75010',
 		'city'          => 'Paris',
-		'no_latitude'	=> '45.826413',
-		'no_longitude'  => '1.273833',
+		'no_latitude'	=> '48.876141',
+		'no_longitude'  => '2.358283',
 	),
 );
 
