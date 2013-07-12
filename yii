@@ -8,6 +8,16 @@
  * @license http://www.yiiframework.com/license/
  */
 
+function clean_composer_namespace($nsfile)
+{
+	$clean = array();
+	foreach($nsfile AS $name => $patharray)
+	{	
+		$clean[$name] = $patharray[0];		
+	}
+	return $clean;
+}
+
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 
 // fcgi doesn't have STDIN defined by default
@@ -15,7 +25,8 @@ defined('STDIN') or define('STDIN', fopen('php://stdin', 'r'));
 
 require_once(__DIR__ . '/vendor/yiisoft/yii2/yii/Yii.php');
 require_once(__DIR__ . '/vendor/autoload.php');
-Yii::importNamespaces(require(__DIR__ . '/vendor/composer/autoload_namespaces.php'));
+
+Yii::importNamespaces(clean_composer_namespace(require(__DIR__ . '/../vendor/composer/autoload_namespaces.php')));
 
 $config = require_once(__DIR__ . '/console/config/console.php');
 
