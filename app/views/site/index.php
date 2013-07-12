@@ -111,8 +111,8 @@ $this->registerJs($mapJS);
 				foreach( Yii::$app->controller->locations as $i => $location ) {
 					$marker = \PHPGoogleMaps\Overlay\Marker::createFromLocation($location->address.', '.$location->city,
 						array(
-							'title' => $location->address.' Lagerraum',
-							'content' => "$location->address Lagerplatz"
+							'title' => $location->Owner->prename.' '.$location->Owner->name,
+							'content' => $location->address." Lagerplatz"
 						)
 					);
 					$icon2 = new \PHPGoogleMaps\Overlay\MarkerIcon( 'img/truck3.png' );
