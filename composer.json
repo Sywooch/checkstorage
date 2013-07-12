@@ -9,33 +9,12 @@
             "email": "philipp@frenzel.net"
         }
     ],
-    "repositories": [
-        {
-            "type":"package",
-            "package":{
-                "name":"yiiext/assetparser",
-                "version":"1.0.8",
-                "authors": [
-                    {
-                        "name": "Michel Bobilier",
-                        "homepage": "https://github.com/athos99"
-                    }
-                ],
-                "source":{
-                    "url":"https://github.com/athos99/assetparser.git",
-                    "type":"git",
-                    "reference":"master"
-                }
-            }
-        }
-    ],
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.0",
         "yiisoft/yii2": "dev-master",
         "yiisoft/yii2-composer":"dev-master",
         "yiisoft/yii2-jui": "dev-master",
-        "yiiext/assetparser":"*",
         "phpexcel/phpexcel":"*",
         "phpword/phpword":"*",
         "sebastian/diff": "1.0.*@dev",

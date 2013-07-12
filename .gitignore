@@ -3,3 +3,5 @@
 /app/runtime/*
 /www/assets/*
 app/data/.DS_Store
+
+composer.lock
