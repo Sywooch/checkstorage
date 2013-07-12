@@ -27,20 +27,14 @@ function includeIfExists($file)
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
 
-require_once(__DIR__ . '/../vendor/yiisoft/yii2/yii/Yii.php');
-require_once(__DIR__ . '/../vendor/autoload.php');
+require(__DIR__ . '/../vendor/yiisoft/yii2/yii/Yii.php');
+require(__DIR__ . '/../vendor/autoload.php');
 
-Yii::setAlias('@yiidhtmlx', __DIR__ . '/../vendor/philippfrenzel/yiidhtmlx/yiidhtmlx/');
-Yii::setAlias('@yii2tooltipster', __DIR__ . '/../vendor/philippfrenzel/yii2tooltipster/yii2tooltipster/');
-Yii::setAlias('@yiimetroui', __DIR__ . '/../vendor/philippfrenzel/yiimetroui/yiimetroui/');
-Yii::setAlias('@yiijquerytoc', __DIR__ . '/../vendor/philippfrenzel/yiijquerytoc/yiijquerytoc/');
-Yii::setAlias('@yiiwymeditor', __DIR__ . '/../vendor/philippfrenzel/yiiwymeditor/yiiwymeditor/');
-Yii::setAlias('@yii/jui', __DIR__ . '/../vendor/yiisoft/yii2-jui/yii/jui/');
+Yii::importNamespaces(require(__DIR__ . '/../vendor/composer/autoload_namespaces.php')); 
 
-//adding elfinder
-Yii::setAlias('@yii2elfinder', __DIR__ . '/../vendor/philippfrenzel/yii2elfinder/yii2elfinder/');
+//require(__DIR__ . '/../vendor/composer/autoload_classmap.php');  
 
-Yii::$classMap['SebastianBergmann\Diff'] = __DIR__ . '/../vendor/sebastian/diff/src/Diff.php';
+//Yii::$classMap['SebastianBergmann\Diff'] = __DIR__ . '/../vendor/sebastian/diff/src/Diff.php';
 
 if(($baseConfig = includeIfExists(__DIR__.'/../app/config/main.php')) && ($localConfig = includeIfExists(__DIR__.'/../app/config/local.php'))) {
 	$config = \yii\helpers\ArrayHelper::merge($baseConfig,$localConfig);
@@ -49,4 +43,6 @@ if(($baseConfig = includeIfExists(__DIR__.'/../app/config/main.php')) && ($local
 }
 
 $application = new yii\web\Application($config);
-return $application->run();
+
+$exitCode = $application->run();
+exit($exitCode);

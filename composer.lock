@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "48cc26d7bde566cf5b51e38046972838",
+    "hash": "ac87c807545b12b40a4582d7229672d7",
     "packages": [
         {
             "name": "anthonymartin/geo-location",
@@ -611,12 +611,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "41087743fe36094843819e58563fb82c8591f3f7"
+                "reference": "5f28f6c1ae4b461e677e5b71dcf20de52dab3851"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/41087743fe36094843819e58563fb82c8591f3f7",
-                "reference": "41087743fe36094843819e58563fb82c8591f3f7",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/5f28f6c1ae4b461e677e5b71dcf20de52dab3851",
+                "reference": "5f28f6c1ae4b461e677e5b71dcf20de52dab3851",
                 "shasum": ""
             },
             "require": {
@@ -697,7 +697,7 @@
                 "framework",
                 "yii"
             ],
-            "time": "2013-07-11 14:04:54"
+            "time": "2013-07-12 11:32:00"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -705,12 +705,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-composer.git",
-                "reference": "660ef5a4ea6945e6b754d009f6029b110ab4797d"
+                "reference": "69ffec54b61a3b78e68cb218c2cf2dec1c6fbbcc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/660ef5a4ea6945e6b754d009f6029b110ab4797d",
-                "reference": "660ef5a4ea6945e6b754d009f6029b110ab4797d",
+                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/69ffec54b61a3b78e68cb218c2cf2dec1c6fbbcc",
+                "reference": "69ffec54b61a3b78e68cb218c2cf2dec1c6fbbcc",
                 "shasum": ""
             },
             "require": {
@@ -741,7 +741,7 @@
                 "update",
                 "yii"
             ],
-            "time": "2013-06-06 11:51:55"
+            "time": "2013-07-11 15:26:57"
         },
         {
             "name": "yiisoft/yii2-jui",
@@ -749,12 +749,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-jui.git",
-                "reference": "1d210a30060cdf5b0213e8b0ad0e7779c9b54ee2"
+                "reference": "6aac15def72e72f54c221addd397642204f92f4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-jui/zipball/1d210a30060cdf5b0213e8b0ad0e7779c9b54ee2",
-                "reference": "1d210a30060cdf5b0213e8b0ad0e7779c9b54ee2",
+                "url": "https://api.github.com/repos/yiisoft/yii2-jui/zipball/6aac15def72e72f54c221addd397642204f92f4d",
+                "reference": "6aac15def72e72f54c221addd397642204f92f4d",
                 "shasum": ""
             },
             "require": {
@@ -776,7 +776,7 @@
                 "renderer",
                 "yii"
             ],
-            "time": "2013-07-10 21:15:48"
+            "time": "2013-07-11 15:26:57"
         }
     ],
     "packages-dev": [
@@ -802,9 +802,9 @@
         "php-google-maps/php-google-maps": 20,
         "philippfrenzel/yii2tooltipster": 20
     },
-    "platform": [
-
-    ],
+    "platform": {
+        "php": ">=5.3.0"
+    },
     "platform-dev": [
 
     ]

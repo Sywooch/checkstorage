@@ -21,9 +21,6 @@
                         "homepage": "https://github.com/athos99"
                     }
                 ],
-                "require": {
-                    "php": ">=5.2.0"
-                },
                 "source":{
                     "url":"https://github.com/athos99/assetparser.git",
                     "type":"git",
@@ -34,6 +31,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
+        "php": ">=5.3.0",
         "yiisoft/yii2": "dev-master",
         "yiisoft/yii2-composer":"dev-master",
         "yiisoft/yii2-jui": "dev-master",
