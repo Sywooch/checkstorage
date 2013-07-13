@@ -8,6 +8,7 @@ use \yii\helpers\ArrayHelper;
 use \Yii;
 
 use app\components\GeoLocation;
+use app\modules\components\units\models\Unit;
 
 class Storage extends ActiveRecord
 {
@@ -19,15 +20,42 @@ class Storage extends ActiveRecord
         return '{{%storage}}';
     }
 
+    public static $countries = array(
+        'DE' => 'Deutschland',
+        'AT' => 'Österreich',
+        'FR' => 'Frankreich',
+        'CH' => 'Schweiz',
+    );
+
+    public static function getCountryOptions()
+    {
+        return self::$countries;
+    }
+
  	public function rules()
 	{
 	    return array(
-	        array('name, user_id', 'required'),
+	        array('name, user_id, address', 'required'),
             array('name, country, address, city','string','max'=>255),
             array('zipcode','string','max'=>15),
-            array('no_latitude, no_longitude','float'),	        
+            array('no_latitude, no_longitude','string'),	        
 	    );
 	}
+
+    /**
+    * before we save the record, we will calculate the cordinates
+    */
+    public function beforeSave($insert){
+        if (parent::beforeSave($insert)) {
+            $location = $this->address . ' ,'.$this->city.' ,'. $this->country;
+            $response = GeoLocation::getGeocodeFromGoogle($location);
+            $this->no_latitude = $response->results[0]->geometry->location->lat;
+            $this->no_longitude = $response->results[0]->geometry->location->lng;
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     /**
     * @return model \app\models\user Owner
@@ -47,7 +75,7 @@ class Storage extends ActiveRecord
     * @return model \app\models\comparisonfactor Comparison Factor
     */
     public function getUnits(){
-        return $this->hasMany('Unit', array('storage_id' => 'id'));
+        return $this->hasMany('\app\modules\units\models\Unit', array('storage_id' => 'id'));
     }
 
     /**
@@ -68,10 +96,10 @@ class Storage extends ActiveRecord
         return array(
             'id'                => 'ID',
             'name'              => Yii::t('app','Name'),
-            'country'           => Yii::t('app','Country'),
-            'address'           => Yii::t('app','Address'),
-            'city'              => Yii::t('app','City'),
-            'zipcode'           => Yii::t('app','Zipcode'),
+            'country'           => Yii::t('app','Land'),
+            'address'           => Yii::t('app','Adresse'),
+            'city'              => Yii::t('app','Stadt'),
+            'zipcode'           => Yii::t('app','Postleitzahl'),
             'no_longitude'      => Yii::t('app','Longitude'),
             'no_latitude'       => Yii::t('app','Latitude'),
         );

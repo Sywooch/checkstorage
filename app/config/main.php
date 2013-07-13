@@ -10,7 +10,10 @@ return array(
 	'controllerNamespace' => 'app\controllers',
 	'charset'=>'UTF-8',
 	'language' => 'de_DE',	
-	'modules' => array(	
+	'modules' => array(
+		'units' => array(
+			'class' => 'app\modules\units\Units'
+		),	
 		'debug' => array(
 			'class' => 'yii\debug\Module',
 			'enabled' => YII_DEBUG && YII_ENV === 'dev',

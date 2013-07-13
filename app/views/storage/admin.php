@@ -59,13 +59,17 @@ $this->registerJs($deleteJS);
 		<td><?php echo $model->country;?></td>
 		<td><?php echo $model->zipcode;?></td>
 		<td>
+			<i class="icon-book"></i> 
+			<?php
+				echo Html::a('verwalten', array("dashboard", "id"=>$model->id), array('class'=>'dashboard'));
+			?>
 			<i class="icon-pencil"></i> 
 			<?php
-				echo Html::a('edit', array("update", "id"=>$model->id), array('class' => 'edit')); 
+				echo Html::a('bearbeiten', array("update", "id"=>$model->id), array('class' => 'edit')); 
 			?>
 			<i class="icon-remove"></i> 
 			<?php
-				echo Html::a('delete', array("softdelete", "id"=>$model->id), array('class'=>'delete'));
+				echo Html::a('entfernen', array("softdelete", "id"=>$model->id), array('class'=>'delete'));
 			?>
 		</td>
 	</tr>

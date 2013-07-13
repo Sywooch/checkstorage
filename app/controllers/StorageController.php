@@ -37,7 +37,7 @@ class StorageController extends Controller
 					),
 					array(
 						'allow'=>true,
-						'actions'=>array('view','update','create','index','admin','jsongridstoragedata'),
+						'actions'=>array('dashboard','view','update','create','index','admin','jsongridstoragedata'),
 				        'roles'=>array('@'),
 					),  
 					array(
@@ -49,6 +49,17 @@ class StorageController extends Controller
 	}
 
 	public function actionView($id='')
+	{		
+		$model=$this->loadModel($id);
+		if(Yii::$app->user->isGuest OR !Yii::$app->user->id == $model->user_id)
+			$this->layout = 'column1';	
+
+		return $this->render('view',array(
+			'model'=>$model,			
+		));
+	}
+
+	public function actionDashboard($id='')
 	{		
 		$model=$this->loadModel($id);
 		if(Yii::$app->user->isGuest OR !Yii::$app->user->id == $model->user_id)

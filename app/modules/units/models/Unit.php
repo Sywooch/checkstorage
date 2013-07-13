@@ -1,5 +1,5 @@
 <?php
-namespace app\models;
+namespace app\modules\units\models;
 
 use \yii\db\ActiveRecord;
 use \yii\helpers\Html;
@@ -17,9 +17,9 @@ class Unit extends ActiveRecord
     
     public static $periods = array(
         self::PERIOD_DAILY   =>'Tagespreis',
-        self::PERIOD_WEEKLY =>'Wochenpreis',
-        self::PERIOD_4WEEK  =>'4 Wochenpreis',
-        self::PERIOD_MONTHLY  =>'Monatspreis',
+        self::PERIOD_WEEKLY  =>'Wochenpreis',
+        self::PERIOD_4WEEK   =>'4 Wochenpreis',
+        self::PERIOD_MONTHLY =>'Monatspreis',
     );
 
     public static function getPeriodOptions()
