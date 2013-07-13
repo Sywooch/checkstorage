@@ -78,7 +78,8 @@ $this->registerJs($map->printMapJS());
 				<tr>
 					<td><b>QM</b></td>
 					<td class="span3"><b>Wochenpreis</b></td>
-					<td class="span3"><b>4 Wochenpreis</b></td>					
+					<td class="span3"><b>4 Wochenpreis</b></td>
+					<td class="span1"><b>Merken</b></td>					
 				</tr>
 			</thead>
 <?php 
@@ -92,6 +93,9 @@ foreach($units As $unit):
 				</td>
 				<td class="bg-color-blue<?php echo (int)$unit->room_length*$unit->room_width; ?>">
 					<small>ab</small> <b><?php echo number_format($unit->unit_rate*$unit->FourWeekFactor,2,',','.'); ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i> Woche
+				</td>
+				<td>
+					chb
 				</td>				
 			</tr>
 <?php
@@ -101,10 +105,20 @@ endforeach;
 	</div>
 </div>
 
-<h2>Leistungsübersicht</h2>
+<div class="row-fluid">
+	<div class="span4">
+		<h2><i class="icon-camera"></i> Bilder</h2>
+	</div>
+	<div class="span8">
+		<h2><i class="icon-barcode"></i> Leistungsübersicht</h2>
+	</div>
+</div>
 
 <div class="row-fluid">
-	<div class="span6">
+	<div class="span4">
+		BILDER
+	</div>
+	<div class="span4">
 <?php
 
 echo \yii\widgets\DetailView::widget(array(
@@ -135,7 +149,7 @@ array( // the owner name of the model
 
 ?>		
 	</div>
-	<div class="span6">
+	<div class="span4">
 <?php
 
 echo \yii\widgets\DetailView::widget(array(
