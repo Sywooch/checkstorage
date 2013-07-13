@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\comments;
+namespace app\modules\units;
 
 use yii\base\Module;
 

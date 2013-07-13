@@ -37,7 +37,7 @@ $this->registerJs($deleteJS);
 <h1><i class="icon-building"></i> Standorte verwalten</h1>
 
 
-<table class="table">
+<table class="table table-striped">
 	<thead>
 		<tr>
 			<td>#</td>

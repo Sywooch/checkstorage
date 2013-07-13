@@ -41,7 +41,7 @@ return array(
 					'levels' => array('error','warning'),
 				),
 			),
-		),		
+		),	
 		'assetManager'=>array(
 			'bundles' => require(__DIR__ . '/assets.php'),
         ),
