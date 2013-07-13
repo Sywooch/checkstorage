@@ -11,8 +11,6 @@ use app\models\Messages;
 
 use app\widgets\PortletStorageSearch;
 
-use yii2tooltipster\yii2tooltipster;
-
 $this->title = 'check storage - Lagerraum, Keller, Dachboden, Selfstorage Vergleich';
 
 
@@ -47,8 +45,6 @@ DEL;
 
 $this->registerJs($mapJS);
 ?>
-
-<?php echo yii2tooltipster::widget(array('options'=>array('class'=>'.tipster'))); ?>
 
 <?php Block::begin(array('id'=>'sidebar')); ?>
 	

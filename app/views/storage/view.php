@@ -95,7 +95,7 @@ foreach($units As $unit):
 					<small>ab</small> <b><?php echo number_format($unit->unit_rate*$unit->FourWeekFactor,2,',','.'); ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i> Woche
 				</td>
 				<td>
-					chb
+					<?php echo Html::checkBox('rememberme'.$unit->id,'',array('class'=>'tipster','title'=>'Hier klicken um das Abteil zu merken.')); ?>
 				</td>				
 			</tr>
 <?php
