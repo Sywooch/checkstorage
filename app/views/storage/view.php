@@ -21,7 +21,7 @@ use \yii\widgets\Block;
 	</ul>
 <?php Block::end(); ?>
 
-<h1><i class="icon-building"></i> <?php echo Html::encode($model->name); ?></h1>
+<h1><img src="img/storage/<?php echo Html::encode($model->Owner->id); ?>.png" alt="logo"></img> <?php echo Html::encode($model->name); ?></h1>
 
 <div class="row-fluid">
 	<div class="span4">
