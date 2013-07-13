@@ -46,8 +46,10 @@ class UserController extends Controller
 
 	public function actionView($id='')
 	{
-		$model=$this->loadModel($id);
+		if(!Yii::$app->user->isAdmin)
+			$id = Yii::$app->user->id;
 
+		$model=$this->loadModel($id);
 		/**
 		* LOADING THE MESSAGES
 		*/

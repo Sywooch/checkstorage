@@ -181,7 +181,7 @@ class User extends ActiveRecord implements Identity
 			'name'           => Yii::t('app','Fam. Name'),
 			'prename'        => Yii::t('app','Prename'),
 			'no_employee'    => Yii::t('app','Employee No'),
-			'position'       => Yii::t('app','Zweck'),
+			'position'       => Yii::t('app','Art'),
         );
     }
 

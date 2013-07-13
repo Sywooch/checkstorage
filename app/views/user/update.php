@@ -14,9 +14,10 @@ use \yii\bootstrap\Tabs;
 <?php Block::end(); ?>
 
 <h1>
-    <?php echo Html::a('<i class="icon-arrow-left-3"></i>'.Yii::t('app','back'), array('/user/view','id'=>$model->id),array()); ?>
+    <small><?php echo Html::a('<i class="icon-arrow-left"></i> '.Yii::t('app','back'), array('/user/view','id'=>$model->id),array()); ?></small>
     <?php echo Yii::t('app','Edit User Form'); ?>
 </h1>
+
 
 <?php $form = ActiveForm::begin(array(
     'options' => array('class' => 'form-horizontal'),
@@ -48,6 +49,7 @@ echo Tabs::widget(array(
      'items' => $myTabs,
 ));
 ?>
+
 
 <div class="form-actions">
     <?php echo Html::submitButton($model->isNewRecord ? '<i class="icon-plus"></i> '.Yii::t('app','Create') : '<i class="icon-pencil"></i> '.Yii::t('app','Save'), array('class'=>'btn btn-success fg-color-white')); ?>

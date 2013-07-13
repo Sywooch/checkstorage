@@ -37,7 +37,7 @@ class OpportunitiesController extends Controller
 					),
 					array(
 						'allow'=>true,
-						'actions'=>array('update','create','admin','jsongridOpportunitiesdata'),
+						'actions'=>array('view','index','update','create','admin','jsongridOpportunitiesdata'),
 				        'roles'=>array('@'),
 					),  
 					array(

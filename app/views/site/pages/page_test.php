@@ -19,7 +19,7 @@ use yii\widgets\Block;
 <p>
 	Die Dokumentation der Seite gliedert sich für die 2 Nutzerarten:
 	<ul>
-		<li>Kunden</li>
+		<li>Kunden / Interessenten</li>
 		<li>Anbieter</li>
 	</ul>
 	Im Rahmen der Transparenz für beide Seiten, sind alle Inhalte für jeden zugänglich, denn auch in Ihnen steckt sowohl

@@ -4,6 +4,23 @@ body {
 	background-color: #F9F9F5;
 }
 
+.tab-content{
+  background-color: #ffffff;
+}
+
+.page-sidebar{
+  margin-top:25px;
+}
+
+.mytoolbox{
+  margin-top:10px;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:5px;
+  font-size:20px;
+  background-color: #A4D3EE;
+}
+
 #logostyle{
 	font-size: 38px;
 	color: #00688B;

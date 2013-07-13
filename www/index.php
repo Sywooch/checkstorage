@@ -23,16 +23,6 @@ function includeIfExists($file)
 	}
 }
 
-function clean_composer_namespace($nsfile)
-{
-	$clean = array();
-	foreach($nsfile AS $name => $patharray)
-	{	
-		$clean[$name] = $patharray[0];		
-	}
-	return $clean;
-}
-
 // comment out the following line to disable debug mode
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
@@ -40,7 +30,7 @@ defined('YII_ENV') or define('YII_ENV', 'dev');
 require(__DIR__ . '/../vendor/yiisoft/yii2/yii/Yii.php');
 require(__DIR__ . '/../vendor/autoload.php');
 
-Yii::importNamespaces(clean_composer_namespace(require(__DIR__ . '/../vendor/composer/autoload_namespaces.php')));
+Yii::importNamespaces(require(__DIR__ . '/../vendor/composer/autoload_namespaces.php'));
 
 //require(__DIR__ . '/../vendor/composer/autoload_classmap.php');  
 

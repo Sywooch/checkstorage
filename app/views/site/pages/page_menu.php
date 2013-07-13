@@ -15,10 +15,11 @@ use yii\helpers\Html;
 <h4>Für Anbieter</h4>
 
 <ul>
-	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_storage_registration')); ?>">Anmeldung</a></li>	
-	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_store_management')); ?>">Store Verwaltung</a></li>
-	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_price_management')); ?>">Preis/Abteil Verwaltung</a></li>
-	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_customer_management')); ?>">Kunden Verwaltung</a></li>
-	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_contract_management')); ?>">Vertragsverwaltung</a></li>
+	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_storage_registration')); ?>">Anmeldung</a></li>
+	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_storage_registration')); ?>">Mein Account</a></li>	
+	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_store_management')); ?>">Lagerplätze verwalten</a></li>
+	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_price_management')); ?>">Abteile verwalten</a></li>
+	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_customer_management')); ?>">Kunden verwalten</a></li>
+	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_contract_management')); ?>">Verträge verwalten</a></li>
 	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_import')); ?>">Import Dokumentation</a></li>
 </ul>
