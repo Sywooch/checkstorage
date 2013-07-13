@@ -7,6 +7,17 @@ $this->title = 'About';
 ?>
 <h1>Über Uns</h1>
 
+<p>
+	Frenzel GmbH<br>
+	Hohewartstr. 32 <br>
+	70469 Stuttgart
+</p>
+
+<div class="well">
+	Sämtliche Marken sind Eigentum der jeweiligen Firmen! Sollten Sie mit der Verwendung eines Logos nicht einverstanden sein, 
+	so bitten wir um eine kurze Mail an kooperation @ checkstorage . de und wir ersetzen es durch den einfachen Schriftzug.
+</div>
+
 <h2>Wichtiger Hinweis</h2>
 
 <p>
@@ -34,4 +45,3 @@ Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wi
 <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.
 </p>
 
-Quellverweis: eRecht24 Disclaimer 
