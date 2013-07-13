@@ -72,32 +72,31 @@ $this->registerJs($map->printMapJS());
 <?php $map->printMap() ?>
 	</div>
 	<div class="span8 portlet">
+		<h4 class="fg-color-white">Preistabelle</h4>
 		<table class="table">
 			<thead>
 				<tr>
-					<td>QM</td>
-					<td class="span3">Wochenpreis</td>
-					<td class="span3">4 Wochenpreis</td>					
+					<td><b>QM</b></td>
+					<td class="span3"><b>Wochenpreis</b></td>
+					<td class="span3"><b>4 Wochenpreis</b></td>					
 				</tr>
 			</thead>
+<?php 
+$units = $model->Units;
+foreach($units As $unit):
+?>
 			<tr>
-				<td class="fg-color-white">1qm</td>
-				<td class="bg-color-blue1">
-					<small>ab</small> <b><?php //echo $data->getUnitPrice(1.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i> Woche
+				<td class="bg-color-green<?php echo (int)$unit->room_length*$unit->room_width; ?> fg-color-white"><?php echo $unit->room_length*$unit->room_width; ?> qm</td>
+				<td class="bg-color-blue<?php echo (int)$unit->room_length*$unit->room_width; ?>">
+					<small>ab</small> <b><?php echo number_format($unit->unit_rate*$unit->WeekFactor,2,',','.'); ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i> Woche
 				</td>
-				<td class="bg-color-blue1">
-					<small>ab</small> <b><?php //echo $data->getUnitPrice(1.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i> Woche
+				<td class="bg-color-blue<?php echo (int)$unit->room_length*$unit->room_width; ?>">
+					<small>ab</small> <b><?php echo number_format($unit->unit_rate*$unit->FourWeekFactor,2,',','.'); ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i> Woche
 				</td>				
 			</tr>
-			<tr>
-				<td class="fg-color-white">2qm</td>
-				<td class="bg-color-blue2">
-					<small>ab</small> <b><?php //echo $data->getUnitPrice(1.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i> Woche
-				</td>
-				<td class="bg-color-blue2">
-					<small>ab</small> <b><?php //echo $data->getUnitPrice(1.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i> Woche
-				</td>			
-			</tr>
+<?php
+endforeach;
+?>
 		</table>
 	</div>
 </div>

@@ -60,6 +60,50 @@ class Unit extends ActiveRecord
         return $this->hasOne('Storage', array('id' => 'storage_id'));
     }
 	
+    /**
+    * @return model \app\models\storage Store
+    */
+    public function getWeekFactor(){
+    	$week = 1;
+    	switch($this->rate_period)
+    	{
+    		case 0:
+    			$week = 7;
+    			break;
+    		case 1:
+    			$week = 1;
+    			break;
+    		case 2:
+    			$week = 0.25;
+    			break;
+    		default:
+    			$week = 7/31;
+    	}
+        return $week;
+    }
+
+    /**
+    * @return model \app\models\storage Store
+    */
+    public function getFourWeekFactor(){
+    	$week = 1;
+    	switch($this->rate_period)
+    	{
+    		case 0:
+    			$week = 28;
+    			break;
+    		case 1:
+    			$week = 4;
+    			break;
+    		case 2:
+    			$week = 1;
+    			break;
+    		default:
+    			$week = 28/31;
+    	}
+        return $week;
+    }
+
 	/**
 	 * @return array customized attribute labels (name=>label)
 	 */
