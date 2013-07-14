@@ -59,7 +59,7 @@ $this->registerJs($mapJS);
 	<div class="row-fluid">
 		<div class="span7">
 			<?php echo PortletStorageSearch::widget(array(
-          		'maxResults'=>5,
+          		'maxResults'=>8,
       		)); ?>
 
 <?php
