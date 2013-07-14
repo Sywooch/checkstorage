@@ -43,7 +43,7 @@ $marker = \PHPGoogleMaps\Overlay\Marker::createFromPosition(new \PHPGoogleMaps\C
 		'content' => $model->address." Lagerplatz"
 	)
 );
-$icon1 = new \PHPGoogleMaps\Overlay\MarkerIcon( 'img/flags_iso/24/'.strtolower($model->country).'.png' );
+$icon1 = new \PHPGoogleMaps\Overlay\MarkerIcon( 'img/truck3.png' );
 $marker->setIcon( $icon1 );
 $map->addObject( $marker );
 

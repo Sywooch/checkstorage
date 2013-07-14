@@ -46,7 +46,7 @@ $this->registerAssetBundle('app');
 			<?php endif; ?>
 		</div>
 		<div id="logostyle">CheckStorage</div>
-		<div id="sloganstyle">LAGERRAUM VERGLEICH</div>
+		<div id="sloganstyle">Lagerraum Vergleich - Finde DEINEN Platz!</div>		
 	</div>
 		
 	<div id="pagewrapper">
