@@ -7,7 +7,7 @@ use \yii\helpers\Html;
 ?>
 	
 	<fieldset>
-		<legend><?php echo Yii::t('app','General'); ?></legend>
+		<legend><?php echo Yii::t('app','Lagerplatz'); ?></legend>
 		
 		
 		<div class="row-fluid">

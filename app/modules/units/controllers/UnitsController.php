@@ -87,7 +87,7 @@ class UnitsController extends Controller
 		$provider = new ActiveDataProvider(array(
 		      'query' => Unit::find()->where(array('storage_id'=>$id)),
 		      'pagination' => array(
-		          'pageSize' => 2,
+		          'pageSize' => 20,
 		      ),
 	  	));
 

@@ -10,6 +10,7 @@ use \yii\db\Query;
 use \yii\helpers\Json;
 
 use app\models\Storage;
+use app\models\ComparisionFactor;
 
 class StorageController extends Controller
 {
@@ -87,7 +88,7 @@ class StorageController extends Controller
 	{
 		$this->layout = 'column1';
 		$model=$this->loadModel($id);
-		if ($model->load($_POST) && $model->save()) {
+		if (($model->load($_POST) AND $model->Comparision->load($_POST)) && ($model->save() AND $model->Comparision->save())) {
 			return $this->redirect(array('admin'));
 		}
 

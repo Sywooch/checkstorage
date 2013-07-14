@@ -21,11 +21,11 @@ class ComparisionFactor extends ActiveRecord
 	{
 	    return array(
 	        array('storage_id', 'required'),
-            array('name, country, address, city,max_degrees,min_degrees','string'),
+            array('max_degrees,min_degrees,opening_office_days,opening_days','string'),
             array('date_opening','date'),
-            array('no_parking,opening_office_days,opening_days,music,shopping_pricelevel,shopping,no_elevators,fireprotection,externalunits,security_camera,security_access,security_service,trolleys,aircondition,aircondition_office','integer'),
+            array('storage_id, no_parking,music,shopping_pricelevel,shopping,no_elevators,fireprotection,externalunits,security_camera,security_access,security_service,trolleys,aircondition,aircondition_office','integer'),
             array('room_height','double'),
-            array('opening_office_end,opening_office_start,opening_start,opening_end','time'),	        
+            array('opening_office_end,opening_office_start,opening_start,opening_end','string'),	        
 	    );
 	}
 

@@ -32,9 +32,14 @@ use \yii\bootstrap\Tabs;
 <?php 
 $myTabs = array();
 $myTabs[] = array(
-            'label' => Yii::t('app','General User'),
+            'label' => Yii::t('app','Allgemeines'),
             'active' => true,
             'content' => $this->context->renderPartial('/storage/_form', array('model'=>$model,'form'=>$form)),
+        );
+$myTabs[] = array(
+            'label' => Yii::t('app','Zusatzleistungen'),
+            'active' => false,
+            'content' => $this->context->renderPartial('/storage/_form_comparision', array('model'=>$model->Comparision,'form'=>$form)),
         );
 /*$myTabs[] = array(
             'label' => Yii::t('app','User Contact'),
