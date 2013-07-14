@@ -5,7 +5,8 @@ use app\helpers\HighlightHelper;
 ?>
 <div class="row-fluid">
 	<div class="span5">
-		<p><b><?php echo $data->name; ?></b> von <b><?php echo $data->Owner->prename; ?> <?php echo $data->Owner->name; ?></b></p>
+		<img src="img/storage/<?php echo Html::encode($data->Owner->id); ?>.png" alt="<?php echo $data->name; ?>" style="height:30px"></img> 
+		<p><b><?php echo $data->Owner->prename; ?> <?php echo $data->Owner->name; ?></b></p>
 		<div>
 			<?php echo $data->address; ?><br>
 			<?php echo $data->zipcode; ?> <?php echo $data->city; ?> 
