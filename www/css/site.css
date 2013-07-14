@@ -1,7 +1,16 @@
 body {
-	padding-top: 20px;
-	padding-bottom: 60px;
 	background-color: #F9F9F5;
+}
+
+#topbar{
+  background-color: #A4D3EE;
+  height: 4px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.masthead{
+  padding-top:15px;
 }
 
 .tab-content{

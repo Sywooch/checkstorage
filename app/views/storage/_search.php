@@ -16,10 +16,10 @@ use yii\jui\DatePicker;
 
 <div class="row-fluid">
 	<div class="span6">
-		<?php echo $form->field($model,'address')->textInput(array('maxlength'=>128,'placeholder'=>'Ihre Adresse...','class'=>'input-xlarge tipster','title'=>'Adresse, Stadt oder Postleitzahl eintragen...')); ?>
+		<?php echo $form->field($model,'address',array('template' => "{input}\n{error}"))->textInput(array('maxlength'=>128,'placeholder'=>'Ihre Adresse...','class'=>'input-xlarge tipster','title'=>'Adresse, Stadt oder Postleitzahl eintragen...')); ?>
 	</div>
 	<div class="span6">
-		<?php echo $form->field($model,'int_weeks')->textInput(array('maxlength'=>128,'placeholder'=>'4 (in Wochen)','class'=>'tipster','title'=>'Mietdauer in Wochen, min. 2 Wochen...')); ?>
+		<?php echo $form->field($model,'int_weeks',array('template' => "{input}\n{error}"))->textInput(array('maxlength'=>128,'placeholder'=>'4 (Mietdauer in Wochen)','class'=>'tipster','title'=>'Mietdauer in Wochen, min. 2 Wochen...')); ?>
 	</div>
 </div>
 <div class="row-fluid">

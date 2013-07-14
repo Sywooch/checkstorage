@@ -35,6 +35,8 @@ $this->registerAssetBundle('app');
 
 <?php echo yii2tooltipster::widget(array('options'=>array('class'=>'.tipster'))); ?>
 
+<div id="topbar"></div>
+
 <div class="container">
 	<?php $this->beginBody(); ?>
 	<div class="masthead">
