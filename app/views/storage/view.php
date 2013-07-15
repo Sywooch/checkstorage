@@ -72,36 +72,41 @@ $this->registerJs($map->printMapJS());
 <?php $map->printMap() ?>
 	</div>
 	<div class="span8 portlet">
+		<div class="pull-right">
+			&nbsp;<a href="<?php echo Html::url(array('/storage/rememberme')); ?>" class="btn btn-inverse"><i class="icon-star"></i> Merkzettel</a>
+		</div>
 		<h4 class="fg-color-white">Preistabelle</h4>
-		<table class="table">
-			<thead>
+		<div style="height:264px;overflow:auto">
+			<table class="table">
+				<thead>
+					<tr>
+						<td><b>QM</b></td>
+						<td class="span3"><b>Wochenpreis</b></td>
+						<td class="span3"><b>4 Wochenpreis</b></td>
+						<td class="span1"><b>Merken</b></td>					
+					</tr>
+				</thead>
+	<?php 
+	$units = $model->Units;
+	foreach($units As $unit):
+	?>
 				<tr>
-					<td><b>QM</b></td>
-					<td class="span3"><b>Wochenpreis</b></td>
-					<td class="span3"><b>4 Wochenpreis</b></td>
-					<td class="span1"><b>Merken</b></td>					
+					<td class="bg-color-green<?php echo (int)$unit->room_length*$unit->room_width; ?> fg-color-white"><?php echo $unit->room_length*$unit->room_width; ?> qm</td>
+					<td class="bg-color-blue<?php echo (int)$unit->room_length*$unit->room_width; ?>">
+						<small>ab</small> <b><?php echo number_format($unit->unit_rate*$unit->WeekFactor,2,',','.'); ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i> Woche
+					</td>
+					<td class="bg-color-blue<?php echo (int)$unit->room_length*$unit->room_width; ?>">
+						<small>ab</small> <b><?php echo number_format($unit->unit_rate*$unit->FourWeekFactor,2,',','.'); ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i> Woche
+					</td>
+					<td>
+						<?php echo Html::checkBox('rememberme'.$unit->id,'',array('class'=>'tipster','title'=>'Hier klicken um das Abteil zu merken.')); ?>
+					</td>				
 				</tr>
-			</thead>
-<?php 
-$units = $model->Units;
-foreach($units As $unit):
-?>
-			<tr>
-				<td class="bg-color-green<?php echo (int)$unit->room_length*$unit->room_width; ?> fg-color-white"><?php echo $unit->room_length*$unit->room_width; ?> qm</td>
-				<td class="bg-color-blue<?php echo (int)$unit->room_length*$unit->room_width; ?>">
-					<small>ab</small> <b><?php echo number_format($unit->unit_rate*$unit->WeekFactor,2,',','.'); ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i> Woche
-				</td>
-				<td class="bg-color-blue<?php echo (int)$unit->room_length*$unit->room_width; ?>">
-					<small>ab</small> <b><?php echo number_format($unit->unit_rate*$unit->FourWeekFactor,2,',','.'); ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i> Woche
-				</td>
-				<td>
-					<?php echo Html::checkBox('rememberme'.$unit->id,'',array('class'=>'tipster','title'=>'Hier klicken um das Abteil zu merken.')); ?>
-				</td>				
-			</tr>
-<?php
-endforeach;
-?>
-		</table>
+	<?php
+	endforeach;
+	?>
+			</table>
+		</div>
 	</div>
 </div>
 

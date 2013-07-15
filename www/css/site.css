@@ -26,7 +26,7 @@ body {
   padding-top:5px;
   padding-bottom:5px;
   padding-left:5px;
-  font-size:20px;
+  font-size:18px;
   background-color: #A4D3EE;
 }
 
@@ -324,6 +324,24 @@ THE BACKGROUND COLORS
 .bg-color-green10 {
   background-color: #008B00 !important;
 }
+.bg-color-green9 {
+  background-color: #2E8B57 !important;
+}
+.bg-color-green12 {
+  background-color: #43CD80 !important;
+}
+.bg-color-green15 {
+  background-color: #32CD32 !important;
+}
+.bg-color-green18 {
+  background-color: #00CD00 !important;
+}
+.bg-color-green21 {
+  background-color: #8FBC8F !important;
+}
+.bg-color-green32 {
+  background-color: #008B00 !important;
+}
 
 .bg-color-blue1 {
   background-color: #A4D3EE !important;
@@ -341,5 +359,23 @@ THE BACKGROUND COLORS
   background-color: #B4CDCD !important;
 }
 .bg-color-blue10 {
+  background-color: #ADD8E6 !important;
+}
+.bg-color-blue9 {
+  background-color: #A4D3EE !important;
+}
+.bg-color-blue12 {
+  background-color: #CAE1FF !important;
+}
+.bg-color-blue15 {
+  background-color: #B0E2FF !important;
+}
+.bg-color-blue18 {
+  background-color: #E0EEEE !important;
+}
+.bg-color-blue21 {
+  background-color: #B4CDCD !important;
+}
+.bg-color-blue32 {
   background-color: #ADD8E6 !important;
 }

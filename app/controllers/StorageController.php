@@ -4,9 +4,13 @@ namespace app\controllers;
 
 use \Yii;
 use \yii\web\Controller;
-use \yii\data\Pagination;
 use \yii\web\HttpException;
+
 use \yii\db\Query;
+use \yii\data\ActiveDataProvider;
+
+use \yii\data\Pagination;
+
 use \yii\helpers\Json;
 
 use app\models\Storage;
@@ -56,18 +60,24 @@ class StorageController extends Controller
 			$this->layout = 'column1';	
 
 		return $this->render('view',array(
-			'model'=>$model,			
+			'model'=>$model,
 		));
 	}
 
 	public function actionDashboard($id='')
 	{		
-		$model=$this->loadModel($id);
-		if(Yii::$app->user->isGuest OR !Yii::$app->user->id == $model->user_id)
-			$this->layout = 'column1';	
+		$model=$this->loadModel($id);	
 
-		return $this->render('view',array(
-			'model'=>$model,			
+		$unitsprovider = new ActiveDataProvider(array(
+		      'query' => \app\modules\units\models\Unit::find()->where(array('storage_id'=>$id)),
+		      'pagination' => array(
+		          'pageSize' => 10,
+		      ),
+	  	));
+
+		return $this->render('dashboard',array(
+			'model' => $model,
+			'unitsprovider' => $unitsprovider,
 		));
 	}
 

@@ -27,6 +27,11 @@ class Unit extends ActiveRecord
         return self::$periods;
     }
 
+    public static function getPeriodAsString($rate_period)
+    {
+        return self::$periods[$rate_period];
+    }
+
     /**
      * @return string the associated database table name
      */
@@ -49,7 +54,7 @@ class Unit extends ActiveRecord
 			array('unit_type,is_consumer,rate_period','integer'),
 			array('unit_number','string','max'=>15),
 			array('note','string'),
-			array('title,current_status,accesskey', 'string', 'max'=>128),
+			array('current_status,accesskey', 'string', 'max'=>128),
 		);
 	}
 
