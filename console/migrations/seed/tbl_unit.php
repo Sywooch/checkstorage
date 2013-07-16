@@ -9,7 +9,7 @@ return array(
 		'unit_type'    		=> '1',
 		'unit_number'		=> NULL,
 		'rate_period'		=> 2, // 1=week, 2=4weeks, 3=monthly, 0=daily
-		'unit_rate'			=> '38.50',
+		'unit_rate'			=> '8.50',
 		'size_code'			=> '1',
 	),
 	array(
@@ -21,7 +21,7 @@ return array(
 		'unit_type'    		=> '1',
 		'unit_number'		=> NULL,
 		'rate_period'		=> 2, // 1=week, 2=4weeks, 3=monthly, 0=daily
-		'unit_rate'			=> '69.50',
+		'unit_rate'			=> '17.00',
 		'size_code'			=> '2',
 	),
 	array(
@@ -33,7 +33,7 @@ return array(
 		'unit_type'    		=> '1',
 		'unit_number'		=> NULL,
 		'rate_period'		=> 2, // 1=week, 2=4weeks, 3=monthly, 0=daily
-		'unit_rate'			=> '118.50',
+		'unit_rate'			=> '26.00',
 		'size_code'			=> '4',
 	),
 	array(
@@ -81,7 +81,7 @@ return array(
 		'unit_type'    		=> '1',
 		'unit_number'		=> NULL,
 		'rate_period'		=> 2, // 1=week, 2=4weeks, 3=monthly, 0=daily
-		'unit_rate'			=> '38.50',
+		'unit_rate'			=> '8.50',
 		'size_code'			=> '1',
 	),
 	array(
@@ -93,7 +93,7 @@ return array(
 		'unit_type'    		=> '1',
 		'unit_number'		=> NULL,
 		'rate_period'		=> 2, // 1=week, 2=4weeks, 3=monthly, 0=daily
-		'unit_rate'			=> '69.50',
+		'unit_rate'			=> '17.00',
 		'size_code'			=> '2',
 	),
 	array(
@@ -105,7 +105,7 @@ return array(
 		'unit_type'    		=> '1',
 		'unit_number'		=> NULL,
 		'rate_period'		=> 2, // 1=week, 2=4weeks, 3=monthly, 0=daily
-		'unit_rate'			=> '118.50',
+		'unit_rate'			=> '26.00',
 		'size_code'			=> '4',
 	),
 	array(
@@ -154,7 +154,7 @@ return array(
 		'unit_type'    		=> '1',
 		'unit_number'		=> NULL,
 		'rate_period'		=> 2, // 1=week, 2=4weeks, 3=monthly, 0=daily
-		'unit_rate'			=> '38.50',
+		'unit_rate'			=> '8.50',
 		'size_code'			=> '1',
 	),
 	array(
@@ -166,7 +166,7 @@ return array(
 		'unit_type'    		=> '1',
 		'unit_number'		=> NULL,
 		'rate_period'		=> 2, // 1=week, 2=4weeks, 3=monthly, 0=daily
-		'unit_rate'			=> '69.50',
+		'unit_rate'			=> '17.00',
 		'size_code'			=> '2',
 	),
 	array(
@@ -178,7 +178,7 @@ return array(
 		'unit_type'    		=> '1',
 		'unit_number'		=> NULL,
 		'rate_period'		=> 2, // 1=week, 2=4weeks, 3=monthly, 0=daily
-		'unit_rate'			=> '118.50',
+		'unit_rate'			=> '26.00',
 		'size_code'			=> '4',
 	),
 	array(
@@ -370,7 +370,7 @@ return array(
 		'unit_type'    		=> '1',
 		'unit_number'		=> NULL,
 		'rate_period'		=> 2, // 1=week, 2=4weeks, 3=monthly, 0=daily
-		'unit_rate'			=> '38.50',
+		'unit_rate'			=> '8.50',
 		'size_code'			=> '1',
 	),
 	array(
@@ -382,7 +382,7 @@ return array(
 		'unit_type'    		=> '1',
 		'unit_number'		=> NULL,
 		'rate_period'		=> 2, // 1=week, 2=4weeks, 3=monthly, 0=daily
-		'unit_rate'			=> '69.50',
+		'unit_rate'			=> '17.00',
 		'size_code'			=> '2',
 	),
 	array(
@@ -394,7 +394,7 @@ return array(
 		'unit_type'    		=> '1',
 		'unit_number'		=> NULL,
 		'rate_period'		=> 2, // 1=week, 2=4weeks, 3=monthly, 0=daily
-		'unit_rate'			=> '118.50',
+		'unit_rate'			=> '26.00',
 		'size_code'			=> '4',
 	),
 	array(
@@ -442,7 +442,7 @@ return array(
 		'unit_type'    		=> '1',
 		'unit_number'		=> NULL,
 		'rate_period'		=> 2, // 1=week, 2=4weeks, 3=monthly, 0=daily
-		'unit_rate'			=> '38.50',
+		'unit_rate'			=> '8.50',
 		'size_code'			=> '1',
 	),
 	array(
@@ -454,7 +454,7 @@ return array(
 		'unit_type'    		=> '1',
 		'unit_number'		=> NULL,
 		'rate_period'		=> 2, // 1=week, 2=4weeks, 3=monthly, 0=daily
-		'unit_rate'			=> '69.50',
+		'unit_rate'			=> '17.00',
 		'size_code'			=> '2',
 	),
 	array(
@@ -466,7 +466,7 @@ return array(
 		'unit_type'    		=> '1',
 		'unit_number'		=> NULL,
 		'rate_period'		=> 2, // 1=week, 2=4weeks, 3=monthly, 0=daily
-		'unit_rate'			=> '118.50',
+		'unit_rate'			=> '26.00',
 		'size_code'			=> '4',
 	),
 	array(
