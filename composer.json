@@ -14,7 +14,7 @@
         "php": ">=5.3.0",
         "yiisoft/yii2": "dev-master",
         "yiisoft/yii2-composer":"dev-master",
-        "yiisoft/yii2-jui": "dev-master",
+        "yiisoft/yii2-jui": "dev-master",        
         "phpexcel/phpexcel":"*",
         "phpword/phpword":"*",
         "sebastian/diff": "1.0.*@dev",

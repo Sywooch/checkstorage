@@ -4,8 +4,9 @@
  * @var $content string
  */
 use yii\helpers\Html;
+use app\config\AppAsset;
 
-$this->registerAssetBundle('app');
+AppAsset::register($this);
 
 ?>
 

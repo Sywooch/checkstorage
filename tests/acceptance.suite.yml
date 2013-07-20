@@ -13,4 +13,4 @@ modules:
     enabled: [PhpBrowser, WebHelper]
     config:
         PhpBrowser:
-            url: 'http://localhost:8081/mpintranet/www/'
+            url: 'http://localhost:8081/checkstorage/www/'

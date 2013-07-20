@@ -8946,3 +8946,98 @@ Stack trace:
   ),
   'argc' => 2,
 )
+2013/07/16 18:49:39 [127.0.0.1] [error] [yii\console\Exception] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets".' in /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/Module.php:586
+Stack trace:
+#0 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Application.php(128): yii\base\Module->runAction('assets', Array)
+#1 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Application.php(96): yii\console\Application->runAction('assets', Array)
+#2 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/Application.php(189): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 /Users/philippfrenzel/Sites/pliq/checkstorage/yii(24): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\console\Exception' with message 'Unknown command "assets".' in /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Application.php:130
+Stack trace:
+#0 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Application.php(96): yii\console\Application->runAction('assets', Array)
+#1 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/Application.php(189): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 /Users/philippfrenzel/Sites/pliq/checkstorage/yii(24): yii\base\Application->run()
+#3 {main}
+2013/07/16 18:49:39 [127.0.0.1] [info] [application] $_SERVER = array (
+  'TERM_PROGRAM' => 'Apple_Terminal',
+  'SHELL' => '/bin/bash',
+  'TERM' => 'xterm-256color',
+  'TMPDIR' => '/var/folders/0n/pltm268d44zdxv6jgfh4zsdr0000gn/T/',
+  'Apple_PubSub_Socket_Render' => '/tmp/launch-nDbUSY/Render',
+  'TERM_PROGRAM_VERSION' => '309',
+  'TERM_SESSION_ID' => '2EF6BF41-3A6C-4906-9712-4A8FDB518A4E',
+  'USER' => 'philippfrenzel',
+  'COMMAND_MODE' => 'unix2003',
+  'SSH_AUTH_SOCK' => '/tmp/launch-azEgWF/Listeners',
+  'Apple_Ubiquity_Message' => '/tmp/launch-YMZK1j/Apple_Ubiquity_Message',
+  '__CF_USER_TEXT_ENCODING' => '0x1F5:0:3',
+  'PATH' => '/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin',
+  'PWD' => '/Users/philippfrenzel/Sites/pliq/checkstorage',
+  'DBUS_LAUNCHD_SESSION_BUS_SOCKET' => '/tmp/launch-YB6Eft/session',
+  'LANG' => 'de_DE.UTF-8',
+  'HOME' => '/Users/philippfrenzel',
+  'SHLVL' => '1',
+  'LOGNAME' => 'philippfrenzel',
+  'SECURITYSESSIONID' => '186a4',
+  '_' => './yii',
+  'PHP_SELF' => './yii',
+  'SCRIPT_NAME' => './yii',
+  'SCRIPT_FILENAME' => './yii',
+  'PATH_TRANSLATED' => './yii',
+  'DOCUMENT_ROOT' => '',
+  'REQUEST_TIME' => 1374000579,
+  'argv' => 
+  array (
+    0 => './yii',
+    1 => 'assets',
+  ),
+  'argc' => 2,
+)
+2013/07/16 18:49:49 [127.0.0.1] [error] [yii\console\Exception] exception 'yii\console\Exception' with message 'Missing required arguments: configFile, bundleFile' in /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Controller.php:129
+Stack trace:
+#0 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/InlineAction.php(48): yii\console\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/Controller.php(120): yii\base\InlineAction->runWithParams(Array)
+#2 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Controller.php(77): yii\base\Controller->runAction('', Array)
+#3 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/Module.php(582): yii\console\Controller->runAction('', Array)
+#4 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Application.php(128): yii\base\Module->runAction('asset', Array)
+#5 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/console/Application.php(96): yii\console\Application->runAction('asset', Array)
+#6 /Users/philippfrenzel/Sites/pliq/checkstorage/vendor/yiisoft/yii2/yii/base/Application.php(189): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /Users/philippfrenzel/Sites/pliq/checkstorage/yii(24): yii\base\Application->run()
+#8 {main}
+2013/07/16 18:49:49 [127.0.0.1] [info] [application] $_SERVER = array (
+  'TERM_PROGRAM' => 'Apple_Terminal',
+  'SHELL' => '/bin/bash',
+  'TERM' => 'xterm-256color',
+  'TMPDIR' => '/var/folders/0n/pltm268d44zdxv6jgfh4zsdr0000gn/T/',
+  'Apple_PubSub_Socket_Render' => '/tmp/launch-nDbUSY/Render',
+  'TERM_PROGRAM_VERSION' => '309',
+  'TERM_SESSION_ID' => '2EF6BF41-3A6C-4906-9712-4A8FDB518A4E',
+  'USER' => 'philippfrenzel',
+  'COMMAND_MODE' => 'unix2003',
+  'SSH_AUTH_SOCK' => '/tmp/launch-azEgWF/Listeners',
+  'Apple_Ubiquity_Message' => '/tmp/launch-YMZK1j/Apple_Ubiquity_Message',
+  '__CF_USER_TEXT_ENCODING' => '0x1F5:0:3',
+  'PATH' => '/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin',
+  'PWD' => '/Users/philippfrenzel/Sites/pliq/checkstorage',
+  'DBUS_LAUNCHD_SESSION_BUS_SOCKET' => '/tmp/launch-YB6Eft/session',
+  'LANG' => 'de_DE.UTF-8',
+  'HOME' => '/Users/philippfrenzel',
+  'SHLVL' => '1',
+  'LOGNAME' => 'philippfrenzel',
+  'SECURITYSESSIONID' => '186a4',
+  '_' => './yii',
+  'PHP_SELF' => './yii',
+  'SCRIPT_NAME' => './yii',
+  'SCRIPT_FILENAME' => './yii',
+  'PATH_TRANSLATED' => './yii',
+  'DOCUMENT_ROOT' => '',
+  'REQUEST_TIME' => 1374000589,
+  'argv' => 
+  array (
+    0 => './yii',
+    1 => 'asset',
+  ),
+  'argc' => 2,
+)

@@ -1,3 +1,5 @@
+@import url(//fonts.googleapis.com/css?family=Telex);
+
 body {
 	background-color: #F9F9F5;
 }
@@ -31,12 +33,15 @@ body {
 }
 
 #logostyle{
+  font-family: Telex;
 	font-size: 38px;
 	color: #00688B;
 }
 
 #sloganstyle{
+  font-family: Telex;
 	font-size: 19px;
+  padding-top:10px;
 	padding-bottom: 15px;
 	color: #32CD32;
 }

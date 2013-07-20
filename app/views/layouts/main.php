@@ -6,13 +6,13 @@
 use yii\helpers\Html;
 use yii\bootstrap\NavBar;
 use app\models\User;
-use yii2tooltipster\yii2tooltipster;
+use app\config\AppAsset;
+use Yii2Tooltipster\Yii2Tooltipster;
 
 use \yii\web\Session;
 
 $this->assetBundles['yii/bootstrap']=true;
-$this->registerAssetBundle('app');
-
+AppAsset::register($this); 
 
 ?>
 
@@ -33,7 +33,7 @@ $this->registerAssetBundle('app');
 </head>
 <body>
 
-<?php echo yii2tooltipster::widget(array('options'=>array('class'=>'.tipster'))); ?>
+<?php echo Yii2Tooltipster::widget(array('options'=>array('class'=>'.tipster'))); ?>
 
 <div id="topbar"></div>
 

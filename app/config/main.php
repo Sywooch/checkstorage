@@ -7,6 +7,7 @@ return array(
 	'name' => 'check storage - Lagerraum, Keller, Dachboden, Selfstorage Vergleich',
 	'basePath' => dirname(__DIR__),
 	'vendorPath' => dirname(__DIR__) . '/vendor',
+	'preload' => array('debug'),
 	'controllerNamespace' => 'app\controllers',
 	'charset'=>'UTF-8',
 	'language' => 'de_DE',	
@@ -41,10 +42,7 @@ return array(
 					'levels' => array('error','warning'),
 				),
 			),
-		),	
-		'assetManager'=>array(
-			'bundles' => require(__DIR__ . '/assets.php'),
-        ),
+		),
 		'translations' => array(
 			array(
 				'class' => 'yii\i18n\PhpMessageSource',

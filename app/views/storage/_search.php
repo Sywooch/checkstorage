@@ -3,7 +3,7 @@
 use \yii\helpers\Html;
 use \yii\widgets\ActiveForm;
 use app\components\MyHtml;
-use yii\jui\DatePicker;
+use \yii\jui\DatePicker;
 
 ?>
 

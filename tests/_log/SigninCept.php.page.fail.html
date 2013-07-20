@@ -3,57 +3,43 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Login</title>
-	<link href="/mpintranet/www/assets/881a5b71/css/jquery-ui.css" rel="stylesheet">
-<link href="/mpintranet/www/assets/d86cfe57/css/bootstrap.css" rel="stylesheet">
-<link href="/mpintranet/www/css/site.css" rel="stylesheet">
-<link href="/mpintranet/www/less/modern.css" rel="stylesheet">
+	<link href="/checkstorage/www/assets/bbe1164a/css/bootstrap.css" rel="stylesheet">
+<link href="/checkstorage/www/assets/bbe1164a/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="/checkstorage/www/css/bootstrap.min.css" rel="stylesheet">
+<link href="/checkstorage/www/css/font-awesome.min.css" rel="stylesheet">
+<link href="/checkstorage/www/css/site.css" rel="stylesheet">
+<link href="/checkstorage/www/css/jquery-ui.css" rel="stylesheet">
+<link href="/checkstorage/www/css/syntaxhighlighter/github.css" rel="stylesheet">
 </head>
 <body class="metrouicss">
 <div class="container">
-		<div class="masthead">		
-		<h3 class="muted">MyPlace Intranet
-				</h3>
+		<div class="masthead">
+		<div class="pull-right">		
+					</div>
+		<div id="logostyle">check storage</div>
+		<div id="sloganstyle">LAGERRAUM VERGLEICH</div>
 	</div>
+	
 	<div id="pagewrapper">
 		<section id="content" class="bg-color-white">
 	<div class="container-fluid">
 		<div class="row-fluid">
 			
+<h1>Login</h1>
 
 <div class="row-fluid">
-	<div class="span3">
-		<div id="w0" class="icon bg-color-redMyplace tile">
-<div id="w0-tile0" class="tile-content"><i class="icon-cube"></i></div>
-
-<div id="w0-tile-brand0" class="brand"><div class="name">myplace</div></div>
-
-</div>
-	</div>
-	<div class="span9">
-		<div class="notices">
-<div id="w1" class="bg-color-green"><div id="w1-notice-icon0" class="notice-icon"><i class="icon-key fg-color-white"></i></div>
-
-<div id="w1-notice-header0" class="notice-header">Login</div>
-
-<a class="close" href="#"></a>
-
-<div id="w1-notice0" class="notice-text"><p>Welcome to the MyPlace Intranet!</p><p>Please fill out the following fields to login</p></div>
-</div>
-</div>
-
-		<p>&nbsp;</p>
-
-		<form id="w2" class="form-horizontal" action="/mpintranet/www//index.php?r=site%2Flogin" method="post">			<div class="control-group field-loginform-username required">
+	<div class="span12">
+		<form id="w0" class="form-horizontal" action="/checkstorage/www//index.php?r=site%2Flogin" method="post">			<div class="control-group field-loginform-username required">
 <label class="control-label" for="loginform-username">Benutzername</label>
 <div class="controls">
-<input type="text" id="loginform-username" name="LoginForm[username]">
+<input type="text" id="loginform-username" name="LoginForm[username]" value="pfrenzel">
 <span class="help-inline"></span>
 </div>
-</div>			<div class="control-group field-loginform-password required">
+</div>			<div class="control-group field-loginform-password required error">
 <label class="control-label" for="loginform-password">Passwort</label>
 <div class="controls">
-<input type="password" id="loginform-password" name="LoginForm[password]">
-<span class="help-inline"></span>
+<input type="password" id="loginform-password" name="LoginForm[password]" value="pfrenzel">
+<span class="help-inline">Incorrect username or password.</span>
 </div>
 </div>			<div class="control-group field-loginform-rememberme">
 <input type="hidden" name="LoginForm[rememberMe]" value="0">
@@ -62,7 +48,7 @@
 <span class="help-inline"></span>
 </div>
 </div>			<div class="form-actions">				
-				<button type="submit" class="btn btn-success fg-color-white"><i class="icon-enter"></i> Anmelden</button>			</div>
+				<button type="submit" class="btn btn-success fg-color-white"><i class="icon-arrow-right"></i> Anmelden</button>			</div>
 		</form>	</div>
 </div>
 
@@ -72,14 +58,232 @@
 </section>
 	</div>
 
-	<script src="/mpintranet/www/assets/d975465d/jquery.js"></script>
-<script src="/mpintranet/www/assets/d975465d/yii.js"></script>
-<script src="/mpintranet/www/assets/881a5b71/js/tile-drag.js"></script>
-<script src="/mpintranet/www/assets/d975465d/yii.validation.js"></script>
-<script src="/mpintranet/www/assets/d975465d/yii.activeForm.js"></script>
-<script src="/mpintranet/www/js/dropdown.js"></script>
+	<div id="yii-debug-toolbar" data-url="/checkstorage/www//index.php?r=debug/default/toolbar&tag=51e5bac6b8821" style="display:none"></div><style>#yii-debug-toolbar {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	z-index: 1000000;
+	font: 11px Verdana, Arial, sans-serif;
+	text-align: left;
+	height: 38px;
+	border-top: 1px solid #ccc;
+	background: rgb(237,237,237);
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VkZWRlZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUzJSIgc3RvcC1jb2xvcj0iI2Y2ZjZmNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(237,237,237,1)), color-stop(53%,rgba(246,246,246,1)), color-stop(100%,rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top,  rgba(237,237,237,1) 0%,rgba(246,246,246,1) 53%,rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top,  rgba(237,237,237,1) 0%,rgba(246,246,246,1) 53%,rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(237,237,237,1) 0%,rgba(246,246,246,1) 53%,rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom,  rgba(237,237,237,1) 0%,rgba(246,246,246,1) 53%,rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff',GradientType=0 );
+}
+
+.yii-debug-toolbar-block {
+	float: left;
+	margin: 0;
+	border-right: 1px solid #e4e4e4;
+	padding: 4px 8px;
+	line-height: 32px;
+}
+
+.yii-debug-toolbar-block a {
+	text-decoration: none;
+	color: black;
+}
+
+.yii-debug-toolbar-block span {
+}
+
+.yii-debug-toolbar-block img {
+	vertical-align: middle;
+}
+
+#yii-debug-toolbar .label {
+	display: inline-block;
+	padding: 2px 4px;
+	font-size: 11.844px;
+	font-weight: normal;
+	line-height: 14px;
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	white-space: nowrap;
+	vertical-align: baseline;
+	background-color: #999999;
+}
+
+#yii-debug-toolbar .label {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#yii-debug-toolbar .label:empty {
+	display: none;
+}
+
+#yii-debug-toolbar a.label:hover,
+#yii-debug-toolbar a.label:focus {
+	color: #ffffff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#yii-debug-toolbar .label-important {
+	background-color: #b94a48;
+}
+
+#yii-debug-toolbar .label-important[href] {
+	background-color: #953b39;
+}
+
+#yii-debug-toolbar .label-warning,
+#yii-debug-toolbar .badge-warning {
+	background-color: #f89406;
+}
+
+#yii-debug-toolbar .label-warning[href] {
+	background-color: #c67605;
+}
+
+#yii-debug-toolbar .label-success {
+	background-color: #468847;
+}
+
+#yii-debug-toolbar .label-success[href] {
+	background-color: #356635;
+}
+
+#yii-debug-toolbar .label-info {
+	background-color: #3a87ad;
+}
+
+#yii-debug-toolbar .label-info[href] {
+	background-color: #2d6987;
+}
+
+#yii-debug-toolbar .label-inverse,
+#yii-debug-toolbar .badge-inverse {
+	background-color: #333333;
+}
+
+#yii-debug-toolbar .label-inverse[href],
+#yii-debug-toolbar .badge-inverse[href] {
+	background-color: #1a1a1a;
+}
+
+.yii-debug-toolbar-toggler {
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	bottom: 4px;
+	width: 15px;
+	height: 30px;
+	font-size: 25px;
+	font-weight: 100;
+	line-height: 28px;
+	color: #ffffff;
+	text-align: center;
+	background: #666666;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
+.yii-debug-toolbar-toggler:hover,
+.yii-debug-toolbar-toggler:focus {
+	color: #ffffff;
+	text-decoration: none;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+
+#yii-debug-toolbar-min {
+	display: none;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	z-index: 1000000;
+	font: 11px Verdana, Arial, sans-serif;
+	text-align: left;
+	width: 63px;
+	height: 38px;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	-webkit-border-top-left-radius: 6px;
+	-moz-border-top-left-radius: 6px;
+	border-top-left-radius: 6px;
+	background: rgb(237,237,237);
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VkZWRlZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUzJSIgc3RvcC1jb2xvcj0iI2Y2ZjZmNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(237,237,237,1)), color-stop(53%,rgba(246,246,246,1)), color-stop(100%,rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top,  rgba(237,237,237,1) 0%,rgba(246,246,246,1) 53%,rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top,  rgba(237,237,237,1) 0%,rgba(246,246,246,1) 53%,rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(237,237,237,1) 0%,rgba(246,246,246,1) 53%,rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom,  rgba(237,237,237,1) 0%,rgba(246,246,246,1) 53%,rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff',GradientType=0 );
+}
+
+#yii-debug-toolbar-logo {
+	position: fixed;
+	right: 31px;
+	bottom: 4px;
+}
+</style><script>(function() {
+	var ajax = function(url, settings) {
+		var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+		settings = settings || {};
+		xhr.open(settings.method || 'GET', url, true);
+		xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+		xhr.onreadystatechange = function(state) {
+			if (xhr.readyState == 4) {
+				if (xhr.status == 200 && settings.success) {
+					settings.success(xhr);
+				} else if (xhr.status != 200 && settings.error) {
+					settings.error(xhr);
+				}
+			}
+		};
+		xhr.send(settings.data || '');
+	};
+
+	var e = document.getElementById('yii-debug-toolbar');
+	if (e) {
+		e.style.display = 'block';
+		var url = e.getAttribute('data-url');
+		ajax(url, {
+			success: function(xhr) {
+				var div = document.createElement('div');
+				div.innerHTML = xhr.responseText;
+				e.parentNode.replaceChild(div, e);
+				if (window.localStorage) {
+					var pref = localStorage.getItem('yii-debug-toolbar');
+					if (pref == 'minimized') {
+						document.getElementById('yii-debug-toolbar').style.display = 'none';
+						document.getElementById('yii-debug-toolbar-min').style.display = 'block';
+					}
+				}
+			},
+			error: function(xhr) {
+				e.innerHTML = xhr.responseText;
+			}
+		});
+	}
+})();
+</script><script src="/checkstorage/www/assets/a9df45af/jquery.js"></script>
+<script src="/checkstorage/www/assets/a9df45af/yii.js"></script>
+<script src="/checkstorage/www/assets/a9df45af/yii.validation.js"></script>
+<script src="/checkstorage/www/assets/a9df45af/yii.activeForm.js"></script>
+<script src="/checkstorage/www/js/dropdown.js"></script>
+<script src="/checkstorage/www/js/syntaxhighlighter/highlight.pack.js"></script>
 <script type="text/javascript">jQuery(document).ready(function(){
-jQuery('#w2').yiiActiveForm({"username":{"validate":function(attribute, value, messages) {yii.validation.required(value, messages, {"message":"Benutzername cannot be blank."});},"name":"loginform-username","validateOnChange":true,"validateOnType":false,"validationDelay":200,"container":".field-loginform-username","input":"#loginform-username","error":".help-inline"},"password":{"validate":function(attribute, value, messages) {yii.validation.required(value, messages, {"message":"Passwort cannot be blank."});},"name":"loginform-password","validateOnChange":true,"validateOnType":false,"validationDelay":200,"container":".field-loginform-password","input":"#loginform-password","error":".help-inline"},"rememberMe":{"validate":function(attribute, value, messages) {yii.validation.boolean(value, messages, {"trueValue":"1","falseValue":"0","message":"angemeldet bleiben must be either &quot;1&quot; or &quot;0&quot;.","skipOnEmpty":1});},"name":"loginform-rememberme","validateOnChange":true,"validateOnType":false,"validationDelay":200,"container":".field-loginform-rememberme","input":"#loginform-rememberme","error":".help-inline"}}, {"errorSummary":".error-summary","validateOnSubmit":true,"errorCssClass":"error","successCssClass":"success","validatingCssClass":"validating","ajaxVar":"ajax"});
+jQuery('#w0').yiiActiveForm({"username":{"validate":function(attribute, value, messages) {yii.validation.required(value, messages, {"message":"Benutzername cannot be blank."});},"name":"loginform-username","validateOnChange":true,"validateOnType":false,"validationDelay":200,"container":".field-loginform-username","input":"#loginform-username","error":".help-inline"},"password":{"validate":function(attribute, value, messages) {yii.validation.required(value, messages, {"message":"Passwort cannot be blank."});},"name":"loginform-password","validateOnChange":true,"validateOnType":false,"validationDelay":200,"container":".field-loginform-password","input":"#loginform-password","error":".help-inline"},"rememberMe":{"validate":function(attribute, value, messages) {yii.validation.boolean(value, messages, {"trueValue":"1","falseValue":"0","message":"angemeldet bleiben must be either &quot;1&quot; or &quot;0&quot;.","skipOnEmpty":1});},"name":"loginform-rememberme","validateOnChange":true,"validateOnType":false,"validationDelay":200,"container":".field-loginform-rememberme","input":"#loginform-rememberme","error":".help-inline"}}, {"errorSummary":".error-summary","validateOnSubmit":true,"errorCssClass":"error","successCssClass":"success","validatingCssClass":"validating","ajaxVar":"ajax"});
 });</script>
 </div>
 
@@ -87,14 +291,12 @@ jQuery('#w2').yiiActiveForm({"username":{"validate":function(attribute, value, m
 	<div class="container">
 		<div class="span4">
 			<ul class="unstyled">
-				<li>MyPlace Selfstorage 2013</li>
 				<li>&copy; Frenzel GmbH 2013</li>
 			</ul>
 		</div>
 		<div class="span4">
 			<ul class="unstyled">
-				<li>Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a>.</li>
-				<li>Styles by <a href="http://metroui.org.ua/">Metro UI CSS</a></li>
+				<li>Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a>.</li>				
 			</ul>
 		</div>
 		<div class="span4">
@@ -103,6 +305,5 @@ jQuery('#w2').yiiActiveForm({"username":{"validate":function(attribute, value, m
 	</div>	
 </div>
 
- 
 </body>
 </html>
