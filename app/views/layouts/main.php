@@ -56,7 +56,7 @@ AppAsset::register($this);
 
 		$MenuItems = array();
 		//Bedarfssammler
-		$MenuItems[] = array('label' => 'Bedarfssammler', 'url' => array('/opportunities/index'));
+		//$MenuItems[] = array('label' => 'Bedarfssammler', 'url' => array('/opportunities/index'));
 		$MenuItems[] = array('label' => 'Dokumentation', 'url' => array('/site/page','view'=>'page_test'));
 
 		//menu items visible for guests
