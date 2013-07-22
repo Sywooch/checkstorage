@@ -14,6 +14,9 @@ return array(
 	'modules' => array(
 		'units' => array(
 			'class' => 'app\modules\units\Units'
+		),
+		'contracts' => array(
+			'class' => 'app\modules\contracts\Contracts'
 		),	
 		'debug' => array(
 			'class' => 'yii\debug\Module',
