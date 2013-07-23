@@ -12,13 +12,13 @@ return array(
 		'note'				=> 'Ein erster Versuch',
 	),
 	array(
-		'unit_id'			=> 1,
+		'unit_id'			=> 2,
 		'user_id'			=> 7,			//or 7
 		'date_created'		=> date('Y-m-d'),
 		'date_start'		=> date('Y-m-d'),
 		'date_end'			=> NULL,
 		'date_deleted'		=> NULL,
-		'is_consumer'		=> 0,		
+		'is_consumer'		=> 1,		
 		'note'				=> 'Und hier haben wir auch ein Vertragli',
 	),
 );

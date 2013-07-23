@@ -36,7 +36,7 @@ class Storage extends ActiveRecord
 	{
 	    return array(
 	        array('name, user_id, address', 'required'),
-            array('name, country, address, city','string','max'=>255),
+            array('name, country, address, city, phone, fax, mail','string','max'=>255),
             array('zipcode','string','max'=>15),
             array('no_latitude, no_longitude','string'),	        
 	    );
@@ -100,6 +100,9 @@ class Storage extends ActiveRecord
             'address'           => Yii::t('app','Adresse'),
             'city'              => Yii::t('app','Stadt'),
             'zipcode'           => Yii::t('app','Postleitzahl'),
+            'phone'             => Yii::t('app','Telefon'),
+            'fax'               => Yii::t('app','Fax'),
+            'mail'              => Yii::t('app','E-Mail'),
             'no_longitude'      => Yii::t('app','Longitude'),
             'no_latitude'       => Yii::t('app','Latitude'),
         );
