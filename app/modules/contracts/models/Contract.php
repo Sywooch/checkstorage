@@ -6,9 +6,6 @@ use yii\db\ActiveRecord;
 use yii\helpers\Html;
 use Yii;
 
-use app\modules\units\models\Unit AS Unit;
-use app\models\User AS User;
-
 class Contract extends ActiveRecord
 {	
     /**
@@ -38,14 +35,14 @@ class Contract extends ActiveRecord
     * @return model \app\modules\units\models\Unit Unit
     */
     public function getUnit(){
-        return $this->hasOne('Unit', array('id' => 'unit_id'));
+        return $this->hasOne('app\modules\units\models\Unit', array('id' => 'unit_id'));
     }
 
     /**
     * @return model \app\models\User User
     */
     public function getContractPartner(){
-        return $this->hasOne('User', array('id' => 'user_id'));
+        return $this->hasOne('app\models\User', array('id' => 'user_id'));
     }
 	
     /**

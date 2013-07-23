@@ -88,7 +88,7 @@ class ContractsController extends Controller
 		$this->layout='/column2';
 
 		$provider = new ActiveDataProvider(array(
-		      'query' => Contract::find()->with('Unit'),//->where(array('storage_id'=>$id))
+		      'query' => Contract::find()->with('Unit'),//->where(array('storage_id'=>$id)),
 		      'pagination' => array(
 		          'pageSize' => 20,
 		      ),

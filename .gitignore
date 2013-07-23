@@ -5,3 +5,5 @@
 app/data/.DS_Store
 
 composer.lock
+
+console/runtime/logs/app.log

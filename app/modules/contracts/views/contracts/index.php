@@ -13,33 +13,33 @@ use \yii\widgets\Block;
 	<li class="nav-header">Aktionen</li>
 		<ul class="unstyled">
 		<?php
-			echo '<li class="mytoolbox">'.Html::a('<i class="icon-plus fg-color-white"></i> Vertrag anlegen',array('/contracts/contracts/create'),array('class'=>'fg-color-white')).'</li>';			
+			echo '<li class="mytoolbox">'.Html::a('<i class="icon-plus fg-color-white"></i> Vertrag anlegen',array('/contracts/contracts/createTable'),array('class'=>'fg-color-white')).'</li>';			
 		?>
 		</ul>
 	</ul>
 <?php Block::end(); ?>
 
 
-<h1>Contracts</h1>
+<h1>Verträge</h1>
 
 <table class="table table-striped">
 	<thead>
-		<td>Abteil Breite</td>
-		<td>Abteil Länge</td>
-		<td>Abteil Höhe</td>
+		<td>Vertrag #</td>
+		<td>Abteil #</td>
+		<td>Kunde</td>
 		<td></td>
 	</thead>
 
 <?php
 
-$units = $provider->getItems();
+$contracts = $provider->getItems();
 
-foreach($units AS $unit):
+foreach($contracts AS $contract):
 ?>
 <tr>
-	<td><?php echo $unit->room_width; ?></td>
-	<td><?php echo $unit->room_length; ?></td>
-	<td><?php echo $unit->room_height; ?></td>
+	<td># <?php echo $contract->id; ?></td>
+	<td># <?php echo $contract->Unit->id; ?> - <?php echo $contract->Unit->unit_number; ?></td>
+	<td><?php echo $contract->ContractPartner->name; ?> <?php echo $contract->ContractPartner->prename; ?></td>
 	<td></td>
 </tr>
 <?php endforeach; ?>
