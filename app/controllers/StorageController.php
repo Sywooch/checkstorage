@@ -182,7 +182,7 @@ class StorageController extends Controller
 		
 		$query = new Query;
 		$query->select('id, address, name, category_age ,stat_final_nnf')
-			->from('tbl_Storage')
+			->from('tbl_storage')
 		    ->orderBy('address ASC');
 
 		$command = $query->createCommand();

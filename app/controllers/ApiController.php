@@ -39,7 +39,7 @@ class ApiController extends Controller
 	 */
 	public function actionFetchtable($tablename,$secret)
 	{
-		$allowedTables = array('tbl_location','tbl_user','tbl_time_table');
+		$allowedTables = array('tbl_location','tbl_user');
 		if(in_array($tablename,$allowedTables) && $secret=='t0p53cr3t'){
 			$db = Yii::$app->getComponent('db');
 

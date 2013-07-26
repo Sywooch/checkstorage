@@ -2,7 +2,7 @@
 
 namespace app\components;
 
-use \yii\helpers\base\Html;
+use \yii\helpers\Html;
 
 
 class MyHtml extends Html

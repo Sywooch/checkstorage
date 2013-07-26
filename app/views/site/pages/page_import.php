@@ -13,6 +13,44 @@ use yii\widgets\Block;
 <?php Block::end(); ?>
 
 <h1>Import Formate <small>CSV-Strukturen</small></h1>
+
+<ul>
+	<li>Standorte</li>
+	<li>Preisliste</li>
+</ul>
+
+<h2>
+	Standorte
+</h2>
+<h3>Schema</h3>
+<table class="table stripped">
+	<thead>
+		<td>Feld</td>
+		<td>Inhalt</td>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Name</td>
+			<td>Der Standortname für die externe Kommunikation</td>
+		</tr>
+		<tr>
+			<td>Strasse</td>
+			<td>Die Strasse, in der der Standort sich befindet. Je genauer desto besser (Hausnummer)</td>
+		</tr>
+		<tr>
+			<td>Postleitzahl</td>
+			<td>Die Postleitzahl in dem sich Ihr Standort befindet</td>
+		</tr>
+		<tr>
+			<td>Stadt</td>
+			<td>In welcher Stadt befindet sich Ihr Standort?</td>
+		</tr>
+		<tr>
+			<td>Land</td>
+			<td>In welchem Land befindet sich ihr Standort (2Letter ISO CODE)</td>
+		</tr>
+	</tbody>
+</table>
 <h2>
 	Preisliste
 </h2>

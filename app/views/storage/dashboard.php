@@ -8,7 +8,19 @@ use \yii\bootstrap\Tabs;
 
 <?php Block::begin(array('id'=>'sidebar')); ?>
 	<ul class="nav nav-list">
-	<li class="nav-header">Aktionen</li>
+	<li class="nav-header">Verwaltung</li>
+		<ul class="unstyled">
+		<?php
+
+		if(Yii::$app->user->isAdmin OR Yii::$app->user->id == $model->user_id){
+			echo '<li class="mytoolbox">'.Html::a('<i class="icon-archive fg-color-white"></i> Verträge',array('/contracts/contracts/index','id'=>$model->id),array('class'=>'fg-color-white')).'</li>';
+			echo '<li class="mytoolbox">'.Html::a('<i class="icon-user fg-color-white"></i> Kunden',array('/opportunities/index','id'=>$model->id),array('class'=>'fg-color-white')).'</li>';
+			echo '<li class="mytoolbox">'.Html::a('<i class="icon-eur fg-color-white"></i> Rechnungen',array('/invoice/index','id'=>$model->id),array('class'=>'fg-color-white')).'</li>';
+		}
+		
+		?>
+		</ul>
+	<li class="nav-header">Standort Aktionen</li>
 		<ul class="unstyled">
 		<?php
 

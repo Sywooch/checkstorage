@@ -19,9 +19,9 @@ use \yii\widgets\Block;
 	{
 		echo '<li class="mytoolbox">'.Html::a('<i class="icon-building fg-color-white"></i> Lagerplätze',array('/storage/admin','id'=>$model->id),array('class'=>'fg-color-white')).'</li>';
 		echo '<li class="mytoolbox">'.Html::a('<i class="icon-dashboard fg-color-white"></i> Interessenten',array('/opportunities/index','id'=>$model->id),array('class'=>'fg-color-white')).'</li>';
-		echo '<li class="mytoolbox">'.Html::a('<i class="icon-user fg-color-white"></i> Kunden',array('/opportunities/index','id'=>$model->id),array('class'=>'fg-color-white')).'</li>';
-		echo '<li class="mytoolbox">'.Html::a('<i class="icon-archive fg-color-white"></i> Verträge',array('/contracts/contracts/index','id'=>$model->id),array('class'=>'fg-color-white')).'</li>';
-		echo '<li class="mytoolbox">'.Html::a('<i class="icon-eur fg-color-white"></i> Rechnungen',array('/invoice/index','id'=>$model->id),array('class'=>'fg-color-white')).'</li>';
+		//echo '<li class="mytoolbox">'.Html::a('<i class="icon-user fg-color-white"></i> Kunden',array('/opportunities/index','id'=>$model->id),array('class'=>'fg-color-white')).'</li>';
+		//echo '<li class="mytoolbox">'.Html::a('<i class="icon-archive fg-color-white"></i> Verträge',array('/contracts/contracts/index','id'=>$model->id),array('class'=>'fg-color-white')).'</li>';
+		//echo '<li class="mytoolbox">'.Html::a('<i class="icon-eur fg-color-white"></i> Rechnungen',array('/invoice/index','id'=>$model->id),array('class'=>'fg-color-white')).'</li>';
 	}
 
 	//define the menu items for the storage suppliers and the administrator

@@ -156,15 +156,7 @@ $this->registerJs($map->printMapJS());
 				</div>
 			</div>
 			<div class="row-fluid">
-				<div class="span6">					
-					<h4>&nbsp;&nbsp;<i class="icon-book icon-2x"></i>Für Kunden!</h4>
-					<ul>
-						<li>Meine Abteile</li>
-						<li>Meine Rechnungen</li>
-					</ul>
-					<a href="#" class="btn btn-info span12"><i class="icon-signin"></i> Anmelden</a>		
-				</div>
-				<div class="span6">
+				<div class="span12">
 					<h4>&nbsp;&nbsp;<i class="icon-bullhorn icon-2x"></i> Neuigkeiten</h4>
 			
 						<?php
