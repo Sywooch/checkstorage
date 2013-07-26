@@ -92,7 +92,7 @@ class SiteController extends Controller
 		//the blog part!
 		$query = Post::find()
 			->where('status="'. Workflow::STATUS_PUBLISHED.'"')
-			->orderBy('time_update DESC');
+			->orderBy('time_create DESC, id DESC');
 
 		if (!empty($tag))
 			$query->andWhere(array('like', 'tags', '%'.$tag.'%'));
