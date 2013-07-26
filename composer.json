@@ -40,10 +40,10 @@
     "extra": {
         "yii-install-writable": [
             "runtime",
-            "www/assets",
-            "www/autodocs",
-            "www/less",
-            "www/img/cms",
+            "web/assets",
+            "web/autodocs",
+            "web/less",
+            "web/img/cms",
             "console/dbbackup",
             "console/dbbackup/sql"
         ],
