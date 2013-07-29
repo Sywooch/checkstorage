@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 ?>
 
-<h3><i class="icon-book"></i> Inhaltsverzeichnis</h3>
+<h3><i class="icon-book"></i> InhaltsVZ</h3>
 <h4>Für Kunden</h4>
 
 <ul>

@@ -1,7 +1,12 @@
 @import url(//fonts.googleapis.com/css?family=Telex);
 
 body {
+  font-family: Telex, Verdana, Arial, sans-serif;
 	background-color: #F9F9F5;
+}
+
+.navbar-inner {
+    background: url("../img/header-bg.gif") repeat-x scroll left top #00688B;
 }
 
 #topbar{
@@ -33,14 +38,12 @@ body {
 }
 
 #logostyle{
-  font-family: Telex;
-	font-size: 38px;
+  font-size: 38px;
 	color: #00688B;
 }
 
 #sloganstyle{
-  font-family: Telex;
-	font-size: 19px;
+  font-size: 19px;
   padding-top:10px;
 	padding-bottom: 15px;
 	color: #32CD32;
@@ -84,7 +87,7 @@ body {
   background-color: #A4D3EE;
   padding-left: 10px;
   padding-bottom: 10px;
-  padding-top: 5px;
+  padding-top: 10px;
   border-left: solid 1px #454545;
   border-bottom: solid 1px #454545;
   /*box-shadow: 0 0 10px 5px #999999;*/

@@ -11,7 +11,7 @@ use app\models\Storage;
 
 class PortletStorageSearch extends Portlet
 {
-	public $title='Lagerplatz Suche';
+	public $title=NULL;//'Lagerplatz Suche';
 	
 	public $maxResults = 3;
 

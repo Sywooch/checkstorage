@@ -27,7 +27,7 @@ AppAsset::register($this);
 				<a href="<?php echo Html::Url(array('user/view','id'=>Yii::$app->user->identity->id)); ?>"><i class="icon-user"></i> <?php echo Yii::$app->user->identity->username; ?></a>
 			<?php endif; ?>
 		</div>
-		<div id="logostyle">check storage</div>
+		<div id="logostyle">CheckStorage</div>
 		<div id="sloganstyle">LAGERRAUM VERGLEICH</div>
 	</div>
 	

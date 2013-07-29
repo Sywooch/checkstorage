@@ -50,38 +50,39 @@ AppAsset::register($this);
 		<div id="logostyle">CheckStorage</div>
 		<div id="sloganstyle">Lagerraum Vergleich - Finde DEINEN Platz!</div>		
 	</div>
-		
+
 	<div id="pagewrapper">
 		<?php 
 
 		$MenuItems = array();
 		//Bedarfssammler
 		//$MenuItems[] = array('label' => 'Bedarfssammler', 'url' => array('/opportunities/index'));
-		$MenuItems[] = array('label' => 'Dokumentation', 'url' => array('/site/page','view'=>'page_test'));
+		$MenuItems[] = array('label' => '<i class="icon-book"></i> Dokumentation', 'url' => array('/site/page','view'=>'page_test'));
 
 		//menu items visible for guests
 		if(Yii::$app->user->isGuest)
 		{
-			$MenuItems[] = array('label' => 'Kontakt', 'url' => array('/site/contact'),'options'=>array());
-			$MenuItems[] = array('label' => 'Imprint', 'url' => array('/site/about'));			
+			$MenuItems[] = array('label' => '<i class="icon-envelope"></i> Kontakt', 'url' => array('/site/contact'),'options'=>array());
+			$MenuItems[] = array('label' => '<i class="icon-signal"></i> Imprint', 'url' => array('/site/about'));			
 		}
 		//menu items visible for stores and administrator
 		if(Yii::$app->user->identity->position==User::POS_STORE && !Yii::$app->user->isGuest){
-			$MenuItems[] = array('label' => 'Lagerplätze', 'url' => array('/storage/admin'));
+			$MenuItems[] = array('label' => '<i class="icon-house"></i> Lagerplätze', 'url' => array('/storage/admin'));
 		};
 		//menu items visible for none stores
 		if(!Yii::$app->user->isGuest){
-			$MenuItems[] = array('label' => 'Abmelden', 'url' => array('/site/logout'));
+			$MenuItems[] = array('label' => '<i class="icon-signout"></i> Abmelden', 'url' => array('/site/logout'));
 		};
 
 		echo NavBar::widget(array(
 			'id' => 'mainnavigation',
 			'options' => array('class' => 'nav'),
-			'brandLabel' => 'Start',
+			'brandLabel' => '<i class="icon-search"></i> Lagerraum Suchen',			
 			'items' => array(
 				 array(
 					'class' => 'yii\bootstrap\Nav',
 					'options' => array(
+						'encodeLabels' => false,
 						'items'=> $MenuItems,
 					)
 				)
