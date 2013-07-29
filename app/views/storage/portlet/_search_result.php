@@ -28,24 +28,19 @@ use app\helpers\HighlightHelper;
 			</tr>
 			<tr>
 				<td class="bg-color-blue1 priceinfo">
-					<small>ab</small> <b><?php echo $data->getUnitPrice(1.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
-					Woche
+					<small>ab</small> <b><?php echo $data->getUnitPrice(1.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="pro Woche, Ohne Gewähr!"></i><br>
 				</td>
 				<td class="bg-color-blue2 priceinfo">
-					<small>ab</small> <b><?php echo $data->getUnitPrice(2.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
-					Woche
+					<small>ab</small> <b><?php echo $data->getUnitPrice(2.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="pro Woche, Ohne Gewähr!"></i><br>
 				</td>
 				<td class="bg-color-blue4 priceinfo">
-					<small>ab</small> <b><?php echo $data->getUnitPrice(4.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
-					Woche
+					<small>ab</small> <b><?php echo $data->getUnitPrice(4.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="pro Woche, Ohne Gewähr!"></i><br>
 				</td>
 				<td class="bg-color-blue6 priceinfo">
-					<small>ab</small> <b><?php echo $data->getUnitPrice(6.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
-					Woche
+					<small>ab</small> <b><?php echo $data->getUnitPrice(6.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="pro Woche, Ohne Gewähr!"></i><br>
 				</td>
 				<td class="bg-color-blue10 priceinfo">
-					<small>ab</small> <b><?php echo $data->getUnitPrice(10.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
-					Woche
+					<small>ab</small> <b><?php echo $data->getUnitPrice(10.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="pro Woche, Ohne Gewähr!"></i><br>
 				</td>
 			</tr>
 		</table>

@@ -93,10 +93,10 @@ $this->registerJs($map->printMapJS());
 				<tr>
 					<td class="bg-color-green<?php echo (int)$unit->room_length*$unit->room_width; ?> fg-color-white"><?php echo $unit->room_length*$unit->room_width; ?> qm</td>
 					<td class="bg-color-blue<?php echo (int)$unit->room_length*$unit->room_width; ?>">
-						<small>ab</small> <b><?php echo number_format($unit->unit_rate*$unit->WeekFactor,2,',','.'); ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i> Woche
+						<small>ab</small> <b><?php echo number_format($unit->unit_rate*$unit->WeekFactor,2,',','.'); ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i>
 					</td>
 					<td class="bg-color-blue<?php echo (int)$unit->room_length*$unit->room_width; ?>">
-						<small>ab</small> <b><?php echo number_format($unit->unit_rate*$unit->FourWeekFactor,2,',','.'); ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i> Woche
+						<small>ab</small> <b><?php echo number_format($unit->unit_rate*$unit->FourWeekFactor,2,',','.'); ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i>
 					</td>
 					<td>
 						<?php echo Html::checkBox('rememberme'.$unit->id,'',array('class'=>'tipster','title'=>'Hier klicken um das Abteil zu merken.')); ?>
