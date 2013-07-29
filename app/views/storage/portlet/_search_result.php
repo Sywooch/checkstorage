@@ -12,7 +12,8 @@ use app\helpers\HighlightHelper;
 		<div>
 			<?php echo $data->address; ?><br>
 			<?php echo $data->zipcode; ?> <?php echo $data->city; ?> <br>
-			<?php echo $data->phone; ?><br>
+			<i class="icon-phone"></i> <?php echo $data->phone; ?><br>
+			<i class="icon-envelope"></i> <?php echo $data->mail; ?><br>
 		</div>
 	</div>
 </div>
