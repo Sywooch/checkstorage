@@ -77,6 +77,10 @@ body {
 	/*background: url("../img/bg_footer.png") repeat-x scroll 0 0 transparent;*/
 }
 
+.price-info{
+  font-size: 11px;
+}
+
 .portlet-title{
   padding-top:2px;
   color: #ffffff;

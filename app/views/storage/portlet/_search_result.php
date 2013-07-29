@@ -22,23 +22,23 @@ use app\helpers\HighlightHelper;
 				<td class="fg-color-white bg-color-green10" style="text-align:center">10qm</td>
 			</tr>
 			<tr>
-				<td class="bg-color-blue1">
+				<td class="bg-color-blue1 priceinfo">
 					<small>ab</small> <b><?php echo $data->getUnitPrice(1.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
 					Woche
 				</td>
-				<td class="bg-color-blue2">
+				<td class="bg-color-blue2 priceinfo">
 					<small>ab</small> <b><?php echo $data->getUnitPrice(2.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
 					Woche
 				</td>
-				<td class="bg-color-blue4">
+				<td class="bg-color-blue4 priceinfo">
 					<small>ab</small> <b><?php echo $data->getUnitPrice(4.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
 					Woche
 				</td>
-				<td class="bg-color-blue6">
+				<td class="bg-color-blue6 priceinfo">
 					<small>ab</small> <b><?php echo $data->getUnitPrice(6.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
 					Woche
 				</td>
-				<td class="bg-color-blue10">
+				<td class="bg-color-blue10 priceinfo">
 					<small>ab</small> <b><?php echo $data->getUnitPrice(10.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="Ohne Gewähr!"></i><br>
 					Woche
 				</td>
