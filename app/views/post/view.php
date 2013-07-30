@@ -2,7 +2,7 @@
 use \yii\helpers\Html;
 use \Yii;
 
-use yiimetroui\Accordion;
+use yii\bootstrap\Collapse;
 ?>
 
 <?php 
@@ -32,12 +32,12 @@ echo $this->context->renderPartial('_view', array(
 			<?php echo Yii::$app->session->getFlash('commentSubmitted'); ?>
 		</div>
 	<?php else: ?>
-		<?php echo Accordion::widget(array(
+		<?php echo Collapse::widget(array(
 			'items'=>array(
 				Yii::t('app','Leave a Comment')=>array(
 					'content'=>$this->context->renderPartial('/comment/_form',array('model'=>$comment))
 				)
-			)
+			)			
 		));
 		?>
 	<?php endif; ?>
