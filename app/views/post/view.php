@@ -2,7 +2,7 @@
 use \yii\helpers\Html;
 use \Yii;
 
-use yii\bootstrap\Collapse;
+use yii\jui\Accordion;
 ?>
 
 <?php 
@@ -31,15 +31,20 @@ echo $this->context->renderPartial('_view', array(
 		<div class="flash-success">
 			<?php echo Yii::$app->session->getFlash('commentSubmitted'); ?>
 		</div>
-	<?php else: ?>
-		<?php echo Collapse::widget(array(
+	<?php else: ?>		
+		<?php echo Accordion::widget(array(
 			'items'=>array(
-				Yii::t('app','Leave a Comment')=>array(
+				array(
+					'header'=>Yii::t('app','Leave a Comment'),
 					'content'=>$this->context->renderPartial('/comment/_form',array('model'=>$comment))
 				)
-			)			
+			),
+			'clientOptions'=>array(
+				'collapsible'=>true,
+				'collapsed'=>true,
+			)
 		));
 		?>
 	<?php endif; ?>
-
+	<p>&nbsp;</p>
 </div><!-- comments -->

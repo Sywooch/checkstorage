@@ -569,5 +569,15 @@ return array(
 		'no_latitude'	=> '48.133494',
 		'no_longitude'  => '16.295512',
 	),
+	'mc_selfstorage_1' => array(
+		'user_id'		=> 11,
+		'name'          => 'Mc Selfstorage Leonding',		
+		'country'       => 'AT',
+		'address'       => 'Stummerstrasse 1',
+		'zipcode'       => '4060',
+		'city'          => 'Leonding',
+		'no_latitude'	=> '48.271680',
+		'no_longitude'  => '14.248365',
+	),
 );
 
