@@ -4,11 +4,11 @@ use \yii\helpers\Html;
 use app\helpers\HighlightHelper;
 ?>
 <div class="row-fluid">
-	<div class="span5">
+	<div class="span4">
 		<img src="img/storage/<?php echo Html::encode($data->Owner->id); ?>.png" alt="<?php echo $data->name; ?>" style="height:30px"></img> 
 		<p><b><?php echo $data->Owner->prename; ?> <?php echo $data->Owner->name; ?></b></p>
 	</div>
-	<div class="span7">
+	<div class="span8">
 		<div>
 			<?php echo $data->address; ?><br>
 			<?php echo $data->zipcode; ?> <?php echo $data->city; ?> <br>
@@ -19,13 +19,18 @@ use app\helpers\HighlightHelper;
 </div>
 <div class="row-fluid">
 	<div class="span12">
-		<table class="table striped">
+		<table class="table">
 			<tr>
 				<td class="fg-color-white bg-color-green1" style="text-align:center"><?php echo Html::checkBox('rememberme'.$data->id.'_1','',array('class'=>'tipster','title'=>'Hier klicken um das Abteil für Ihre Anfrage zu selektieren.')); ?> 1qm</td>
 				<td class="fg-color-white bg-color-green2" style="text-align:center"><?php echo Html::checkBox('rememberme'.$data->id.'_2','',array('class'=>'tipster','title'=>'Hier klicken um das Abteil für Ihre Anfrage zu selektieren.')); ?> 2qm</td>
 				<td class="fg-color-white bg-color-green4" style="text-align:center"><?php echo Html::checkBox('rememberme'.$data->id.'_4','',array('class'=>'tipster','title'=>'Hier klicken um das Abteil für Ihre Anfrage zu selektieren.')); ?> 4qm</td>
 				<td class="fg-color-white bg-color-green6" style="text-align:center"><?php echo Html::checkBox('rememberme'.$data->id.'_6','',array('class'=>'tipster','title'=>'Hier klicken um das Abteil für Ihre Anfrage zu selektieren.')); ?> 6qm</td>
 				<td class="fg-color-white bg-color-green10" style="text-align:center"><?php echo Html::checkBox('rememberme'.$data->id.'_10','',array('class'=>'tipster','title'=>'Hier klicken um das Abteil für Ihre Anfrage zu selektieren.')); ?> 10qm</td>
+				<td>
+					<div class="pull-right">
+					 <a id="btn_<?php echo $data_id; ?>" href="<?php echo Html::url(array('/storage/rememberme')); ?>" class="btn btn-inverse"><i class="icon-star tipster" title="Anfragen"></i></a>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td class="bg-color-blue1 priceinfo">
@@ -43,6 +48,7 @@ use app\helpers\HighlightHelper;
 				<td class="bg-color-blue10 priceinfo">
 					<small>ab</small> <b><?php echo $data->getUnitPrice(10.00)->one()->unit_rate; ?></b> <i class="icon-eur tipster" title="pro Woche, Ohne Gewähr!"></i><br>
 				</td>
+				<td></td>
 			</tr>
 		</table>
 	</div>

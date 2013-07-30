@@ -3,6 +3,7 @@ use \yii\helpers\Html;
 use \yii\widgets\LinkPager;
 
 use \yii\widgets\Block;
+use \yii\widgets\ListView;
 
 $tdis->params['breadcrumbs']=array(
 	'Manage Posts',
@@ -36,56 +37,9 @@ $this->registerJs($deleteJS);
 
 <h1><i class="icon-building"></i> Standorte verwalten</h1>
 
-
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<td>#</td>
-			<td>Name</td>
-			<td>Adresse</td>
-			<td>Land</td>
-			<td>PLZ</td>
-			<td>Aktionen</td>
-		</tr>
-	</thead>
-	<?php
-	if (count($models) > 0) {
-		foreach($models as $model) {
-	?>
-	<tr>
-		<td><?php echo $model->id;?></td>
-		<td><?php echo Html::a(Html::encode($model->name), $model->url);?></td>
-		<td><?php echo $model->address;?></td>
-		<td><?php echo $model->country;?></td>
-		<td><?php echo $model->zipcode;?></td>
-		<td>
-			<i class="icon-book"></i> 
-			<?php
-				echo Html::a('verwalten', array("dashboard", "id"=>$model->id), array('class'=>'dashboard'));
-			?>
-			<i class="icon-pencil"></i> 
-			<?php
-				echo Html::a('bearbeiten', array("update", "id"=>$model->id), array('class' => 'edit')); 
-			?>
-			<i class="icon-remove"></i> 
-			<?php
-				echo Html::a('entfernen', array("softdelete", "id"=>$model->id), array('class'=>'delete'));
-			?>
-		</td>
-	</tr>
-	<?php
-		}
-	}
-	else {
-	?>
-	<tr>
-		<td cols="5">no result.</td>
-	</tr>
-	<?php
-	}
-	?>
-</table>
-<?php
-	echo LinkPager::widget(array('pagination'=>$pagination));
+<?php 
+	echo ListView::widget(array(
+		'dataProvider'=>$dpStorage,
+		'itemView' => 'iviews/_admin',
+	));
 ?>
-

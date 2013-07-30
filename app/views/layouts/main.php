@@ -67,7 +67,7 @@ AppAsset::register($this);
 		}
 		//menu items visible for stores and administrator
 		if(Yii::$app->user->identity->position==User::POS_STORE && !Yii::$app->user->isGuest){
-			$MenuItems[] = array('label' => '<i class="icon-house"></i> Lagerplätze', 'url' => array('/storage/admin'));
+			$MenuItems[] = array('label' => '<i class="icon-building"></i> Lagerplätze', 'url' => array('/storage/admin'));
 		};
 		//menu items visible for none stores
 		if(!Yii::$app->user->isGuest){

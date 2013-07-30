@@ -28,6 +28,13 @@ body {
   margin-top:25px;
 }
 
+.tile{
+  margin-top:5px;
+  padding-top:5px;
+  padding-bottom:5px;
+  border:1px solid #ddd;
+}
+
 .mytoolbox{
   margin-top:10px;
   padding-top:5px;
@@ -122,10 +129,10 @@ body {
 	padding: 10px;
 }
 
-/* page wrap 
+/* page wrap */
 #pagewrapper{
-	box-shadow: 0 0 10px 5px #999999;
-}*/
+	/*box-shadow: 0 0 10px 2px #ababab;*/
+}
 
 /* section content */
 #content{

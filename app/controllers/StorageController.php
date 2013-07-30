@@ -7,6 +7,7 @@ use \yii\web\Controller;
 use \yii\web\HttpException;
 
 use \yii\db\Query;
+use \yii\data\Sort;
 use \yii\data\ActiveDataProvider;
 
 use \yii\data\Pagination;
@@ -37,7 +38,7 @@ class StorageController extends Controller
 				'rules' => array(
 					array(
 						'allow'=>true,
-						'actions'=>array('view'),
+						'actions'=>array('view','rememberme'),
 						'roles' => array('?'),
 					),
 					array(
@@ -116,6 +117,10 @@ class StorageController extends Controller
 		return $this->redirect(array('admin'));
 	}
 
+	public function actionRemberme(){
+		$this->render('index');
+	}
+
 	public function actionIndex($tag='')
 	{
 		$this->layout = 'column2';
@@ -142,20 +147,30 @@ class StorageController extends Controller
 	public function actionAdmin()
 	{
 		$this->layout = 'column2';
-		$query = Storage::find()->where(array('user_id'=>Yii::$app->user->id))
-				->orderBy('id DESC');
 
-		$countQuery = clone $query;
-		$pagination = new Pagination();
-		$pagination->totalCount = $countQuery->count();
-		$pagination->pageSize=25;
+		$query = Storage::find()->where(array('user_id'=>Yii::$app->user->id));
+		$sort = new Sort(array(
+          'attributes' => array(
+              'country',
+              'name' => array(
+                  'asc' => array('name' => Sort::ASC),
+                  'desc' => array('name' => Sort::DESC),
+                  'default' => Sort::DESC,
+                  'label' => 'Name',
+              	),
+        	),
+      	));
 
-		$models = $query->offset($pagination->offset)
-			->limit($pagination->limit)
-			->all();
+		$dpStorage = new ActiveDataProvider(array(
+		      'query' => $query,
+		      'pagination' => array(
+		          'pageSize' => 10,
+		      ),
+		      'sort' => $sort
+	  	));		
 
 		return $this->render('admin', array(
-			'models' => $models,
+			'dpStorage' => $dpStorage,
 			'pagination' => $pagination,
 		));
 	}

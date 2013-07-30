@@ -9,7 +9,6 @@ use \yii\helpers\Html;
 	<fieldset>
 		<legend><?php echo Yii::t('app','Lagerplatz'); ?></legend>
 		
-		
 		<div class="row-fluid">
 			<div class="span4">
 				<?php echo $form->field($model,'name')->textInput(array('size'=>80,'maxlength'=>128,'class'=>'tipster','title'=>'Tragen Sie hier den Anzeigenamen des Standortes ein...')); ?>
@@ -32,6 +31,19 @@ use \yii\helpers\Html;
 			</div>
 		</div>
 		
+	</fieldset>
+
+	<fieldset>
+		<legend><?php echo Yii::t('app','Kommunikation'); ?></legend>
+		
+		<div class="row-fluid">
+			<div class="span4">
+				<?php echo $form->field($model,'phone')->textInput(array('size'=>80,'maxlength'=>128,'class'=>'tipster','title'=>'Tragen Sie hier den Anzeigenamen des Standortes ein...')); ?>
+			</div>
+			<div class="span8">				
+				<?php echo $form->field($model,'mail')->textInput(array('size'=>80,'maxlength'=>128,'class'=>'tipster','title'=>'Tragen Sie hier die möglichst genaue Adresse des Standortes ein...')); ?>
+			</div>
+		</div>
 	
 	</fieldset>
 

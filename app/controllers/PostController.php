@@ -27,6 +27,11 @@ class PostController extends Controller
 				'rules' => array(
 					array(
 						'allow'=>true,
+						'actions'=>array('view'),
+				        'roles'=>array('?'),
+					), 
+					array(
+						'allow'=>true,
 						'actions'=>array('index','view','create','update','indexadmin','admin'),
 				        'roles'=>array('@'),
 					), 
