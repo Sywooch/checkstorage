@@ -32,6 +32,52 @@ class Unit extends ActiveRecord
         return self::$periods[$rate_period];
     }
 
+    const UNIT_ROOM         = 1;
+    const UNIT_EXTERNAL     = 2;
+    const UNIT_CONTAINER    = 3;
+    const UNIT_OTHER        = 4;
+    
+    public static $unittypes = array(
+        self::UNIT_ROOM      =>'Abteil',
+        self::UNIT_EXTERNAL  =>'Aussenabteil',
+        self::UNIT_CONTAINER =>'Container',
+        self::UNIT_OTHER     =>'Sonstige',
+    );
+
+    public static function getUnitTypeOptions()
+    {
+        return self::$unittypes;
+    }
+
+    public static function getUnitTypeAsString($unit_type)
+    {
+        return self::$unittypes[$unit_type];
+    }
+
+    const STATUS_VACANT      = 'v';
+    const STATUS_OCCUPIED    = 'o';
+    const STATUS_UNAVAILABLE = 'x';
+    const STATUS_SUSPENDED   = 's';
+    const STATUS_DESTROYED   = 'd';
+    
+    public static $unitstatus = array(
+        self::STATUS_VACANT      =>'frei',
+        self::STATUS_OCCUPIED    =>'belegt',
+        self::STATUS_UNAVAILABLE =>'wartend',
+        self::STATUS_SUSPENDED   =>'noch belegt',
+        self::STATUS_DESTROYED   =>'aufgelöst',
+    );
+
+    public static function getUnitStatusOptions()
+    {
+        return self::$unitstatus;
+    }
+
+    public static function getUnitStatusAsString($current_status)
+    {
+        return self::$unitstatus[$current_status];
+    }
+
     /**
      * @return string the associated database table name
      */
