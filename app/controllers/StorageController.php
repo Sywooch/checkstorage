@@ -43,7 +43,7 @@ class StorageController extends Controller
 					),
 					array(
 						'allow'=>true,
-						'actions'=>array('dashboard','view','update','create','index','admin','jsongridstoragedata'),
+						'actions'=>array('dashboard','view','update','create','index','admin','jsongridstoragedata','rememberme'),
 				        'roles'=>array('@'),
 					),  
 					array(
@@ -69,16 +69,26 @@ class StorageController extends Controller
 	{		
 		$model=$this->loadModel($id);	
 
-		$unitsprovider = new ActiveDataProvider(array(
-		      'query' => \app\modules\units\models\Unit::find()->where(array('storage_id'=>$id)),
+		$query = \app\modules\units\models\Unit::find()->where(array('storage_id'=>$id));
+		$sort = new Sort(array(
+          'attributes' => array(
+              'unit_number',
+              'current_status',
+              'unit_type'
+        	),
+      	));
+
+      	$dpUnit = new ActiveDataProvider(array(
+		      'query' => $query,
 		      'pagination' => array(
 		          'pageSize' => 10,
 		      ),
+		      'sort' => $sort
 	  	));
 
 		return $this->render('dashboard',array(
 			'model' => $model,
-			'unitsprovider' => $unitsprovider,
+			'dpUnit' => $dpUnit,
 		));
 	}
 

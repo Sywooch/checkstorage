@@ -58,7 +58,7 @@ $myTabs = array();
 $myTabs[] = array(
     'label' => Yii::t('app','Alle Abteile'),
     'active' => true,
-    'content' => $this->context->renderPartial('/../modules/units/views/units/dashboard', array('provider'=>$unitsprovider)),
+    'content' => $this->context->renderPartial('/../modules/units/views/units/dashboard', array('dpUnit'=>$dpUnit)),
 );
 /*$myTabs[] = array(
             'label' => Yii::t('app','User Contact'),
