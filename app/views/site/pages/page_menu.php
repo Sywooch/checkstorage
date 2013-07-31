@@ -9,7 +9,7 @@ use yii\helpers\Html;
 
 <ul>
 	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_user_registration')); ?>">Anmeldung</a></li>
-	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_user_bedarfssammler')); ?>">Bedarfssammler</a></li>
+	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_user_bedarfsammler')); ?>">Bedarfssammler</a></li>
 </ul>
 
 <h4>Für Anbieter</h4>
