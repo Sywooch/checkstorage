@@ -16,7 +16,7 @@ use yii\helpers\Html;
 
 <ul>
 	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_storage_registration')); ?>">Anmeldung</a></li>
-	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_storage_registration')); ?>">Mein Account</a></li>	
+	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_store_registration')); ?>">Mein Account</a></li>	
 	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_store_management')); ?>">Lagerplätze verwalten</a></li>
 	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_price_management')); ?>">Abteile verwalten</a></li>
 	<li><a href="<?php echo Html::url(array('/site/page','view'=>'page_customer_management')); ?>">Kunden verwalten</a></li>
