@@ -3,30 +3,30 @@
 use \yii\helpers\Html;
 
 ?>
-<div class="row-fluid tile">
+<div class="row-fluid tile <?php echo ++$index%2==0?'bg-color-blue2':'bg-color-white'?>">
 	<div class="span3">
-		<img src='img/flags_iso/24/<?php echo strtolower($item->country);?>.png'></img><?php echo Html::a(Html::encode($item->name), $item->url);?>
+		&nbsp;<img src='img/flags_iso/24/<?php echo strtolower($model->country);?>.png'></img>&nbsp;<?php echo Html::a(Html::encode($model->name), $model->url);?>
 	</div>
 	<div class="span5">
-		<?php echo $item->address;?><br>
-		<i class="icon-phone"></i> <?php echo $item->phone;?><br>
-		<i class="icon-envelope"></i> <?php echo $item->mail;?>
+		<?php echo $model->address;?><br>
+		<i class="icon-phone"></i> <?php echo $model->phone;?><br>
+		<i class="icon-envelope"></i> <?php echo $model->mail;?>
 	</div>
 	<div class="span2">
-		<?php echo $item->zipcode;?> <?php echo $item->city;?>
+		<?php echo $model->zipcode;?> <?php echo $model->city;?>
 	</div>
 	<div class="span2">
 		<i class="icon-book"></i> 
 		<?php
-			echo Html::a('verwalten', array("dashboard", "id"=>$item->id), array('class'=>'dashboard'));
+			echo Html::a('verwalten', array("dashboard", "id"=>$model->id), array('class'=>'dashboard'));
 		?><br>
 		<i class="icon-pencil"></i> 
 		<?php
-			echo Html::a('bearbeiten', array("update", "id"=>$item->id), array('class' => 'edit')); 
+			echo Html::a('bearbeiten', array("update", "id"=>$model->id), array('class' => 'edit')); 
 		?><br>
 		<i class="icon-remove"></i> 
 		<?php
-			echo Html::a('entfernen', array("softdelete", "id"=>$item->id), array('class'=>'delete'));
+			echo Html::a('entfernen', array("softdelete", "id"=>$model->id), array('class'=>'delete'));
 		?>
 	</div>
 </div>

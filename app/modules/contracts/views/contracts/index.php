@@ -2,9 +2,9 @@
 
 use \Yii;
 use \yii\helpers\Html;
-use \yii\widgets\LinkPager;
 
 use \yii\widgets\Block;
+use \yii\widgets\ListView;
 ?>
 
 
@@ -23,34 +23,10 @@ use \yii\widgets\Block;
 
 <h1>Verträge</h1>
 
-<table class="table table-striped">
-	<thead>
-		<td>Vertrag #</td>
-		<td>Abteil #</td>
-		<td>Kunde</td>
-		<td></td>
-	</thead>
 
-<?php
-
-$contracts = $provider->getItems();
-
-foreach($contracts AS $contract):
-?>
-<tr>
-	<td># <?php echo $contract->id; ?></td>
-	<td># <?php echo $contract->Unit->id; ?> - <?php echo $contract->Unit->unit_number; ?></td>
-	<td><?php echo $contract->ContractPartner->name; ?> <?php echo $contract->ContractPartner->prename; ?></td>
-	<td></td>
-</tr>
-<?php endforeach; ?>
-
-</table>
-
-<?php
-
-echo LinkPager::widget(array(
-      'pagination' => $provider->getPagination(),
- ));
-
+<?php 
+	echo ListView::widget(array(
+		'dataProvider'=>$provider,
+		'itemView' => 'iviews/_admin',
+	));
 ?>

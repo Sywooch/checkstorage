@@ -1,8 +1,12 @@
-@import url(//fonts.googleapis.com/css?family=Telex);
+/*@import url(//fonts.googleapis.com/css?family=Telex);*/
 
 body {
+  background-color: #F9F9F5;  
+}
+
+#pagewrapper {
   font-family: Telex, Verdana, Arial, sans-serif;
-	background-color: #F9F9F5;
+  background-color: #FFFFFF;
 }
 
 .navbar-inner {
