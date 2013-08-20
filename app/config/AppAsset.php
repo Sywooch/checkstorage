@@ -17,11 +17,10 @@ class AppAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
-    public $css = array(
-        'css/bootstrap.min.css',
+    public $css = array(        
         'css/font-awesome.min.css',
-        'css/site.css',
         'css/syntaxhighlighter/github.css',
+        'css/site.css',
     );
     public $js = array(
         'js/dropdown.js',
@@ -30,6 +29,6 @@ class AppAsset extends AssetBundle
     public $depends = array(
         'yii\web\YiiAsset',
         'yii\web\JqueryAsset',
-        'yii\bootstrap\ResponsiveAsset',
+        'yii\bootstrap\BootstrapAsset'
     );
 }

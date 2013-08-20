@@ -3,6 +3,7 @@ use \Yii;
 use \yii\helpers\Html;
 use \yii\widgets\Block;
 use \yii\widgets\ActiveForm;
+use \yii\widgets\ActiveField;
 
 use \yii\bootstrap\Tabs;
 ?>
@@ -19,10 +20,9 @@ use \yii\bootstrap\Tabs;
 </h4>
 
 <?php $form = ActiveForm::begin(array(
-    'options' => array('class' => 'form-horizontal'),
+    'options' => array('class' => ActiveField::className()),
 )); ?>
 
-<div class="row-fluid">
 <?php 
 
 $myTabs = array();
@@ -47,7 +47,6 @@ echo Tabs::widget(array(
      'items' => $myTabs,
 ));
 ?>
-</div>
 
 <div class="form-actions">
     <?php echo Html::submitButton($model->isNewRecord ? '<i class="icon-plus"></i> '.Yii::t('app','Create') : '<i class="icon-pencil"></i> '.Yii::t('app','Save'), array('class'=>'btn btn-success fg-color-white')); ?>

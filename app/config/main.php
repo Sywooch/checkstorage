@@ -20,7 +20,7 @@ return array(
 		),	
 		'debug' => array(
 			'class' => 'yii\debug\Module',
-			'enabled' => YII_DEBUG && YII_ENV === 'dev',
+			//'enabled' => YII_DEBUG && YII_ENV === 'dev',
 		),
 	),
 	'components' => array(
@@ -46,13 +46,23 @@ return array(
 				),
 			),
 		),
-		'translations' => array(
-			array(
-				'class' => 'yii\i18n\PhpMessageSource',
-				'basePath' => "@app/messages",
-				'sourceLanguage' => 'en_US',
-				'fileMap' => array(
-					'app'=>'app.php'
+		'i18n'=>array(
+			'translations' => array(
+				'app'=> array(
+					'class' => 'yii\i18n\PhpMessageSource',
+					'basePath' => "@app/messages",
+					'sourceLanguage' => 'en_US',
+					'fileMap' => array(
+						'app'=>'app.php'					
+					)
+				),
+				'yii'=> array(
+					'class' => 'yii\i18n\PhpMessageSource',
+					'basePath' => "@app/messages",
+					'sourceLanguage' => 'en_US',
+					'fileMap' => array(
+						'yii'=>'other.php'
+					)
 				)
 			)
 		),

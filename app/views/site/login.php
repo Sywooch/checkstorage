@@ -11,10 +11,10 @@ $this->title = 'Login';
 
 <h1>Login</h1>
 
-<div class="row-fluid">
-	<div class="span12">
+<div class="row">
+	<div class="col-lg-12">
 		<?php $form = ActiveForm::begin(array(
-			'options' => array('class' => 'form-horizontal'),
+			//'options' => array('class' => 'form-horizontal'),
 			'fieldConfig' => array(
 				//'class' => 'app\components\MyActiveField' removed as it's working fine without!
 			)

@@ -40,17 +40,17 @@ AppAsset::register($this);
 
 <div id="footer" class="footer fg-color-white">
 	<div class="container">
-		<div class="span4">
+		<div class="col-lg-4">
 			<ul class="unstyled">
 				<li>&copy; Frenzel GmbH <?php echo date('Y'); ?></li>
 			</ul>
 		</div>
-		<div class="span4">
+		<div class="col-lg-4">
 			<ul class="unstyled">
 				<li><?php echo Yii::powered(); ?></li>				
 			</ul>
 		</div>
-		<div class="span4">
+		<div class="col-lg-4">
 			
 		</div>
 	</div>	

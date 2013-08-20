@@ -8,9 +8,9 @@ use app\widgets\TagCloud;
 
 <?php $this->beginContent('@app/views/layouts/main.php'); ?>
 <section id="content" class="bg-color-white">
-	<div class="container-fluid">
-	  <div class="row-fluid">
-	  	 <div class="span3">
+	<div class="container">
+	  <div class="row">
+	  	 <div class="col-lg-3">
 	  	 	
 	  	 	<?php echo PortletUserSearch::widget(array(
           		'maxResults'=>5,
@@ -27,10 +27,10 @@ use app\widgets\TagCloud;
 	  	 	<?php echo $this->blocks['sidebar']; ?>      
 	  	 	
 	    </div>
-	    <div class="span7">
+	    <div class="col-lg-7">
 	      <?php echo $content; ?>
 	    </div>
-	    <div class="span2">	  	 		
+	    <div class="col-lg-2">	  	 		
 	  	 	<?php echo $this->blocks['toolbar']; ?>
 	    </div>
 	  </div>	  

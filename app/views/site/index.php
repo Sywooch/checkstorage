@@ -56,8 +56,8 @@ $this->registerJs($mapJS);
 	
 <?php Block::end(); ?>
 
-	<div class="row-fluid">
-		<div class="span7">
+	<div class="row">
+		<div class="col-lg-7">
 			<?php echo PortletStorageSearch::widget(array(
           		'maxResults'=>8,
       		)); ?>
@@ -125,8 +125,8 @@ $this->registerJs($map->printHeaderJS());
 $this->registerJs($map->printMapJS());
 ?>
 
-			<div class="row-fluid">
-				<div class="span6">
+			<div class="row">
+				<div class="col-lg-6">
 					<h4>&nbsp;&nbsp;<i class="icon-user icon-2x"></i> Für Interessenten!</h4>
 					<ul>
 						<li>Bedarfssammler</li>
@@ -136,7 +136,7 @@ $this->registerJs($map->printMapJS());
 						<li>Lagertraum - Ich suche, Ihr bietet?!</li>
 					</ul>
 				</div>
-				<div class="span6">
+				<div class="col-lg-6">
 					<h4>&nbsp;&nbsp;<i class="icon-building icon-2x"></i> Für Anbieter!</h4>
 					<ul>
 						<li>Wo bieten Sie Lagerflächen?</li>
@@ -147,16 +147,16 @@ $this->registerJs($map->printMapJS());
 					</ul>			
 				</div>
 			</div>
-			<div class="row-fluid">
-				<div class="span6">
-					<a href="<?php echo Html::url(array('/site/register')); ?>" class="btn btn-success span12"><i class="icon-plus"></i> Registrieren (kostenlos)</a>
+			<div class="row">
+				<div class="col-lg-6">
+					<a href="<?php echo Html::url(array('/site/register')); ?>" class="btn btn-success"><i class="icon-plus"></i> Registrieren (kostenlos)</a>
 				</div>
-				<div class="span6">
-					<a href="<?php echo Html::url(array('/site/register')); ?>" class="btn btn-inverse span12"><i class="icon-plus"></i> Registrieren (kostenlos)</a>			
+				<div class="col-lg-6">
+					<a href="<?php echo Html::url(array('/site/register')); ?>" class="btn btn-info"><i class="icon-plus"></i> Registrieren (kostenlos)</a>			
 				</div>
 			</div>
-			<div class="row-fluid">
-				<div class="span12">
+			<div class="row">
+				<div class="col-lg-12">
 					<h4>&nbsp;&nbsp;<i class="icon-bullhorn icon-2x"></i> Neuigkeiten</h4>
 			
 						<?php
@@ -176,13 +176,13 @@ $this->registerJs($map->printMapJS());
 		
 				</div>
 			</div>
-			<div class="row-fluid">
-				<div class="span12">
+			<div class="row">
+				<div class="col-lg-12">
 					
 				</div>				
 			</div>
 		</div>
-		<div class="span5">
+		<div class="col-lg-5">
 			<?php $map->printMap() ?>
 			<p>&nbsp;</p>
 <h4>&nbsp;&nbsp;<i class="icon-globe icon-2x"></i> Top Standorte</h4>

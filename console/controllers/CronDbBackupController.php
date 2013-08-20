@@ -238,7 +238,7 @@ class CronDbBackupController extends Controller
             echo PHP_EOL."--\n-- Structure for table `$tableName`\n--".PHP_EOL;
             echo PHP_EOL.'DROP TABLE IF EXISTS '.$tableSchema->name.';'.PHP_EOL.PHP_EOL;
 
-            $q = $db->createCommand('SHOW CREATE TABLE '.$tableSchema->name.';')->queryRow();
+            $q = $db->createCommand('SHOW CREATE TABLE '.$tableSchema->name.';')->queryOne();
             
             $create_query = $q['Create Table'];
 

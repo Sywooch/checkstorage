@@ -9,6 +9,12 @@
             "email": "philipp@frenzel.net"
         }
     ],
+    "repositories": [
+        {
+            "type": "pear",
+            "url": "http://pear.horde.org"
+        }
+    ],
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.0",

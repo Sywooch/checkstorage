@@ -27,14 +27,10 @@ function includeIfExists($file)
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
 
-require(__DIR__ . '/../vendor/yiisoft/yii2/yii/Yii.php');
 require(__DIR__ . '/../vendor/autoload.php');
+require(__DIR__ . '/../vendor/yiisoft/yii2/yii/Yii.php');
 
 Yii::importNamespaces(require(__DIR__ . '/../vendor/composer/autoload_namespaces.php'));
-
-//require(__DIR__ . '/../vendor/composer/autoload_classmap.php');  
-
-//Yii::$classMap['SebastianBergmann\Diff'] = __DIR__ . '/../vendor/sebastian/diff/src/Diff.php';
 
 if(($baseConfig = includeIfExists(__DIR__.'/../app/config/main.php')) && ($localConfig = includeIfExists(__DIR__.'/../app/config/local.php'))) {
 	$config = \yii\helpers\ArrayHelper::merge($baseConfig,$localConfig);

@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Telex);
+/*@import url(//fonts.googleapis.com/css?family=Telex);*/
 
 body {
   background-color: #F9F9F5;  
@@ -9,7 +9,7 @@ body {
   background-color: #FFFFFF;
 }
 
-.navbar-inner {
+.navbar{
     background: url("../img/header-bg.gif") repeat-x scroll left top #00688B;
 }
 
@@ -157,6 +157,10 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 
 #toccmspage a{
 	display: block;
+}
+
+.unstyled{
+  list-style: none;
 }
 
 /*

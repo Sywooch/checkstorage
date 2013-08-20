@@ -4,7 +4,10 @@
  * @var $content string
  */
 use yii\helpers\Html;
+
 use yii\bootstrap\NavBar;
+use yii\bootstrap\Nav;
+
 use app\models\User;
 use app\config\AppAsset;
 use Yii2Tooltipster\Yii2Tooltipster;
@@ -24,7 +27,7 @@ AppAsset::register($this);
 	
 	<meta name="description" content="Checkstorage ist die Selfstorage Vergleichs Plattform für den EU-weiten Vergleich von Lagerplatz, Mietflächen, Lager Bedarfsermittlung, Storage Plattform, Self Storage, Lager, Keller, Dachboden, Verleih von Flächen" />
 	<meta name="keywords" content="Lagerplatz Vergleich, Börse, Bedarfsermittlung, Storage Plattform, Self Storage, Lager, Keller, Dachboden, Verleih von Flächen, Weinlager, Reifeneinlagern" />
-	<meta name="author" content="Frenzel GmbH">
+	<meta name="author" content="Frenzel GmbH - Checkstorage">
 	<meta name="robots" content="index, follow" />
 	<meta name="revisit-after" content="1 month" />
 
@@ -33,12 +36,14 @@ AppAsset::register($this);
 </head>
 <body>
 
+<?php $this->beginBody(); ?>
+
 <?php echo Yii2Tooltipster::widget(array('options'=>array('class'=>'.tipster'))); ?>
 
 <div id="topbar"></div>
 
 <div class="container">
-	<?php $this->beginBody(); ?>
+	
 	<div class="masthead">
 		<div class="pull-right">		
 			<?php if (!Yii::$app->user->isGuest): ?>
@@ -57,37 +62,46 @@ AppAsset::register($this);
 		$MenuItems = array();
 		//Bedarfssammler
 		//$MenuItems[] = array('label' => 'Bedarfssammler', 'url' => array('/opportunities/index'));
-		$MenuItems[] = array('label' => '<i class="icon-book"></i> Dokumentation', 'url' => array('/site/page','view'=>'page_test'));
+		$MenuItems[] = array('label' => '<div class="fg-color-white"><i class="icon-book"></i> Dokumentation</div>', 'url' => array('/site/page','view'=>'page_test'));
 
 		//menu items visible for guests
 		if(Yii::$app->user->isGuest)
 		{
-			$MenuItems[] = array('label' => '<i class="icon-envelope"></i> Kontakt', 'url' => array('/site/contact'),'options'=>array());
-			$MenuItems[] = array('label' => '<i class="icon-signal"></i> Imprint', 'url' => array('/site/about'));			
+			$MenuItems[] = array('label' => '<div class="fg-color-white"><i class="icon-envelope"></i> Kontakt</div>', 'url' => array('/site/contact'));
+			$MenuItems[] = array('label' => '<div class="fg-color-white"><i class="icon-signal"></i> Imprint</div>', 'url' => array('/site/about'));			
 		}
 		//menu items visible for stores and administrator
 		if(Yii::$app->user->identity->position==User::POS_STORE && !Yii::$app->user->isGuest){
-			$MenuItems[] = array('label' => '<i class="icon-building"></i> Lagerplätze', 'url' => array('/storage/admin'));
+			$MenuItems[] = array('label' => '<div class="fg-color-white"><i class="icon-building"></i> Lagerplätze</div>', 'url' => array('/storage/admin'));
 		};
 		//menu items visible for none stores
 		if(!Yii::$app->user->isGuest){
-			$MenuItems[] = array('label' => '<i class="icon-signout"></i> Abmelden', 'url' => array('/site/logout'));
+			$MenuItems[] = array('label' => '<div class="fg-color-white"><i class="icon-signout"></i> Abmelden</div>', 'url' => array('/site/logout'));
 		};
 
-		echo NavBar::widget(array(
-			'id' => 'mainnavigation',
-			'options' => array('class' => 'nav'),
-			'brandLabel' => '<i class="icon-search"></i> Lagerraum Suchen',			
-			'items' => array(
-				 array(
-					'class' => 'yii\bootstrap\Nav',
-					'options' => array(
-						'encodeLabels' => false,
-						'items'=> $MenuItems,
-					)
-				)
-			),
-		)); ?>
+?>
+
+<div class="fg-color-white">
+
+<?php
+
+NavBar::begin(array(
+	'id' => 'mainnavigation',
+	'class' => 'navbar',
+	'brandLabel' => '<div class="fg-color-white"><i class="icon-search"></i> Lagerraum Suchen</div>',
+));
+
+	echo Nav::widget(array(
+		'encodeLabels' => false,
+		'options' => array('class' => 'nav navbar-nav'),
+		'items' => $MenuItems
+	)); 
+
+NavBar::end();
+ 
+?>
+
+</div>
 		<!-- /.navbar -->
 		
 		<!-- Content starts here -->
@@ -95,28 +109,25 @@ AppAsset::register($this);
 
 	</div><!-- /#pagewrapper -->
 	
-	<?php $this->endBody(); ?>
 </div>
 
 <div id="footer" class="footer bg-color-darken fg-color-white">
 	<div class="container">
-		<div class="row-fluid">
-			<div class="span12">
+		<div class="row">
+			<div class="col-lg-12">
 				<b>Lagerplatz Vergleich, Börse, Bedarfsermittlung, Storage Plattform, SelfStorage, Lager, Keller, Dachboden, Verleih von Flächen, Möbel einlagern, Mietflächen, Weinlager, Reifenlager</b>
 			</div>
 		</div>
-		<div class="row-fluid">
-			<div class="span4">
-				<ul class="unstyled">
-					<li>&copy; Frenzel GmbH <?php echo date('Y'); ?></li>				
-				</ul>
+		<div class="row">
+			<div class="col-lg-4">
+				&copy; Frenzel GmbH <?php echo date('Y'); ?>
 				<address>
 					Hohewartstr. 32 <br>
 					70469 Stuttgart <br>
 					Deutschland
 				</address>
 			</div>
-			<div class="span4">
+			<div class="col-lg-4">
 				<ul class="unstyled">
 					<li>Impressum</li>
 					<li>Letzte Suche: <?php $session = new Session; echo $session['address']; ?></li>					
@@ -132,7 +143,7 @@ AppAsset::register($this);
 					</ul>
 				</ul>
 			</div>
-			<div class="span4">
+			<div class="col-lg-4">
 				<ul class="unstyled">
 					<li>kontakt@check-storage.de</li>
 					<li>+49 711 852505 (DE)</li>
@@ -153,6 +164,8 @@ AppAsset::register($this);
   ga('send', 'pageview');
 
 </script>
+	
+	<?php $this->endBody(); ?>
 
 </body>
 </html>
