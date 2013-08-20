@@ -3,12 +3,12 @@ use \yii\helpers\Html;
 
 use app\helpers\HighlightHelper;
 ?>
-<div class="row-fluid">
-	<div class="span4">
+<div class="row">
+	<div class="col-lg-4">
 		<img src="img/storage/<?php echo Html::encode($data->Owner->id); ?>.png" alt="<?php echo $data->name; ?>" style="height:30px"></img> 
 		<p><b><?php echo $data->Owner->prename; ?> <?php echo $data->Owner->name; ?></b></p>
 	</div>
-	<div class="span8">
+	<div class="col-lg-8">
 		<div>
 			<?php echo $data->address; ?><br>
 			<?php echo $data->zipcode; ?> <?php echo $data->city; ?> <br>
@@ -17,8 +17,8 @@ use app\helpers\HighlightHelper;
 		</div>
 	</div>
 </div>
-<div class="row-fluid">
-	<div class="span12">
+<div class="row">
+	<div class="col-lg-12">
 		<table class="table">
 			<tr>
 				<td class="fg-color-white bg-color-green1" style="text-align:center"><?php echo Html::checkBox('rememberme'.$data->id.'_1','',array('class'=>'tipster','title'=>'Hier klicken um das Abteil für Ihre Anfrage zu selektieren.')); ?> 1qm</td>
@@ -53,8 +53,8 @@ use app\helpers\HighlightHelper;
 		</table>
 	</div>
 </div>
-<div class="row-fluid">
-	<div class="span11">
+<div class="row">
+	<div class="col-lg-11">
 		<table class="table">
 			<tr>
 				<td class="bg-color-white"><i class="icon-bullseye fg-color-red tipster" title="Entfernung zu Ihrer Adresse in km"></i> <?php echo number_format($data->calcDistanceBetween($model->latitude, $model->longitude), 2, ',', '.'); ?>km</td>
