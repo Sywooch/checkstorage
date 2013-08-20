@@ -15,7 +15,7 @@ use \yii\jui\DatePicker;
 )); 
 ?>
 
-<div class="row" style="padding-bottom: 3px">
+<div class="row" style="padding-bottom: 4px">
 	<div class="col-lg-6">
 		<?php echo $form->field($model,'address',array('template' => "{input}\n{error}"))->textInput(array('maxlength'=>128,'placeholder'=>'Ihre Adresse...','class'=>'col-lg-12 tipster','title'=>'Adresse, Stadt oder Postleitzahl eintragen...')); ?>
 	</div>
