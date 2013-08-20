@@ -21,10 +21,10 @@ use \yii\widgets\Block;
 	</ul>
 <?php Block::end(); ?>
 
-<h1><img src="img/storage/<?php echo Html::encode($model->Owner->id); ?>.png" alt="logo"></img> <?php echo Html::encode($model->name); ?></h1>
-
 <div class="row">
 	<div class="col-lg-4">
+		<h1><img src="img/storage/<?php echo Html::encode($model->Owner->id); ?>.png" alt="logo"></img> <?php echo Html::encode($model->name); ?></h1>
+		
 		<div class="well">
 			<?php echo Html::encode($model->Owner->prename) . ' ' . Html::encode($model->Owner->name); ?><br>
 			<?php echo Html::encode($model->address); ?><br>
@@ -71,12 +71,12 @@ $this->registerJs($map->printMapJS());
 
 <?php $map->printMap() ?>
 	</div>
-	<div class="col-lg-8 portlet">
+	<div class="col-lg-8">
 		<div class="pull-right">
 			&nbsp;<a href="<?php echo Html::url(array('/storage/rememberme')); ?>" class="btn btn-inverse"><i class="icon-star"></i> Merkzettel</a>
 		</div>
 		<h4 class="fg-color-white">Preistabelle</h4>
-		<div style="height:264px;overflow:auto">
+		<div>
 			<table class="table">
 				<thead>
 					<tr>
