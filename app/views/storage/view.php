@@ -23,8 +23,8 @@ use \yii\widgets\Block;
 
 <h1><img src="img/storage/<?php echo Html::encode($model->Owner->id); ?>.png" alt="logo"></img> <?php echo Html::encode($model->name); ?></h1>
 
-<div class="row-fluid">
-	<div class="span4">
+<div class="row">
+	<div class="col-lg-4">
 		<div class="well">
 			<?php echo Html::encode($model->Owner->prename) . ' ' . Html::encode($model->Owner->name); ?><br>
 			<?php echo Html::encode($model->address); ?><br>
@@ -71,7 +71,7 @@ $this->registerJs($map->printMapJS());
 
 <?php $map->printMap() ?>
 	</div>
-	<div class="span8 portlet">
+	<div class="col-lg-8 portlet">
 		<div class="pull-right">
 			&nbsp;<a href="<?php echo Html::url(array('/storage/rememberme')); ?>" class="btn btn-inverse"><i class="icon-star"></i> Merkzettel</a>
 		</div>
@@ -110,20 +110,20 @@ $this->registerJs($map->printMapJS());
 	</div>
 </div>
 
-<div class="row-fluid">
-	<div class="span4">
+<div class="row">
+	<div class="col-lg-4">
 		<h2><i class="icon-camera"></i> Bilder</h2>
 	</div>
-	<div class="span8">
+	<div class="col-lg-8">
 		<h2><i class="icon-barcode"></i> Leistungsübersicht</h2>
 	</div>
 </div>
 
-<div class="row-fluid">
-	<div class="span4">
+<div class="row">
+	<div class="col-lg-4">
 		BILDER
 	</div>
-	<div class="span4">
+	<div class="col-lg-4">
 <?php
 
 echo \yii\widgets\DetailView::widget(array(
@@ -154,7 +154,7 @@ array( // the owner name of the model
 
 ?>		
 	</div>
-	<div class="span4">
+	<div class="col-lg-4">
 <?php
 
 echo \yii\widgets\DetailView::widget(array(
