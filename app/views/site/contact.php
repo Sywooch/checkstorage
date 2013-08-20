@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 use app\components\MyHtml;
 use yii\widgets\ActiveForm;
-use yii\widgets\Captcha;
+use yii\captcha\Captcha;
 
 /**
  * @var yii\base\View $this
@@ -16,8 +16,8 @@ $this->title = 'Kontakt';
 	<h1><?php echo Html::encode($this->title); ?></h1>
 
 	<?php if(Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
-	<div class="row-fluid">
-		<div class="span12">
+	<div class="row">
+		<div class="col-lg-12">
 			<div class="info">
 				Danke, einer unserer Mitarbeiter wird sich so schnell wie möglich bei Ihnen melden!
 			</div>
@@ -30,9 +30,6 @@ $this->title = 'Kontakt';
 
 	<?php $form = ActiveForm::begin(array(
 		'options' => array('class' => 'form-horizontal'),
-		'fieldConfig' => array(
-			'class' => 'app\components\MyActiveField'
-		),
 	)); ?>
 		
 		<?php echo $form->field($model, 'name')->textInput(); ?>
