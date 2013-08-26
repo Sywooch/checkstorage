@@ -20,7 +20,7 @@ class UnitsController extends Controller
 	public function behaviors() {
 		return array(
 			'AccessControl' => array(
-				'class' => '\yii\web\AccessControl',
+				'class' => 'yii\web\AccessControl',
 				'rules' => array(
 					array(
 						'allow'=>true,
@@ -35,10 +35,9 @@ class UnitsController extends Controller
 		);
 	}
 
-	public function actionView($id)
+	public function actionView($id=NULL)
 	{
 		$model=$this->loadModel($id);
-		$comment=$this->newComment($model);
 		return $this->render('view',array(
 			'model'=>$model,
 			'comment'=>$comment,
@@ -82,9 +81,9 @@ class UnitsController extends Controller
 		return $this->redirect(array('index'));
 	}
 
-	public function actionIndex($id)
+	public function actionIndex($id=NULL)
 	{
-		$provider = new ActiveDataProvider(array(
+		$dpUnits = new ActiveDataProvider(array(
 		      'query' => Unit::find()->where(array('storage_id'=>$id)),
 		      'pagination' => array(
 		          'pageSize' => 20,
@@ -92,7 +91,7 @@ class UnitsController extends Controller
 	  	));
 
 		return $this->render('index', array(
-			'provider' => $provider,
+			'dpUnits' => $dpUnits,
 		));
 	}
 
@@ -125,17 +124,6 @@ class UnitsController extends Controller
 				'pagination' => $pagination,
 			));
 	}
-	
-
-	public function actionSuggestTags($q='',$limit=20, $timestamp=0)
-	{
-		if(($keyword=trim($q))!=='')
-		{
-			$tags=Tag::suggestTags($keyword);
-			if($tags!==array())
-				echo implode("\n",$tags);
-		}
-	}
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
@@ -150,7 +138,7 @@ class UnitsController extends Controller
 				$this->_model=Unit::find($id);
 			}
 			if($this->_model===null)
-				throw new \yii\web\HttpException(404,'The requested page does not exist.');
+				throw new yii\web\HttpException(404,'The requested page does not exist.');
 		}
 		return $this->_model;
 	}

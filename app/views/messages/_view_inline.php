@@ -2,7 +2,7 @@
 use \yii\helpers\Html;
 ?>
 
-<div class="row-fluid">
+<div class="row">
 	<div class="span10">
 	
 <?php if($data->sender_id == Yii::$app->user->identity->id) : ?>

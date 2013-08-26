@@ -4,7 +4,7 @@ use \yii\helpers\Html;
 use app\helpers\HighlightHelper;
 ?>
 
-<div class="row-fluid">	
+<div class="row">	
 	<table>
 		<tr>
 			<td><b><?php echo HighlightHelper::highlightWords($data->prename.' '.$data->name,array($searchText)); ?></b></td>

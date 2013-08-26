@@ -36,22 +36,22 @@ use \yii\bootstrap\Tabs;
 
 <h1><img src="img/storage/<?php echo Html::encode($model->Owner->id); ?>.png" alt="logo"></img> <?php echo Html::encode($model->name); ?></h1>
 
-<div class="row-fluid">
-	<div class="span4">
+<div class="row">
+	<div class="col-lg-4">
 		<div class="well">
 			<?php echo Html::encode($model->Owner->prename) . ' ' . Html::encode($model->Owner->name); ?><br>
 			<?php echo Html::encode($model->address); ?><br>
 			<?php echo Html::encode($model->zipcode); ?> <?php echo Html::encode($model->city); ?>
 		</div>
 	</div>
-	<div class="span8 portlet">
+	<div class="col-lg-8 portlet">
 		<h4 class="fg-color-white">Preistabelle</h4>
 		TO BE FILLED LATER
 	</div>
 </div>
 
-<div class="row-fluid">
-	<div class="span12">
+<div class="row">
+	<div class="col-lg-12">
 		
 <?php 
 $myTabs = array();

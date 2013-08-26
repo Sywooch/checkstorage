@@ -23,7 +23,7 @@ DEL;
 $this->registerJs($deleteJS);
 ?>
 
-<div class="row-fluid comment" id="c<?php echo $data->id; ?>">
+<div class="row comment" id="c<?php echo $data->id; ?>">
 
 	<p>
 		<?php echo Html::a("#{$data->id}", $data->url, array(

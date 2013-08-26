@@ -6,6 +6,7 @@ use \Yii;
 use \yii\helpers\Html;
 use \yii\widgets\Block;
 use \yii\widgets\ActiveForm;
+use \yii\widgets\ActiveField;
 
 use \yii\bootstrap\Tabs;
 ?>
@@ -23,10 +24,7 @@ use \yii\bootstrap\Tabs;
 
 
 <?php $form = ActiveForm::begin(array(
-    'options' => array('class' => 'form-horizontal'),
-    'fieldConfig' => array(
-            'class' => 'app\components\MyActiveField'
-    ),
+    'options' => array('class' => ActiveField::className()),
 )); ?>
 
 <?php 

@@ -6,8 +6,8 @@ use app\models\Costcenter;
 use app\models\Geography;
 ?>
 
-<div class="row-fluid">
-	<div class="span12">
+<div class="row">
+	<div class="col-lg-12">
 		<div class="page-control" data-role="page-control">
 			<!-- Responsive controls -->
 			<span class="menu-pull"></span>
@@ -72,7 +72,7 @@ use app\models\Geography;
 							<legend>Building</legend>											
 
 						<?php echo $form->field($model,'date_opening')->textInput(array('size'=>80,'maxlength'=>128)); ?>
-						<div class="row-fluid">
+						<div class="row">
 							<div class="span6"><?php echo $form->field($model,'category_property')->radioList($model->getCatPropertiesOptions()); ?></div>
 							<div class="span6"><?php echo $form->field($model,'category_age')->radioList(array(0=>'Old',1=>'New')); ?></div>
 						</div>						

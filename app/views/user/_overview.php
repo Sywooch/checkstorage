@@ -11,7 +11,7 @@ use \yii\widgets\Block;
 	</ul>
 <?php Block::end(); ?>
 
-<div class="row-fluid">	
+<div class="row">	
 	<h2><?php echo Html::encode($data->prename); ?> <?php echo Html::encode($data->name); ?></h2>
 	<table class="table table-striped">
 		<tr>

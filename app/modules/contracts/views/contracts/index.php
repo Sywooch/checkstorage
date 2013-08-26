@@ -4,7 +4,7 @@ use \Yii;
 use \yii\helpers\Html;
 
 use \yii\widgets\Block;
-use \yii\widgets\ListView;
+use \yii\grid\GridView;
 ?>
 
 
@@ -12,9 +12,9 @@ use \yii\widgets\ListView;
 	<ul class="nav nav-list">
 	<li class="nav-header">Aktionen</li>
 		<ul class="unstyled">
-			<li class="mytoolbox"><?php echo Html::a('<i class="icon-arrow-left fg-color-white"></i> Übersicht', array('/storage/admin'),array('class'=>'fg-color-white')); ?></li>
+			<li class="mytoolbox"><?php echo Html::a('<i class="icon-arrow-left fg-color-white"></i> Übersicht', array('/contracts','id'=>$id),array('class'=>'fg-color-white')); ?></li>
 		<?php			
-			echo '<li class="mytoolbox">'.Html::a('<i class="icon-plus fg-color-white"></i> Vertrag anlegen',array('/contracts/contracts/createTable'),array('class'=>'fg-color-white')).'</li>';			
+			echo '<li class="mytoolbox">'.Html::a('<i class="icon-plus fg-color-white"></i> Vertrag anlegen',array('/contracts/contracts/create'),array('class'=>'fg-color-white')).'</li>';			
 		?>
 		</ul>
 	</ul>
@@ -25,8 +25,7 @@ use \yii\widgets\ListView;
 
 
 <?php 
-	echo ListView::widget(array(
-		'dataProvider'=>$provider,
-		'itemView' => 'iviews/_admin',
+	echo GridView::widget(array(
+		'dataProvider'=>$dpContracts,
 	));
 ?>

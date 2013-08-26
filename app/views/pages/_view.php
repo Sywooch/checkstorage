@@ -24,7 +24,7 @@ $this->registerJs($syntaxhighlighter);
 	</div>
 <?php endif; ?>
 
-<div class="row-fluid" id='cmswrapper'>
+<div class="row" id='cmswrapper'>
 	<div style="padding-top:13px">
 		<h1>
 			<?php echo Html::encode($data->title);?>			
@@ -41,7 +41,7 @@ $this->registerJs($syntaxhighlighter);
 		?>
 	<p>
 </div>
-<div class="row-fluid">
+<div class="row">
 	<p class="tags">
 		<strong>Tags:</strong>
 		<?php echo implode(' ', $data->tagLinks); ?>

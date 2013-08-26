@@ -23,15 +23,10 @@ $this->registerJs($deleteJS);
 ?>
 
 <?php Block::begin(array('id'=>'sidebar')); ?>
-	<ul class="nav nav-list">
-	<li class="nav-header">Aktionen</li>
-		<ul class="unstyled">
-		<?php
-			echo '<li class="mytoolbox">'.Html::a('<i class="icon-arrow-left fg-color-white"></i> Übersicht',array('/user/view','id'=>Yii::$app->user->id),array('class'=>'fg-color-white')).'</li>';
-			echo '<li class="mytoolbox">'.Html::a('<i class="icon-plus fg-color-white"></i> Lagerplatz anlegen',array('/storage/create'),array('class'=>'fg-color-white')).'</li>';			
-		?>
-		</ul>
-	</ul>
+	<?php
+		echo '<div class="list-group-item">'.Html::a('<i class="icon-arrow-left"></i> Übersicht',array('/user/view','id'=>Yii::$app->user->id),array()).'</div>';
+		echo '<div class="list-group-item">'.Html::a('<i class="icon-plus"></i> Lagerplatz anlegen',array('/storage/create'),array()).'</div>';			
+	?>
 <?php Block::end(); ?>
 
 

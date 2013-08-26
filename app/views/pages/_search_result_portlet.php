@@ -3,11 +3,11 @@ use \yii\helpers\Html;
 
 use app\helpers\HighlightHelper;
 ?>
-<div class="row-fluid">
+<div class="row">
 	<small>Found hit in:</small>
 	<p><?php echo $data->name; ?></p>
 </div>
-<div class="row-fluid">	
+<div class="row">	
 	<p>
 		<?php echo substr(HighlightHelper::highlightWords(strip_tags($data->body),array($searchText)),0,200).'...'; ?>	
 	</p>

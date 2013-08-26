@@ -11,7 +11,7 @@ use \yii\widgets\Block;
 	</ul>
 <?php Block::end(); ?>
 
-<div class="row-fluid">	
+<div class="row">	
 	<h2><i class="icon-sun"></i> <?php echo Html::encode($data->address); ?> <small><?php echo Html::encode($data->Region->name); ?></small></h2>
 	<table class="table table-striped">
 		<tr>

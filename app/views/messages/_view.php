@@ -10,7 +10,7 @@ use \yii\widgets\Block;
 	</ul>
 <?php Block::end(); ?>
 
-<div class="row-fluid">	
+<div class="row">	
 	<h4><?php echo Html::encode($data->subject); ?></h4>
 	<p>
 	<?php

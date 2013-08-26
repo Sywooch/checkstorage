@@ -16,7 +16,7 @@ use app\models\Workflow;
 	)); 
 ?>
 
-<div class="row-fluid">
+<div class="row">
 	<div class="span4">
 		<?php echo $form->field($model,'title')->textInput(array('size'=>80,'maxlength'=>128)); ?>
 		<?php echo $form->field($model,'name')->textInput(array('size'=>80,'maxlength'=>128)); ?>

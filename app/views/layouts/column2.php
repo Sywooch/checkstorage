@@ -2,7 +2,7 @@
 <section id="content">
   <div class="row">
   	 <div class="col-lg-3">
-  	 	<div class="page-sidebar">	  	 		
+  	 	<div class="list-group">
   	 		<?php echo $this->blocks['sidebar']; ?>
   	 	</div>      
     </div>

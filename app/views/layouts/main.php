@@ -47,9 +47,9 @@ AppAsset::register($this);
 	<div class="masthead">
 		<div class="pull-right">		
 			<?php if (!Yii::$app->user->isGuest): ?>
-				<a href="<?php echo Html::Url(array('user/view','id'=>Yii::$app->user->identity->id)); ?>"><i class="icon-user icon-2x"></i> <?php echo Yii::$app->user->identity->username; ?></a>
+				<a href="<?php echo Html::Url(array('/user/view','id'=>Yii::$app->user->identity->id)); ?>"><i class="icon-user icon-2x"></i> <?php echo Yii::$app->user->identity->username; ?></a>
 			<?php else: ?>
-				<a href="<?php echo Html::Url(array('site/login')); ?>"><i class="icon-signin icon-2x"></i> Anmelden</a>
+				<a href="<?php echo Html::Url(array('/site/login')); ?>"><i class="icon-signin icon-2x"></i> Anmelden</a>
 			<?php endif; ?>
 		</div>
 		<div id="logostyle">CheckStorage</div>
@@ -111,7 +111,7 @@ NavBar::end();
 	
 </div>
 
-<div id="footer" class="footer bg-color-darken fg-color-white">
+<div id="footer" class="footer bg-color-statusRequested fg-color-white">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">

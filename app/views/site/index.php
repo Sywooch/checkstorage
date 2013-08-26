@@ -149,10 +149,10 @@ $this->registerJs($map->printMapJS());
 			</div>
 			<div class="row">
 				<div class="col-lg-6">
-					<a href="<?php echo Html::url(array('/site/register')); ?>" class="btn btn-success"><i class="icon-plus"></i> Registrieren (kostenlos)</a>
+					<a href="<?php echo Html::url(array('/site/register')); ?>" class="btn btn-success col-lg-12"><i class="icon-plus"></i> Registrieren (kostenlos)</a>
 				</div>
 				<div class="col-lg-6">
-					<a href="<?php echo Html::url(array('/site/register')); ?>" class="btn btn-info"><i class="icon-plus"></i> Registrieren (kostenlos)</a>			
+					<a href="<?php echo Html::url(array('/site/register')); ?>" class="btn btn-info col-lg-12"><i class="icon-plus"></i> Registrieren (kostenlos)</a>			
 				</div>
 			</div>
 			<div class="row">

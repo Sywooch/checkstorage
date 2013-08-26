@@ -96,7 +96,7 @@ class Contract extends ActiveRecord
 	{
 		return array(
 			'id'                => 'Id',
-			'user_id'		    => Yii::t('app','Vertragsnahmer'),
+			'user_id'		    => Yii::t('app','Vertragsnehmer'),
 			'date_created'		=> Yii::t('app','Erzeugt am'),
 			'date_start'        => Yii::t('app','Vertragsbegin'),
             'date_end'          => Yii::t('app','Vertragsende'),

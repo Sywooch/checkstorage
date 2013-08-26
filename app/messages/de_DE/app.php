@@ -43,7 +43,7 @@ return array(
 	'My Account'                                                                                    => 'Persönliches',
 	'Login'                                                                                         => 'Anmelden',
 	'Logout'                                                                                        => 'Abmelden',
-	'Create'                                                                                        => 'Erzeugen',
+	'Create'                                                                                        => 'Erstellen',
 	'Update'                                                                                        => 'Aktualisieren',
 	'Delete'                                                                                        => 'Entfernen',
 	'Save'                                                                                          => 'Speichern',

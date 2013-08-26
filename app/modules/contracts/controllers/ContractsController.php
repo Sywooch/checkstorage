@@ -5,6 +5,7 @@ namespace app\modules\contracts\controllers;
 use \Yii;
 use \yii\web\Controller;
 use \yii\data\ActiveDataProvider;
+use \yii\data\Sort;
 
 use \app\modules\contracts\models\Contract;
 
@@ -38,23 +39,19 @@ class ContractsController extends Controller
 	public function actionView($id)
 	{
 		$model=$this->loadModel($id);
-		$comment=$this->newComment($model);
 		return $this->render('view',array(
 			'model'=>$model,
-			'comment'=>$comment,
 		));
 	}
 
 	public function actionCreate()
 	{
-		$this->layout='column1';
-
-		$model=new Post();
+		$model=new Contract();
 		if ($model->load($_POST) && $model->save()) {
 			return $this->redirect(array('view','id'=>$model->id));
 		}
 
-		return $this->render('create',array(
+		return $this->render('crud',array(
 			'model'=>$model,
 		));
 	}
@@ -68,7 +65,7 @@ class ContractsController extends Controller
 			return $this->redirect(array('view','id'=>$model->id));
 		}
 
-		return $this->render('update',array(
+		return $this->render('crud',array(
 			'model'=>$model,
 		));
 	}
@@ -87,7 +84,7 @@ class ContractsController extends Controller
 		//change the layout to 2 columns
 		$this->layout='/column2';
 
-		$provider = new ActiveDataProvider(array(
+		$dpContracts = new ActiveDataProvider(array(
 		      'query' => Contract::find()
 		      				->join('INNER JOIN', 'tbl_unit unit', 'unit.id = unit_id')
 		      				->where(array('storage_id'=>$id)),		      				
@@ -97,7 +94,7 @@ class ContractsController extends Controller
 	  	));
 
 		return $this->render('index', array(
-			'provider' => $provider,
+			'dpContracts' => $dpContracts,
 		));
 	}
 
@@ -111,35 +108,31 @@ class ContractsController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionAdmin($id)
 	{
-		$query = Post::find()
-			->where('status="'. Workflow::STATUS_PUBLISHED.'"')
-			->orderBy('time_create DESC');
-
-		$countQuery = clone $query;
-		$pagination = new Pagination();
-		$pagination->totalCount = $countQuery->count();
+		//change the layout to 2 columns
+		$this->layout='/column2';
 		
-		$models = $query->offset($pagination->offset)
-				->limit($pagination->limit)
-				->all();
+		$query = Contract::find()
+      				->join('INNER JOIN', 'tbl_unit unit', 'unit.id = unit_id')
+      				->where(array('storage_id'=>$id));
+		$sort = new Sort(array(
+            'attributes' => array(
+              'contract_id',
+            ),
+      	));
 
-		return $this->render('admin', array(
-				'models' => $models,
-				'pagination' => $pagination,
-			));
-	}
-	
+      	$dpContracts = new ActiveDataProvider(array(
+		      'query' => $query,
+		      'pagination' => array(
+		          'pageSize' => 10,
+		      ),
+		      'sort' => $sort
+	  	));
 
-	public function actionSuggestTags($q='',$limit=20, $timestamp=0)
-	{
-		if(($keyword=trim($q))!=='')
-		{
-			$tags=Tag::suggestTags($keyword);
-			if($tags!==array())
-				echo implode("\n",$tags);
-		}
+		return $this->render('index', array(
+				'dpContracts' => $dpContracts,
+		));
 	}
 
 	/**

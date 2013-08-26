@@ -8,8 +8,8 @@ use yiimetroui\Accordion;
 <h1><i class="icon-book"></i> <?php echo Yii::t('app','Blog Control'); ?></h1>
 <fieldset>
 	<legend><?php echo Yii::t('app','Blog') . ' ' . Yii::$app->user->identity->RoleAsString; ?></legend>
-	<div class="row-fluid">
-		<div class="span12">
+	<div class="row">
+		<div class="col-lg-12">
 			<a class="shortcut" href="<?php echo Html::url(array('/post/create')); ?>">
 				<span class="icon">
 					<i class="icon-plus"></i>
@@ -40,8 +40,8 @@ use yiimetroui\Accordion;
 
 <fieldset>
 	<legend><?php echo Yii::t('app','CMS') . ' ' . Yii::$app->user->identity->RoleAsString; ?></legend>
-	<div class="row-fluid">
-		<div class="span12">
+	<div class="row">
+		<div class="col-lg-12">
 			<a class="shortcut" href="<?php echo Html::url(array('/pages/create')); ?>">
 				<span class="icon">
 					<i class="icon-plus"></i>

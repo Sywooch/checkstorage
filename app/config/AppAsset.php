@@ -21,6 +21,7 @@ class AppAsset extends AssetBundle
         'css/font-awesome.min.css',
         'css/syntaxhighlighter/github.css',
         'css/site.css',
+        'css/custom-theme/jquery-ui-1.10.0.custom.css',
     );
     public $js = array(
         'js/dropdown.js',

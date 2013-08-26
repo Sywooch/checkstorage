@@ -36,7 +36,7 @@ echo $this->context->renderPartial('_view', array(
 )); 
 ?>
 
-<div id="comments" class="row-fluid">
+<div id="comments" class="row">
 	<?php
 	if($commentCount>=1): ?>
 		<h2>

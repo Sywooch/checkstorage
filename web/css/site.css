@@ -28,7 +28,7 @@ body {
   background-color: #ffffff;
 }
 
-.page-sidebar{
+.sidebar{
   margin-top:25px;
 }
 
@@ -131,6 +131,10 @@ body {
 /* Customize the navbar links to be fill the entire space of the .navbar */
 .nav-bar .nav-bar-inner {
 	padding: 10px;
+}
+
+.nav-header{
+  font-size: 14px;
 }
 
 /* page wrap */

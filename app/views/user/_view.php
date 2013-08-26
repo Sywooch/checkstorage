@@ -4,7 +4,6 @@ use \yii\helpers\Html;
 use \yii\bootstrap\Tabs;
 ?>
 
-<div class="row-fluid">
 <?php 
 
 $items = array();
@@ -25,4 +24,4 @@ echo Tabs::widget(array(
      'items' => $items,
 ));
 ?>
-</div>
+

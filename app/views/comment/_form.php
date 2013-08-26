@@ -4,7 +4,7 @@ use \yii\widgets\ActiveForm;
 
 ?>
 
-<div class="row-fluid">
+<div class="row">
 
 <?php $form = ActiveForm::begin(array(
 	'options' => array('class' => 'form-horizontal'),
